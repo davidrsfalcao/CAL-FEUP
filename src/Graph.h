@@ -7,8 +7,10 @@
 #include <vector>
 #include <queue>
 #include <list>
-#include <limits>
+#include <climits>
 #include <cmath>
+#include <stddef.h>
+
 using namespace std;
 
 template <class T> class Edge;
@@ -27,7 +29,7 @@ const int INT_INFINITY = INT_MAX;
 template <class T>
 class Vertex {
 	T info;
-	vector<Edge<T>  > adj;
+	vector<Edge<T> > adj;
 	bool visited;
 	bool processing;
 	int indegree;
@@ -37,15 +39,20 @@ public:
 	Vertex(T in);
 	friend class Graph<T>;
 
-	void addEdge(Vertex<T> *dest, double w);
+	void addEdge(Vertex<T> *dest, double distance, int line);
 	bool removeEdgeTo(Vertex<T> *d);
 
 	T getInfo() const;
+	T*getInfoPointer(){
+		return &info;
+	}
 	void setInfo(T info);
 
 	int getDist() const;
 	int getIndegree() const;
-
+	int getAdjSize(){
+		return adj.size();
+	}
 	Vertex* path;
 };
 
@@ -81,8 +88,8 @@ Vertex<T>::Vertex(T in): info(in), visited(false), processing(false), indegree(0
 
 
 template <class T>
-void Vertex<T>::addEdge(Vertex<T> *dest, double w) {
-	Edge<T> edgeD(dest,w);
+void Vertex<T>::addEdge(Vertex<T> *dest, double distance, int line) {
+	Edge<T> edgeD(dest, distance, line);
 	adj.push_back(edgeD);
 }
 
@@ -118,15 +125,20 @@ int Vertex<T>::getIndegree() const {
 template <class T>
 class Edge {
 	Vertex<T> * dest;
-	double weight;
+	double distance;
+	int line;
 public:
-	Edge(Vertex<T> *d, double w);
+	Edge(Vertex<T> *d, double dis, int l);
 	friend class Graph<T>;
 	friend class Vertex<T>;
 };
 
 template <class T>
-Edge<T>::Edge(Vertex<T> *d, double w): dest(d), weight(w){}
+Edge<T>::Edge(Vertex<T> *d, double dis, int l){
+	dest = d;
+	distance = dis;
+	line = l;
+}
 
 
 
@@ -149,7 +161,7 @@ class Graph {
 
 public:
 	bool addVertex(const T &in);
-	bool addEdge(const T &sourc, const T &dest, double w);
+	bool addEdge(const T &sourc, const T &dest, double dis, int line);
 	bool removeVertex(const T &in);
 	bool removeEdge(const T &sourc, const T &dest);
 	vector<T> dfs() const;
@@ -157,7 +169,8 @@ public:
 	int maxNewChildren(Vertex<T> *v, T &inf) const;
 	vector<Vertex<T> * > getVertexSet() const;
 	int getNumVertex() const;
-
+	vector<Vertex<T>*> bestPathFrom(const T &s);
+	void dijkstraShortestPath(const T &s);
 	//exercicio 5
 	Vertex<T>* getVertex(const T &v) const;
 	void resetIndegrees();
@@ -167,6 +180,16 @@ public:
 	vector<T> getPath(const T &origin, const T &dest);
 	void unweightedShortestPath(const T &v);
 	bool isDAG();
+	T getVertexbyId(int id);
+	T*getVertexbyIdPointer(int id);
+	int getFirstId(string nome){
+		for(int i = 0; i < vertexSet.size(); i++){
+			if(vertexSet[i]->getInfo().getNome() == nome && vertexSet[i]->getInfo().getId() >= 0){
+				return vertexSet[i]->getInfo().getId();
+			}
+		}
+		return -1;
+	}
 
 };
 
@@ -230,7 +253,7 @@ bool Graph<T>::removeVertex(const T &in) {
 }
 
 template <class T>
-bool Graph<T>::addEdge(const T &sourc, const T &dest, double w) {
+bool Graph<T>::addEdge(const T &sourc, const T &dest, double distance, int line) {
 	typename vector<Vertex<T>*>::iterator it= vertexSet.begin();
 	typename vector<Vertex<T>*>::iterator ite= vertexSet.end();
 	int found=0;
@@ -244,8 +267,7 @@ bool Graph<T>::addEdge(const T &sourc, const T &dest, double w) {
 	}
 	if (found!=2) return false;
 	vD->indegree++;
-	vS->addEdge(vD,w);
-
+	vS->addEdge(vD,distance,line);
 	return true;
 }
 
@@ -487,6 +509,7 @@ vector<T> Graph<T>::getPath(const T &origin, const T &dest){
 		res.push_back( buffer.front() );
 		buffer.pop_front();
 	}
+
 	return res;
 }
 
@@ -514,6 +537,82 @@ void Graph<T>::unweightedShortestPath(const T &s) {
 				q.push(w);
 			}
 		}
+	}
+}
+
+
+template<class T>
+vector <Vertex<T>*> Graph<T>::bestPathFrom(const T &s) {
+	vector<Vertex<T>*> returnVector;
+
+	return returnVector;
+}
+
+template<class T>
+T Graph<T>::getVertexbyId(int id){
+	for(int i = 0; i < vertexSet.size();i++){
+		if(vertexSet[i]->getInfo().getId() == id){
+			return vertexSet[i]->getInfo();
+		}
+	}
+	return vertexSet[0]->getInfo();
+}
+
+template<class T>
+T*Graph<T>::getVertexbyIdPointer(int id){
+	for(int i = 0; i < vertexSet.size();i++){
+		if(vertexSet[i]->getInfo().getId() == id){
+			return vertexSet[i]->getInfoPointer();
+		}
+	}
+	return vertexSet[0]->getInfoPointer();
+}
+
+template<class T>
+void Graph<T>::dijkstraShortestPath(const T &s) {
+
+	for(unsigned int i = 0; i < vertexSet.size(); i++) {
+		vertexSet[i]->path = NULL;
+		vertexSet[i]->dist = INT_INFINITY;
+		vertexSet[i]->processing = false;
+	}
+
+	Vertex<T>* v = getVertex(s);
+	v->dist = 0;
+
+	vector< Vertex<T>* > pq;
+	pq.push_back(v);
+
+	make_heap(pq.begin(), pq.end());
+
+
+	while( !pq.empty() ) {
+
+		v = pq.front();
+		pop_heap(pq.begin(), pq.end());
+		pq.pop_back();
+		for(unsigned int i = 0; i < v->adj.size(); i++) {
+			Vertex<T>* w = v->adj[i].dest;
+			int aValue = v->dist + v->adj[i].distance;
+			int bValue = w->dist;
+			bool condition = aValue < bValue;
+			if(condition) {
+				w->dist = v->dist + v->adj[i].distance;
+				w->path = v;
+				//se já estiver na lista, apenas a actualiza
+				if(!w->processing)
+				{
+					w->processing = true;
+					pq.push_back(w);
+				}
+
+				make_heap (pq.begin(),pq.end(),vertex_greater_than<T>());
+			}
+		}
+	}
+	vector<T> returnVector;
+	for(int i = 0; i < pq.size(); i++){
+		returnVector.push_back(pq[i]->getInfo());
 	}
 }
 
