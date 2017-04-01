@@ -9,19 +9,25 @@
 
 Cidade::Cidade(){
   nome = "";
-  hoteis = NULL;
+  coordenadas = new Coordenadas();
+  hoteis = *(new std::vector<Alojamento*>()) ;
 }
 
-Cidade::Cidade(std::string nome,  std::vector<Alojamento> hoteis){
+Cidade::Cidade(std::string nome, Coordenadas coordenadas, std::vector<Alojamento*> hoteis){
   this->nome = nome;
+  this->coordenadas = coordenadas;
   this->hoteis = hoteis;
+}
+
+Coordenadas Cidade::getCoordenadas(){
+  return coordenadas;
 }
 
 Alojamento* Cidade::HotelMaisBarato(int dia, int mes){
 
   std::vector<Alojamento*>::iterator it = hoteis.begin();
 
-  Alojamento hotel = new Alojamento();
+  Alojamento *hotel = new Alojamento();
   int preco_min = 999999999;
   int preco_temp = 0;
 

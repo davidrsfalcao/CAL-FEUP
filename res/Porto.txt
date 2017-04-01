@@ -1,0 +1,13 @@
+Porto
+470, 270   // exemplo de coordenadas (depois alterar)
+3 //numero hoteis
+HF Ipanema Porto // nome
+3 // numero épocas
+Verao //nome época
+21-06/22-09 //intervalo época
+400 // preço na época
+Natal e Passagem de Ano
+21-12/2-02
+540
+
+(...)
