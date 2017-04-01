@@ -25,12 +25,15 @@ int Coordenadas::getY(){
   return y;
 }
 
-void Coordenadas::setX(int x)
-{
+void Coordenadas::setX(int x){
   this->x = x;
 }
 
-void Coordenadas::setY(int y)
-{
+void Coordenadas::setY(int y){
+  this->y = y;
+}
+
+void Coordenadas::setCoordenadas(int x, int y){
+  this->x = x;
   this->y = y;
 }

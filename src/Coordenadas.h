@@ -36,15 +36,9 @@ public:
 
 	void setY(int y);
 
-	void setCoordenadas(int x, int y)
-	{
-		this->x = x;
-		this->y = y;
-	}
+	void setCoordenadas(int x, int y);
 
 
-
-
-}
+};
 
 #endif /* SRC_COORDENADAS_H_ */
