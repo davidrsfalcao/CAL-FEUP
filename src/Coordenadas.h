@@ -18,10 +18,7 @@ public:
 	/**
 	* @brief Construtor da classe Coordenadas
 	*/
-	Coordenadas() {
-		x = 0;
-		y = 0;
-	}
+	Coordenadas();
 
 	/**
 	* @brief Construtor da classe Coordenadas com inicializa��o de x e y

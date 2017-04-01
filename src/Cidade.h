@@ -7,14 +7,17 @@
 
 #ifndef CIDADE_H_
 #define CIDADE_H_
+#include <iostream>
 #include "Alojamento.h"
 
-using namespace std;
 
 class Cidade {
 private:
-  string nome;
-  vector<*Alojamento> hoteis;
+  std::string nome;
+  std::vector<Alojamento*> hoteis;
+
+public:
+  Cidade();
 
 
 };

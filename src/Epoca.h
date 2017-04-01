@@ -7,10 +7,11 @@
 
 #ifndef SRC_DATA_H_
 #define SRC_DATA_H_
-
+#include <string>
 
 class Epoca {
 private:
+  std::string nome;
   int dia_inicio;
   int mes_inicio;
   int dia_fim;
@@ -19,12 +20,13 @@ private:
 
 public:
   Epoca();
-  Epoca(int dia_inicio, int mes_inicio, int dia_fim, int mes_fim);
+  Epoca(std::string nome, int dia_inicio, int mes_inicio, int dia_fim, int mes_fim, int preco);
   int getDiaInicio();
   int getDiaFim();
   int getMesInicio();
   int getMesFim();
   int getPreco();
+  std::string getNome();
 
 };
 

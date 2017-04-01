@@ -6,8 +6,10 @@
 */
 
 #include "Epoca.h"
+#include <string>
 
 Epoca::Epoca(){
+  nome = "";
   dia_inicio = 0;
   dia_fim = 0;
   mes_inicio = 0;
@@ -15,11 +17,13 @@ Epoca::Epoca(){
   preco = 0;
 }
 
-Epoca::Epoca(int dia_inicio, int mes_inicio, int dia_fim, int mes_fim){
+Epoca::Epoca(std::string nome, int dia_inicio, int mes_inicio, int dia_fim, int mes_fim, int preco){
+  this->nome = nome;
   this->dia_inicio = dia_inicio;
   this->dia_fim = dia_fim;
-  this->mes_inicio = mes_inicio
-  this->mes_fim = mes_fim
+  this->mes_inicio = mes_inicio;
+  this->mes_fim = mes_fim;
+  this->preco = preco;
 }
 
 int Epoca::getDiaInicio(){
@@ -40,4 +44,8 @@ int Epoca::getMesFim(){
 
 int Epoca::getPreco(){
   return preco;
+}
+
+std::string Epoca::getNome(){
+  return nome;
 }
