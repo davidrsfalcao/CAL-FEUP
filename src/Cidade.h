@@ -7,7 +7,7 @@
 
 #ifndef CIDADE_H_
 #define CIDADE_H_
-#include <iostream>
+#include <vector>
 #include "Alojamento.h"
 
 
@@ -18,6 +18,9 @@ private:
 
 public:
   Cidade();
+  Cidade(std::string nome,  std::vector<Alojamento> hoteis);
+  Alojamento* HotelMaisBarato(int dia, int mes);
+
 
 
 };
