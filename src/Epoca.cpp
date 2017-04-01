@@ -12,6 +12,7 @@ Epoca::Epoca(){
   dia_fim = 0;
   mes_inicio = 0;
   mes_fim = 0;
+  preco = 0;
 }
 
 Epoca::Epoca(int dia_inicio, int mes_inicio, int dia_fim, int mes_fim){
