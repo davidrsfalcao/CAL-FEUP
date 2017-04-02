@@ -30,15 +30,14 @@ std::vector<Cidade> ordenarPorId(std::vector<Cidade> vect, int left, int right) 
 
       /* recursion */
       if (left < j)
-            ordenarPorId(vect, left, j);
+            vect = ordenarPorId(vect, left, j);
       if (i < right)
-            ordenarPorId(vect, i, right);
+            vect = ordenarPorId(vect, i, right);
 
       return vect;
 }
 
 std::vector<Cidade> ordenarPorNome(std::vector<Cidade> vect, int left, int right) {
-
 
       int i = left, j = right;
       Cidade tmp;
@@ -61,9 +60,9 @@ std::vector<Cidade> ordenarPorNome(std::vector<Cidade> vect, int left, int right
 
       /* recursion */
       if (left < j)
-            ordenarPorId(vect, left, j);
+            vect = ordenarPorId(vect, left, j);
       if (i < right)
-            ordenarPorId(vect, i, right);
+            vect = ordenarPorId(vect, i, right);
 
       return vect;
 }

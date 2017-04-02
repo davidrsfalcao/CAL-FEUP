@@ -1,9 +1,9 @@
 /*
- * Launcher.cpp
- *
- *  Created on: 01/04/2017
- *      Author: David
- */
+* Launcher.cpp
+*
+*  Created on: 01/04/2017
+*      Author: David
+*/
 #include <iostream>
 #include <cstdio>
 #include <fstream>
@@ -47,6 +47,23 @@ void carregarFicheiros() {
 
 }
 
+void imprimirId(){
+
+	std::cout << "Ordenadas por Id:" << endl << endl;
+	for(size_t i = 0; i< cidadesId.size(); i++){
+		std::cout << cidadesId[i].getId() << endl;
+	}
+
+
+	std::cout << "\n\nOrdenadas por Nome:" << endl << endl;
+	for(size_t i = 0; i< cidadesNome.size(); i++){
+		std::cout << cidadesNome[i].getNome() << endl;
+	}
+
+
+
+}
+
 void testes(){
 
 	Cidade cidade = *(new Cidade());
@@ -86,17 +103,9 @@ void testes(){
 	cidadesId.push_back(cidade);
 	cidadesNome.push_back(cidade);
 
-	cidadesId = ordenarPorId(cidadesId,0,cidadesId.size()-1);
-
-}
-
-void imprimirId(){
-
-	std::cout << "Ordenadas por Id:" << endl << endl;
-	for(size_t i = 0; i< cidadesId.size(); i++){
-		std::cout << cidadesId[i].getId() << endl;
-
-	}
+	cidadesId = ordenarPorId(cidadesId, 0, cidadesId.size()-1);
+	cidadesNome = ordenarPorNome(cidadesNome, 0, cidadesNome.size()-1);
+	imprimirId();
 
 }
 
@@ -104,7 +113,7 @@ int main() {
 	std::cout << "HELLO WORLD";
 	//carregarFicheiros();
 	testes();
-	imprimirId();
+
 
 	return 0;
 }
