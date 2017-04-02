@@ -7,24 +7,41 @@
 
 #include "Cidade.h"
 
-Cidade::Cidade(){
+Cidade::Cidade() {
+  id = 999999;
   nome = "";
-  coordenadas = new Coordenadas();
-  hoteis = *(new std::vector<Alojamento*>()) ;
+  coordenadas = *(new Coordenadas());
+  hoteis = *(new std::vector<Alojamento*>());
 }
 
-Cidade::Cidade(unsigned int id, std::string nome, Coordenadas coordenadas, std::vector<Alojamento*> hoteis){
+Cidade::Cidade(unsigned int id, std::string nome, Coordenadas coordenadas, std::vector<Alojamento*> hoteis) {
   this->id = id;
   this->nome = nome;
   this->coordenadas = coordenadas;
   this->hoteis = hoteis;
 }
 
-Coordenadas Cidade::getCoordenadas(){
+unsigned int Cidade::getId() {
+  return id;
+}
+
+void Cidade::setId(unsigned int id){
+	this->id = id;
+}
+
+std::string Cidade::getNome(){
+  return nome;
+}
+
+void Cidade::setNome(std::string nome){
+	this->nome = nome;
+}
+
+Coordenadas Cidade::getCoordenadas() {
   return coordenadas;
 }
 
-Alojamento* Cidade::HotelMaisBarato(int dia, int mes){
+Alojamento* Cidade::HotelMaisBarato(int dia, int mes) {
 
   std::vector<Alojamento*>::iterator it = hoteis.begin();
 
@@ -32,11 +49,9 @@ Alojamento* Cidade::HotelMaisBarato(int dia, int mes){
   int preco_min = 999999999;
   int preco_temp = 0;
 
-
-  for(;it != hoteis.end(); it++)
-  {
-    preco_temp = (*it)->getPreco(dia,mes);
-    if (preco_temp < preco_min){
+  for (; it != hoteis.end(); it++) {
+    preco_temp = (*it)->getPreco(dia, mes);
+    if (preco_temp < preco_min) {
       preco_min = preco_temp;
       hotel = (*it);
     }
@@ -46,6 +61,16 @@ Alojamento* Cidade::HotelMaisBarato(int dia, int mes){
   return hotel;
 }
 
-unsigned int Alojamento::getId(){
-  return id;
+std::vector<int> Cidade::getDestinos(){
+  return destinos;
+}
+
+int Cidade::getIdDestino(int n){
+
+  return destinos[n*3];
+}
+
+int Cidade::getCustoViagemDestino(int n){
+
+  return destinos[1+n*3];
 }

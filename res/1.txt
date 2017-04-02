@@ -1,5 +1,4 @@
-1 //id
-Porto //nome
+Porto //nome *** o id da cidade e o nome do ficheiro
 470, 270   // exemplo de coordenadas (depois alterar)
 3 //numero hoteis
 HF Ipanema Porto // nome
