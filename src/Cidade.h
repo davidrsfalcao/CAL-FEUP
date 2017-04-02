@@ -14,13 +14,15 @@
 
 class Cidade {
 private:
+  unsigned int id;
   std::string nome;
   Coordenadas coordenadas;
   std::vector<Alojamento*> hoteis;
 
 public:
   Cidade();
-  Cidade(std::string nome, Coordenadas coordenadas, std::vector<Alojamento*> hoteis);
+  Cidade(unsigned int id, std::string nome, Coordenadas coordenadas, std::vector<Alojamento*> hoteis);
+  unsigned int getId();
   Coordenadas getCoordenadas();
   Alojamento* HotelMaisBarato(int dia, int mes);
 

@@ -13,7 +13,8 @@ Cidade::Cidade(){
   hoteis = *(new std::vector<Alojamento*>()) ;
 }
 
-Cidade::Cidade(std::string nome, Coordenadas coordenadas, std::vector<Alojamento*> hoteis){
+Cidade::Cidade(unsigned int id, std::string nome, Coordenadas coordenadas, std::vector<Alojamento*> hoteis){
+  this->id = id;
   this->nome = nome;
   this->coordenadas = coordenadas;
   this->hoteis = hoteis;
@@ -43,4 +44,8 @@ Alojamento* Cidade::HotelMaisBarato(int dia, int mes){
   }
 
   return hotel;
+}
+
+unsigned int Alojamento::getId(){
+  return id;
 }
