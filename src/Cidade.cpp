@@ -74,3 +74,6 @@ int Cidade::getCustoViagemDestino(int n){
 
   return destinos[1+n*3];
 }
+
+
+

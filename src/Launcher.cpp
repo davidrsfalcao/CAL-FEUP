@@ -110,10 +110,12 @@ void testes(){
 }
 
 int main() {
-	std::cout << "HELLO WORLD";
+	//std::cout << "HELLO WORLD";
 	//carregarFicheiros();
 	testes();
+	Cidade cidade = pesquisaNome(cidadesNome,"Porto");
 
+	std::cout << std::endl << std::endl << cidade.getId();
 
 	return 0;
 }
