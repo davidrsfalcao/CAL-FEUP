@@ -51,13 +51,13 @@ void imprimirId(){
 
 	std::cout << "Ordenadas por Id:" << endl << endl;
 	for(size_t i = 0; i< cidadesId.size(); i++){
-		std::cout << cidadesId[i].getId() << endl;
+		std::cout << cidadesId[i].getId() << " - " << cidadesId[i].getNome()<< endl;
 	}
 
 
 	std::cout << "\n\nOrdenadas por Nome:" << endl << endl;
 	for(size_t i = 0; i< cidadesNome.size(); i++){
-		std::cout << cidadesNome[i].getNome() << endl;
+		std::cout << cidadesNome[i].getNome() <<" - "<<cidadesNome[i].getId() << endl;
 	}
 
 
@@ -115,7 +115,7 @@ int main() {
 	testes();
 	Cidade cidade = pesquisaNome(cidadesNome,"Porto");
 
-	std::cout << std::endl << std::endl << cidade.getId();
+	std::cout << std::endl << std::endl << "O id de Porto e " << cidade.getId();
 
 	return 0;
 }

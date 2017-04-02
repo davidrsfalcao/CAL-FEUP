@@ -43,32 +43,32 @@ std::vector<Cidade> ordenarPorId(std::vector<Cidade> vect, int left, int right) 
 
 std::vector<Cidade> ordenarPorNome(std::vector<Cidade> vect, int left, int right) {
 
-      int i = left, j = right;
-      Cidade tmp;
-      Cidade pivot = vect[(floor)((left + right) / 2)];
+	int i = left, j = right;
+	      Cidade tmp;
+	      Cidade pivot = vect[(floor)((left + right) / 2)];
 
-      /* partition */
-      while (i <= j) {
-            while (vect[i].getNome() < pivot.getNome())
-                  i++;
-            while (pivot.getNome() < vect[j].getNome())
-                  j--;
-            if (i <= j) {
-                  tmp = vect[i];
-                  vect[i] = vect[j];
-                  vect[j] = tmp;
-                  i++;
-                  j--;
-            }
-      };
+	      /* partition */
+	      while (i <= j) {
+	            while (vect[i].getNome() < pivot.getNome())
+	                  i++;
+	            while (vect[j].getNome() > pivot.getNome())
+	                  j--;
+	            if (i <= j) {
+	                  tmp = vect[i];
+	                  vect[i] = vect[j];
+	                  vect[j] = tmp;
+	                  i++;
+	                  j--;
+	            }
+	      };
 
-      /* recursion */
-      if (left < j)
-            vect = ordenarPorId(vect, left, j);
-      if (i < right)
-            vect = ordenarPorId(vect, i, right);
+	      /* recursion */
+	      if (left < j)
+	            vect = ordenarPorNome(vect, left, j);
+	      if (i < right)
+	            vect = ordenarPorNome(vect, i, right);
 
-      return vect;
+	      return vect;
 }
 
 
@@ -76,7 +76,6 @@ std::vector<Cidade> ordenarPorNome(std::vector<Cidade> vect, int left, int right
 // Pesquisa Binaria
 Cidade pesquisaNome(std::vector<Cidade> vect , std::string chave)
 {
-	std::cout << std::endl << std::endl;
 
      int inf = 0;
      int sup = vect.size()-1;
@@ -86,9 +85,6 @@ Cidade pesquisaNome(std::vector<Cidade> vect , std::string chave)
 
 
           meio = floor((inf + sup)/2);
-
-          std::cout << inf << "-" << meio << "-" << sup << std::endl;
-          std::cout << vect[inf].getNome() << "-" << vect[meio].getNome()<< "-" << vect[sup].getNome() << std::endl;
           if (chave == vect[meio].getNome())
                return vect[meio];
           if (chave < vect[meio].getNome())
