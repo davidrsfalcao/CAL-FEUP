@@ -11,3 +11,10 @@ Natal e Passagem de Ano
 540
 
 (...)
+3 // numero de destinos 
+12 // id de destino 1
+250 // preco destino 1
+200 // tempo até destino em min
+2 // id destino 2
+500 //preço destino 2
+400 // tempo até destino em min

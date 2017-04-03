@@ -13,13 +13,18 @@
 #include <conio.h>
 #include <vector>
 #include "Graph.h"
+#include "graphviewer.h"
 #include "Cidade.h"
 #include "Algoritmos.h"
 #include "Alojamento.h"
 
+#define NOT_DYNAMIC false
 #define EDGE_COLOR "black"
 #define VERTEX_COLOR "red"
 #define ID_MAX 1 //mudar consoante o numero de ficheiros
+Graph<Cidade> graph;
+
+GraphViewer *gv;
 
 //Variaveis globais
 std::vector<Cidade> cidadesId;  //cidades ordenadas por Id
@@ -111,13 +116,27 @@ void testes(){
 
 }
 
+void inicializarGraphicViewer(){
+	//Inicializar graphos
+	gv = new GraphViewer(1024, 794, NOT_DYNAMIC);
+	gv->setBackground("background.jpg");
+	gv->createWindow(1024, 794);
+	gv->defineVertexColor(VERTEX_COLOR);
+	gv->defineEdgeColor(EDGE_COLOR);
+}
+
 int main() {
+	//testes
 	//std::cout << "HELLO WORLD";
 	//carregarFicheiros();
-	testes();
-	Cidade cidade = pesquisaNome(cidadesNome,"Porto");
+	//testes();
+	//Cidade cidade = pesquisaNome(cidadesNome,"Porto");
 
-	std::cout << std::endl << std::endl << "O id de Porto e " << cidade.getId();
+	//std::cout << std::endl << std::endl << "O id de Porto e " << cidade.getId();
+
+
+	inicializarGraphicViewer();
+	getchar();
 
 	return 0;
 }
