@@ -75,8 +75,9 @@ Cidade pesquisaNome(std::vector<Cidade> vect, std::string chave) {
 	int inf = 0;
 	int sup = vect.size() - 1;
 	int meio;
+
 	while (vect[inf].getNome() <= vect[sup].getNome()) {
-		meio = floor((inf + sup) / 2);
+		meio =(inf + sup) / 2;
 		if (chave == vect[meio].getNome())
 			return vect[meio];
 		if (chave < vect[meio].getNome())
@@ -85,7 +86,7 @@ Cidade pesquisaNome(std::vector<Cidade> vect, std::string chave) {
 			inf = meio + 1;
 	}
 
-	return *(new Cidade());
+	return Cidade();
 }
 
 Cidade pesquisaId(std::vector<Cidade> vect, unsigned int chave){
@@ -102,5 +103,5 @@ Cidade pesquisaId(std::vector<Cidade> vect, unsigned int chave){
 			inf = meio + 1;
 	}
 
-	return *(new Cidade());
+	return Cidade();
 }

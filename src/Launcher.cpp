@@ -31,7 +31,7 @@ std::vector<Cidade> cidadesNome; //cidades ordenadas por Nome
 
 void carregarFicheiros() {
 
-	int contador = 110;
+	int contador = 1;
 	std::string path = "./res/";
 	ifstream in;
 	std::string nomeCidade, nomeH, nomeE, temp;
@@ -40,80 +40,87 @@ void carregarFicheiros() {
 	while (contador <= ID_MAX) {
 		ostringstream conversor;
 		conversor << contador;
-		std::string fich = path + conversor.str()+".txt";
+		std::string fich = path + conversor.str() + ".txt";
 		const char *nomeFich;
 		nomeFich = fich.c_str();
 
 		in.open(nomeFich);
-		getline(in,nomeCidade);
-		getline(in,temp,',');
-		x = atoi(temp.c_str());
-		getline(in,temp);
-		y = atoi(temp.c_str());
 
-		Coordenadas cords = Coordenadas(x,y);
-
-		getline(in,temp);
-		count = atoi(temp.c_str());
-
-		//CICLO Alojamento
-		std::vector<Alojamento*> hoteis;
-		for (size_t i=0; i< count; i++){
-			getline(in,nomeH);
+		if (!in.fail()) {
+			getline(in, nomeCidade);
+			getline(in, temp, ',');
+			x = atoi(temp.c_str());
 			getline(in, temp);
-			count1 = atoi(temp.c_str());
+			y = atoi(temp.c_str());
 
-			//CICLO EPOCAS
-			std::vector<Epoca*> epocas;
-			for(size_t k=0; k<count1; k++){
-				int diaI, diaF, mesI, mesF, preco;
-				getline(in, nomeE);
-				getline(in,temp,'-');
-				diaI = atoi(temp.c_str());
-				getline(in,temp,'/');
-				mesI = atoi(temp.c_str());
-				getline(in,temp,'-');
-				diaF = atoi(temp.c_str());
-				getline(in,temp);
-				mesF = atoi(temp.c_str());
+			Coordenadas cords = Coordenadas(x, y);
 
+			getline(in, temp);
+			count = atoi(temp.c_str());
+
+			//CICLO Alojamento
+			std::vector<Alojamento*> hoteis;
+			for (size_t i = 0; i < count; i++) {
+				getline(in, nomeH);
 				getline(in, temp);
-				preco = atoi(temp.c_str());
+				count1 = atoi(temp.c_str());
 
-				Epoca* epoca = new Epoca(nomeE,diaI,mesI,diaF,mesF,preco);
-				epocas.push_back(epoca);
+				//CICLO EPOCAS
+				std::vector<Epoca*> epocas;
+				for (size_t k = 0; k < count1; k++) {
+					int diaI, diaF, mesI, mesF, preco;
+					getline(in, nomeE);
+					getline(in, temp, '-');
+					diaI = atoi(temp.c_str());
+					getline(in, temp, '/');
+					mesI = atoi(temp.c_str());
+					getline(in, temp, '-');
+					diaF = atoi(temp.c_str());
+					getline(in, temp);
+					mesF = atoi(temp.c_str());
+
+					getline(in, temp);
+					preco = atoi(temp.c_str());
+
+					Epoca* epoca = new Epoca(nomeE, diaI, mesI, diaF, mesF,
+							preco);
+					epocas.push_back(epoca);
+				}
+
+				Alojamento* hotel = new Alojamento(nomeH, epocas);
+				hoteis.push_back(hotel);
 			}
 
-			Alojamento* hotel = new Alojamento(nomeH, epocas);
-			hoteis.push_back(hotel);
+			getline(in, temp);
+			count = atoi(temp.c_str());
+
+			//Ciclo destinos
+			std::vector<int> destinos;
+
+			for (size_t i = 0; i < count; i++) {
+				getline(in, temp);
+				int idD = atoi(temp.c_str());
+				getline(in, temp);
+				int preco = atoi(temp.c_str());
+				getline(in, temp);
+				int tempo = atoi(temp.c_str());
+
+				destinos.push_back(idD);
+				destinos.push_back(preco);
+				destinos.push_back(tempo);
+			}
+
+			Cidade cidade = Cidade(contador, nomeCidade, cords, hoteis,
+					destinos);
+
+			cidadesId.push_back(cidade);
+			cidadesNome.push_back(cidade);
+			in.close();
 		}
-
-		getline(in,temp);
-		count = atoi(temp.c_str());
-
-		//Ciclo destinos
-		std::vector<int> destinos;
-
-		for (size_t i=0; i<count; i++){
-			getline(in,temp);
-			int idD = atoi(temp.c_str());
-			getline(in,temp);
-			int preco = atoi(temp.c_str());
-			getline(in,temp);
-			int tempo = atoi(temp.c_str());
-
-			destinos.push_back(idD);
-			destinos.push_back(preco);
-			destinos.push_back(tempo);
-		}
-
-		Cidade cidade = Cidade(contador,nomeCidade,cords,hoteis,destinos);
-
-		cidadesId.push_back(cidade);
-		cidadesNome.push_back(cidade);
-
 		contador++;
 	}
+	cidadesId = ordenarPorId(cidadesId, 0, cidadesId.size()-1);
+	cidadesNome = ordenarPorNome(cidadesNome, 0, cidadesNome.size()-1);
 
 }
 
@@ -208,13 +215,18 @@ int main() {
 	//inicializarGraphicViewer();
 	//testes();
 	carregarFicheiros();
-	std::vector<Cidade> cidades = cidadesId;
-	std::cout << cidadesId[0].getNome();
-	Cidade cidade = pesquisaNome(cidadesNome,"Dubai");
+
+	for(size_t i=0; i<cidadesNome.size(); i++)
+	{
+		std::cout << cidadesNome[i].getNome() << ";" << endl;
+	}
+
+	Cidade cidade = pesquisaNome(cidadesNome,"Porto");
+
 
 	std::cout << endl << endl << "O id de "<< cidade.getNome()<<" e " << cidade.getId();
 	std::cout << endl << "CordX: " << cidade.getCoordenadas().getX() << " e " << cidade.getCoordenadas().getY() << endl;
-	std::cout << "Hotel mais barato: " << cidade.HotelMaisBarato(3,8)->getNome()<< " com preco "<< cidade.HotelMaisBarato(3,8)->getPreco(3,8) << endl;
+	std::cout << "Hotel mais barato: " << cidade.HotelMaisBarato(21,12)->getNome()<< " com preco "<< cidade.HotelMaisBarato(3,8)->getPreco(3,8) << endl;
 	std::cout << "N destinos: " << cidade.getDestinos().size() << endl;
 
 
