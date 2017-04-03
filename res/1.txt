@@ -1,20 +1,61 @@
-Porto //nome *** o id da cidade e o nome do ficheiro
-470,270   // exemplo de coordenadas (depois alterar)
-3 //numero hoteis
-HF Ipanema Porto // nome
-3 // numero epocas
-Verao //nome epoca
-21-06/22-09 //intervalo epoca
-400 // preco na epoca
+Porto
+470,270
+3
+HF Ipanema Porto
+4
+Verao
+21-06/22-09
+400
 Natal e Passagem de Ano
 21-12/2-02
 540
-
-(...)
-3 // numero de destinos
-12 // id de destino 1
-250 // preco destino 1
-200 // tempo at� destino em min
-2 // id destino 2
-500 //pre�o destino 2
-400 // tempo at� destino em min
+Resto do Ano
+23-09/20-12
+350
+Resto do Ano
+3-02/20-06
+350
+Pestana Vintage Porto
+4
+Verao
+21-06/22-09
+414
+Natal e Passagem de Ano
+21-12/2-02
+515
+Resto do Ano
+23-09/20-12
+370
+Resto do Ano
+3-02/20-06
+370
+The Yeatman Hotel
+4
+Verao
+30-06/5-09
+405
+Natal e Passagem de Ano
+23-12/5-02
+600
+Resto do Ano
+6-09/22-12
+416
+Resto do Ano
+3-02/29-06
+416
+5
+2
+50
+30
+4
+95
+60
+7
+190
+90
+16
+230
+140
+43
+350
+210

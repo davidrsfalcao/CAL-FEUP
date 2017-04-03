@@ -18,8 +18,8 @@ Alojamento::Alojamento(std::string nome, std::vector<Epoca*>epocas){
 	this->epocas = epocas;
 }
 
-void Alojamento::setEpocas(std::vector<Epoca*>epocas){
-	this->epocas = epocas;
+std::string Alojamento::getNome(){
+	return nome;
 }
 
 int Alojamento::getPreco(int dia, int mes) {
