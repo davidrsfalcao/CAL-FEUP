@@ -21,7 +21,7 @@
 #define NOT_DYNAMIC false
 #define EDGE_COLOR "black"
 #define VERTEX_COLOR "red"
-#define ID_MAX 82 //mudar consoante o numero de ficheiros
+#define ID_MAX 110 //mudar consoante o numero de ficheiros
 Graph<Cidade> graph;
 GraphViewer *gv;
 
@@ -31,7 +31,7 @@ std::vector<Cidade> cidadesNome; //cidades ordenadas por Nome
 
 void carregarFicheiros() {
 
-	int contador = 82;
+	int contador = 110;
 	std::string path = "./res/";
 	ifstream in;
 	std::string nomeCidade, nomeH, nomeE, temp;
@@ -210,12 +210,12 @@ int main() {
 	carregarFicheiros();
 	std::vector<Cidade> cidades = cidadesId;
 	std::cout << cidadesId[0].getNome();
-//	Cidade cidade = pesquisaNome(cidadesNome,"Dallas");
-//
-//	std::cout << endl << endl << "O id de "<< cidade.getNome()<<" e " << cidade.getId();
-//	std::cout << endl << "CordX: " << cidade.getCoordenadas().getX() << " e " << cidade.getCoordenadas().getY() << endl;
-//	std::cout << "Hotel mais barato: " << cidade.HotelMaisBarato(3,8)->getNome()<< " com preco "<< cidade.HotelMaisBarato(3,8)->getPreco(3,8) << endl;
-//	std::cout << "N destinos: " << cidade.getDestinos().size() << endl;
+	Cidade cidade = pesquisaNome(cidadesNome,"Dubai");
+
+	std::cout << endl << endl << "O id de "<< cidade.getNome()<<" e " << cidade.getId();
+	std::cout << endl << "CordX: " << cidade.getCoordenadas().getX() << " e " << cidade.getCoordenadas().getY() << endl;
+	std::cout << "Hotel mais barato: " << cidade.HotelMaisBarato(3,8)->getNome()<< " com preco "<< cidade.HotelMaisBarato(3,8)->getPreco(3,8) << endl;
+	std::cout << "N destinos: " << cidade.getDestinos().size() << endl;
 
 
 	return 0;
