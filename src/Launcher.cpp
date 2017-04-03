@@ -17,7 +17,9 @@
 #include "Algoritmos.h"
 #include "Alojamento.h"
 
-#define ID_MAX 1
+#define EDGE_COLOR "black"
+#define VERTEX_COLOR "red"
+#define ID_MAX 1 //mudar consoante o numero de ficheiros
 
 //Variaveis globais
 std::vector<Cidade> cidadesId;  //cidades ordenadas por Id
