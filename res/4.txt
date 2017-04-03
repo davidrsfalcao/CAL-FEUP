@@ -1,0 +1,47 @@
+Barcelona
+470,270
+2
+Hotel Ibis Barcelona Centro
+4
+Verão
+21-06/22-09
+210
+Passagem de Ano
+28-12/03-01
+235
+RestoDoAno
+04-01/20-06
+150
+RestoDoAno
+23-09/27-12
+150
+Hotel Sansi Diputació
+4
+Verão
+21-06/22-09
+1175
+Passagem de Ano
+28-12/03-12
+185
+RestoDoAno
+04-01/20-06
+130
+RestoDoAno
+23-09/27-12
+130
+5
+3
+50
+40
+7
+130
+80
+30
+320
+250
+31
+240
+115
+15
+225
+110
