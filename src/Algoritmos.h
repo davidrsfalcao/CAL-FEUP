@@ -18,5 +18,6 @@ std::vector<Cidade> ordenarPorNome(std::vector<Cidade> vect, int left, int right
 
 Cidade pesquisaNome( std::vector<Cidade> vect , std::string chave);
 
+Cidade pesquisaId(std::vector<Cidade> vect, unsigned int chave);
 
 #endif /* SRC_ALGORITMOS_H_ */
