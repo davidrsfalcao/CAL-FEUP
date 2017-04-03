@@ -1,5 +1,5 @@
 Porto //nome *** o id da cidade e o nome do ficheiro
-470, 270   // exemplo de coordenadas (depois alterar)
+470,270   // exemplo de coordenadas (depois alterar)
 3 //numero hoteis
 HF Ipanema Porto // nome
 3 // numero epocas
@@ -11,10 +11,10 @@ Natal e Passagem de Ano
 540
 
 (...)
-3 // numero de destinos 
+3 // numero de destinos
 12 // id de destino 1
 250 // preco destino 1
-200 // tempo até destino em min
+200 // tempo atï¿½ destino em min
 2 // id destino 2
-500 //preço destino 2
-400 // tempo até destino em min
+500 //preï¿½o destino 2
+400 // tempo atï¿½ destino em min

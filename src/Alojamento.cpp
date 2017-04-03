@@ -13,8 +13,9 @@ Alojamento::Alojamento() {
 	this->nome = "";
 }
 
-Alojamento::Alojamento(string nome) {
+Alojamento::Alojamento(std::string nome, std::vector<Epoca*>epocas){
 	this->nome = nome;
+	this->epocas = epocas;
 }
 
 void Alojamento::setEpocas(std::vector<Epoca*>epocas){

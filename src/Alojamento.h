@@ -20,8 +20,7 @@ private:
 
 public:
   Alojamento();
-  Alojamento(std::string nome);
-  void setEpocas(std::vector<Epoca*>epocas);
+  Alojamento(std::string nome, std::vector<Epoca*>epocas);
   Epoca* getEpoca(int dia, int mes);
   int getPreco(int dia, int mes);
 
