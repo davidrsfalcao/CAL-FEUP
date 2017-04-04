@@ -1,5 +1,5 @@
 Barcelona
-470,270
+11803,3386
 2
 Hotel Ibis Barcelona Centro
 4

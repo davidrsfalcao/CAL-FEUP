@@ -1,5 +1,5 @@
 Cidade do Mexico
-470,270
+4625,4107
 3
 Mexico Hotel
 1
