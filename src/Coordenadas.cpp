@@ -37,3 +37,9 @@ void Coordenadas::setCoordenadas(int x, int y){
   this->x = x;
   this->y = y;
 }
+
+std::ostream & operator <<(std::ostream &of, const Coordenadas &coord){
+	of <<"Coordenadas: "<<coord.x << "-" << coord.y << std::endl;
+
+	return of;
+}

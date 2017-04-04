@@ -8,6 +8,7 @@
 #ifndef CIDADE_H_
 #define CIDADE_H_
 #include <vector>
+#include <iostream>
 #include "Alojamento.h"
 #include "Coordenadas.h"
 
@@ -30,10 +31,12 @@ public:
 	std::string getNome();
 	Coordenadas getCoordenadas();
 	void setCoordenadas(Coordenadas coordenadas);
+	std::vector<Alojamento*> getTodosHoteis();
 	Alojamento* HotelMaisBarato(int dia, int mes);
 	std::vector<int> getDestinos();
 	int getIdDestino(int n);
 	int getCustoViagemDestino(int n);
+	friend std::ostream & operator <<(std::ostream &of, const Cidade &ci);
 
 };
 

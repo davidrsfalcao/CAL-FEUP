@@ -8,6 +8,7 @@
 #ifndef SRC_DATA_H_
 #define SRC_DATA_H_
 #include <string>
+#include <iostream>
 
 class Epoca {
 private:
@@ -27,6 +28,7 @@ public:
   int getMesFim();
   int getPreco();
   std::string getNome();
+  friend std::ostream & operator <<(std::ostream &of, const Epoca &ep);
 
 };
 

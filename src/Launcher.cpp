@@ -124,20 +124,9 @@ void carregarFicheiros() {
 
 }
 
-void imprimirId(){
+void imprimirCidade(Cidade cidade){
 
-	std::cout << "Ordenadas por Id:" << endl << endl;
-	for(size_t i = 0; i< cidadesId.size(); i++){
-		std::cout << cidadesId[i].getId() << " - " << cidadesId[i].getNome()<< endl;
-	}
-
-
-	std::cout << "\n\nOrdenadas por Nome:" << endl << endl;
-	for(size_t i = 0; i< cidadesNome.size(); i++){
-		std::cout << cidadesNome[i].getNome() <<" - "<<cidadesNome[i].getId() << endl;
-	}
-
-
+	std::cout << cidade;
 
 }
 
@@ -216,18 +205,14 @@ int main() {
 	//testes();
 	carregarFicheiros();
 
-	for(size_t i=0; i<cidadesNome.size(); i++)
-	{
-		std::cout << cidadesNome[i].getNome() << ";" << endl;
-	}
-
 	Cidade cidade = pesquisaNome(cidadesNome,"Porto");
+	imprimirCidade(cidade);
 
 
-	std::cout << endl << endl << "O id de "<< cidade.getNome()<<" e " << cidade.getId();
-	std::cout << endl << "CordX: " << cidade.getCoordenadas().getX() << " e " << cidade.getCoordenadas().getY() << endl;
-	std::cout << "Hotel mais barato: " << cidade.HotelMaisBarato(21,12)->getNome()<< " com preco "<< cidade.HotelMaisBarato(3,8)->getPreco(3,8) << endl;
-	std::cout << "N destinos: " << cidade.getDestinos().size() << endl;
+//	std::cout << endl << endl << "O id de "<< cidade.getNome()<<" e " << cidade.getId();
+//	std::cout << endl << "CordX: " << cidade.getCoordenadas().getX() << " e " << cidade.getCoordenadas().getY() << endl;
+//	std::cout << "Hotel mais barato: " << cidade.HotelMaisBarato(21,12)->getNome()<< " com preco "<< cidade.HotelMaisBarato(3,8)->getPreco(3,8) << endl;
+//	std::cout << "N destinos: " << cidade.getDestinos().size() << endl;
 
 
 	return 0;

@@ -7,6 +7,7 @@
 
 #ifndef SRC_COORDENADAS_H_
 #define SRC_COORDENADAS_H_
+#include <iostream>
 
 class Coordenadas {
 
@@ -34,6 +35,8 @@ public:
 	void setY(int y);
 
 	void setCoordenadas(int x, int y);
+
+	friend std::ostream & operator <<(std::ostream &of, const Coordenadas &coord);
 
 
 };

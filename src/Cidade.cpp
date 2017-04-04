@@ -46,6 +46,10 @@ void Cidade::setCoordenadas(Coordenadas coOrdenadas){
 	this->coordenadas = coordenadas;
 }
 
+std::vector<Alojamento*> Cidade::getTodosHoteis(){
+	return hoteis;
+}
+
 Alojamento* Cidade::HotelMaisBarato(int dia, int mes) {
 
 	std::vector<Alojamento*>::iterator it = hoteis.begin();
@@ -78,4 +82,15 @@ int Cidade::getIdDestino(int n){
 int Cidade::getCustoViagemDestino(int n){
 
 	return destinos[1+n*3];
+}
+
+std::ostream & operator <<(std::ostream &of, const Cidade &ci){
+
+	of << "ID: " << ci.id << std::endl;
+	of << "Cidade:" << ci.nome << std::endl;
+	for (size_t i = 0; i < ci.hoteis.size(); i++) {
+		of << (*ci.hoteis[i]) << std::endl;
+	}
+
+	return of;
 }
