@@ -35,7 +35,8 @@ public:
 	Alojamento* HotelMaisBarato(int dia, int mes);
 	std::vector<int> getDestinos();
 	int getIdDestino(int n);
-	int getCustoViagemDestino(int n);
+	int getCustoViagem(int n);
+	int getTempoViagem(int n);
 	friend std::ostream & operator <<(std::ostream &of, const Cidade &ci);
 	bool operator==(const Cidade &ci);
 	bool operator!=(const Cidade &ci);

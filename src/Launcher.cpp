@@ -137,58 +137,6 @@ void imprimirCidade(Cidade cidade){
 
 }
 
-void testes(){
-
-	Cidade cidade = *(new Cidade());
-	cidade.setNome("Porto");
-	cidade.setCoordenadas(Coordenadas(450,450));
-	cidade.setId(12);
-
-	gv->addNode(12, -100, 300);
-	gv->setVertexLabel(12, "PORTO");
-	gv->setVertexColor(12, "white");
-	gv->rearrange();
-
-
-	cidadesId.push_back(cidade);
-	cidadesNome.push_back(cidade);
-
-	cidade.setNome("Lisboa");
-	cidade.setId(1);
-
-	cidadesId.push_back(cidade);
-	cidadesNome.push_back(cidade);
-
-	cidade.setNome("Barcelona");
-	cidade.setId(34);
-
-	cidadesId.push_back(cidade);
-	cidadesNome.push_back(cidade);
-
-	cidade.setNome("Pequim");
-	cidade.setId(2);
-
-	cidadesId.push_back(cidade);
-	cidadesNome.push_back(cidade);
-
-	cidade.setNome("Toquio");
-	cidade.setId(21);
-
-	cidadesId.push_back(cidade);
-	cidadesNome.push_back(cidade);
-
-	cidade.setNome("Bruxelas");
-	cidade.setId(13);
-
-	cidadesId.push_back(cidade);
-	cidadesNome.push_back(cidade);
-
-	cidadesId = ordenarPorId(cidadesId, 0, cidadesId.size()-1);
-	cidadesNome = ordenarPorNome(cidadesNome, 0, cidadesNome.size()-1);
-	//imprimirId();
-
-}
-
 void inicializarGraphicViewer(){
 	//Inicializar graphos
 	gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
@@ -204,7 +152,7 @@ int main() {
 	//testes();
 	carregarFicheiros();
 
-	Cidade cidade = pesquisaId(cidadesId,2);
+	Cidade cidade = pesquisaId(cidadesId,1);
 	imprimirCidade(cidade);
 
 

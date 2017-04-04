@@ -6,6 +6,9 @@
 */
 
 #include "Cidade.h"
+#include "Algoritmos.h"
+
+extern std::vector<Cidade> cidadesId;
 
 Cidade::Cidade() {
 	id = 999999;
@@ -79,9 +82,14 @@ int Cidade::getIdDestino(int n){
 	return destinos[n*3];
 }
 
-int Cidade::getCustoViagemDestino(int n){
+int Cidade::getCustoViagem(int n){
 
 	return destinos[1+n*3];
+}
+
+int Cidade::getTempoViagem(int n){
+
+	return destinos[2+n*3];
 }
 
 std::ostream & operator <<(std::ostream &of, const Cidade &ci){
@@ -90,6 +98,18 @@ std::ostream & operator <<(std::ostream &of, const Cidade &ci){
 	of << "Cidade:" << ci.nome << std::endl;
 	for (size_t i = 0; i < ci.hoteis.size(); i++) {
 		of << (*ci.hoteis[i]) << std::endl;
+	}
+	of << "Numero destinos: " << ci.destinos.size()/3 << std::endl;
+	of << "Destinos: " << std::endl << std::endl;
+
+	for (size_t i = 0; i < (ci.destinos.size()/3) ; i++) {
+
+		unsigned int id = ci.destinos[i*3];
+		Cidade cid = pesquisaId(cidadesId,id);
+
+		of << "Cidade: " << cid.getNome() << std::endl;
+		of << "Custo Viagem: " << ci.destinos[1+i*3] << std::endl;
+		of << "Tempo Viagem: " << ci.destinos[2+i*3] << std::endl << std::endl;
 	}
 
 	return of;
