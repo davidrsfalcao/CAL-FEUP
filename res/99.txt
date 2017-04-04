@@ -1,0 +1,46 @@
+Brasilia
+470,270
+3
+Brasilia Hotel
+2
+Verao
+21-11/20-02
+150
+Resto do Ano
+21-02/20-11
+100
+Ipanema Brasilia Hotel
+2
+Verao
+21-11/20-02
+160
+Resto do Ano
+21-02/20-11
+120
+Athos Hotel
+2
+Verao
+21-11/20-02
+140
+Resto do Ano
+21-02/20-11
+100
+6
+98
+60
+40
+97
+120
+80
+100
+70
+60
+101
+70
+60
+92
+100
+110
+96
+65
+60
