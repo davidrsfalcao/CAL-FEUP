@@ -1,0 +1,29 @@
+Panama
+470,270
+2
+Panama Hotel
+2
+Verao
+21-11/20-02
+190
+Resto do Ano
+21-02/20-11
+150
+Panama Royal Hotel
+2
+Verao
+21-11/17-02
+185
+Resto do Ano
+18-02/20-11
+155
+3
+90
+75
+60
+97
+65
+60
+91
+60
+55
