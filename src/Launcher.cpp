@@ -211,7 +211,7 @@ int main() {
 
 //	std::cout << endl << endl << "O id de "<< cidade.getNome()<<" e " << cidade.getId();
 //	std::cout << endl << "CordX: " << cidade.getCoordenadas().getX() << " e " << cidade.getCoordenadas().getY() << endl;
-//	std::cout << "Hotel mais barato: " << cidade.HotelMaisBarato(21,12)->getNome()<< " com preco "<< cidade.HotelMaisBarato(3,8)->getPreco(3,8) << endl;
+	std::cout << "Hotel mais barato: " << cidade.HotelMaisBarato(31,12)->getNome()<< " com preco "<< cidade.HotelMaisBarato(31,12)->getPreco(31,12) << endl;
 //	std::cout << "N destinos: " << cidade.getDestinos().size() << endl;
 
 

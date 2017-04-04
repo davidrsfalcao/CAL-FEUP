@@ -32,42 +32,91 @@ int Alojamento::getPreco(int dia, int mes) {
 
 Epoca* Alojamento::getEpoca(int dia, int mes) {
 
-	vector<Epoca*>::iterator it;
+	std::vector<Epoca*>ep = epocas;
+	for (size_t i = 0; i < ep.size(); i++) {
+		bool passaAno;
+		bool mesM = (ep[i]->getMesInicio() < ep[i]->getMesFim());
+		bool mesI = (ep[i]->getMesInicio() == ep[i]->getMesFim());
+		bool diaM = (ep[i]->getDiaInicio() < ep[i]->getDiaFim());
 
-	for (vector<Epoca*>::iterator it = epocas.begin(); it != epocas.end();
-	it++) {
+		if (mesM || (mesI && diaM)){
+			passaAno = false;
+		}
+		else passaAno = true;
 
-		if (((*it)->getMesInicio() > (*it)->getMesFim())
-		|| (((*it)->getMesInicio() == (*it)->getMesFim())
-		&& ((*it)->getDiaInicio() > (*it)->getDiaFim()))) {
+		if (!passaAno){
+			if((ep[i]->getMesInicio() < mes) && (ep[i]->getMesFim() > mes)){
+				return ep[i];
+			}
+			else {
+				bool mesII = (ep[i]->getMesInicio() == mes);
+				bool mesIF = (ep[i]->getMesFim() == mes);
 
-			if (((*it)->getMesInicio() > mes) && ((*it)->getMesFim() < mes))
-			return (*it);
+				if(mesII){
+					if(dia >= ep[i]->getDiaInicio()){
+						return ep[i];
+					}
+				}
 
-			if ((*it)->getMesInicio() == mes)
-			if (dia <= (*it)->getDiaInicio())
-			return (*it);
+				if (mesIF){
+					if(dia <= ep[i]->getDiaFim()){
+						return ep[i];
+					}
+				}
 
-			if ((*it)->getMesFim() == mes)
-			if (dia >= (*it)->getDiaFim())
-			return (*it);
+			}
+		}
+		else {
+			bool anoAtual = ((ep[i]->getMesInicio() <= mes) && (mes <= 12));
 
-		} else if (((*it)->getMesInicio() <= mes)
-		&& ((*it)->getMesFim() >= mes)) {
-			if (((*it)->getMesInicio() < mes) && ((*it)->getMesFim() > mes))
-			return (*it);
+			if (anoAtual){
+				if((ep[i]->getMesInicio() < mes) && (12 > mes)){
+					return ep[i];
+				}
+				else {
+					bool mesII = (ep[i]->getMesInicio() == mes);
+					bool mesIF = (12 == mes);
 
-			if ((*it)->getMesInicio() == mes)
-			if (dia >= (*it)->getDiaInicio())
-			return (*it);
+					if(mesII){
+						if(dia >= ep[i]->getDiaInicio()){
+							return ep[i];
+						}
+					}
 
-			if ((*it)->getMesFim() == mes)
-			if (dia <= (*it)->getDiaFim())
-			return (*it);
+					if (mesIF){
+						if(dia <= 31){
+							return ep[i];
+						}
+					}
+				}
+			}
+
+			else {
+				if((1 < mes) && (ep[i]->getMesFim() > mes)){
+					return ep[i];
+				}
+				else {
+					bool mesII = (1 == mes);
+					bool mesIF = (ep[i]->getMesFim() == mes);
+
+					if(mesII){
+						if(dia >= 1){
+							return ep[i];
+						}
+					}
+
+					if (mesIF){
+						if(dia <= ep[i]->getDiaFim()){
+							return ep[i];
+						}
+					}
+
+				}
+			}
 		}
 
 	}
-
+	
 	return new Epoca();
 }
 
