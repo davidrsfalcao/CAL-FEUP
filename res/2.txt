@@ -3,48 +3,48 @@ Lisboa
 3
 Hotel Avenida Palace
 6
-Páscoa
+Pascoa
 15-03/20-04
 350
 Verao
 21-06/22-09
 370
-PassagemDeAno
+Passagem De Ano
 28-12/3-01
 400
-RestoDoAno
+Resto Do Ano
 04-01/14-03
 290
-RestoDoAno
+Resto Do Ano
 21-04/20-06
 280
-RestoDoAno
+Resto Do Ano
 23-09/27-12
 270
 Bairro Alto Hotel
 6
-Páscoa
+Pascoa
 15-03/20-04
 610
 Verao
 21-06/22-09
 580
-PassagemDeAno
+Passagem De Ano
 28-12/3-01
 625
-RestoDoAno
+Resto Do Ano
 04-01/14-03
 470
-RestoDoAno
+Resto Do Ano
 21-04/20-06
 470
-RestoDoAno
+Resto Do Ano
 23-09/27-12
 430
 7
 1
-150
-85
+60
+40
 3
 220
 120
