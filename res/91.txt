@@ -1,5 +1,5 @@
 Guatemala
-470,270
+,270
 3
 Guatemala Hotel
 1
