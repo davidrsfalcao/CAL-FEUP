@@ -1,0 +1,54 @@
+Miami
+6549,4200
+4
+Miami Hotel
+2
+Verao
+21-06/20-09
+340
+Resto do Ano
+21-09/20-06
+290
+Atlantic Hotel
+2
+Verao
+21-06/20-09
+330
+Resto do Ano
+21-09/20-06
+280
+InterContinental Miami Hotel
+2
+Verao
+21-06/20-09
+350
+Resto do Ano
+21-09/20-06
+290
+Florida Mayor Hotel
+2
+Verao
+21-06/20-09
+320
+Resto do Ano
+21-09/20-06
+280
+6
+7
+900
+1200
+88
+200
+190
+83
+200
+300
+89
+180
+100
+84
+190
+210
+86
+390
+400
