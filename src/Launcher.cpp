@@ -153,7 +153,7 @@ int main() {
 	carregarFicheiros();
 
 	Cidade cidade = pesquisaId(cidadesId,1);
-	imprimirCidade(cidade);
+	//imprimirCidade(cidade);
 
 
 	getchar();
