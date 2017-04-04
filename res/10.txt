@@ -1,0 +1,37 @@
+Toulouse
+470,270
+3
+Grand Hotel de L'Opera
+2
+Verão
+21-06/22-09
+85
+RestoDoAno
+23-09/20-06
+40
+Hotel Le Pere Leon
+2
+Verão
+21-06/22-09
+75
+RestoDoAno
+23-09/20-06
+35
+Hotel de Brienne
+2
+Verão
+21-06/22-09
+70
+RestoDoAno
+23-09/20-06
+40
+3
+19
+100
+115
+47
+95
+110
+109
+325
+450

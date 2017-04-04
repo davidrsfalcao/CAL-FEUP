@@ -1,0 +1,53 @@
+Frankfurt
+470,270
+2
+Steigenberger Frankfurter Hof
+4
+Verão
+21-06/22-09
+125
+Passagem de Ano
+28-12/03-01
+135
+RestoDoAno
+04-01/20-06
+100
+RestoDoAno
+23-09/27-12
+100
+Hotel Excelsior
+4
+Verão
+21-06/22-09
+60
+Passagem de Ano
+28-12/03-12
+75
+RestoDoAno
+04-01/20-06
+40
+RestoDoAno
+23-09/27-12
+40
+7
+3
+100
+110
+28
+135
+125
+55
+190
+165
+67
+950
+660
+71
+800
+690
+78
+2500
+1200
+83
+715
+620
