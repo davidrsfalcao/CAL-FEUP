@@ -116,7 +116,7 @@ Epoca* Alojamento::getEpoca(int dia, int mes) {
 		}
 
 	}
-	
+
 	return new Epoca();
 }
 

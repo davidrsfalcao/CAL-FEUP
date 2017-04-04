@@ -19,7 +19,7 @@
 #include "Alojamento.h"
 
 #define NOT_DYNAMIC false
-#define EDGE_COLOR "black"
+#define EDGE_COLOR "white"
 #define VERTEX_COLOR "red"
 #define ID_MAX 110 //mudar consoante o numero de ficheiros
 Graph<Cidade> graph;
@@ -116,7 +116,13 @@ void carregarFicheiros() {
 			cidadesId.push_back(cidade);
 			cidadesNome.push_back(cidade);
 			in.close();
+
+			gv->addNode(contador, cords.getX(), cords.getY());
+			gv->setVertexLabel(contador, nomeCidade);
+			gv->setVertexColor(contador, VERTEX_COLOR);
+			gv->rearrange();
 		}
+
 		contador++;
 	}
 	cidadesId = ordenarPorId(cidadesId, 0, cidadesId.size()-1);
@@ -184,28 +190,20 @@ void testes(){
 
 void inicializarGraphicViewer(){
 	//Inicializar graphos
-	gv = new GraphViewer(1024, 794, NOT_DYNAMIC);
+	gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
 	gv->setBackground("background.jpg");
-	gv->createWindow(1024, 794);
+	gv->createWindow(1680, 1050);
 	gv->defineVertexColor(VERTEX_COLOR);
 	gv->defineEdgeColor(EDGE_COLOR);
 }
 
 int main() {
-	//testes
-	//std::cout << "HELLO WORLD";
-	//carregarFicheiros();
-	//testes();
-	//Cidade cidade = pesquisaNome(cidadesNome,"Porto");
 
-	//std::cout << std::endl << std::endl << "O id de Porto e " << cidade.getId();
-
-
-	//inicializarGraphicViewer();
+	inicializarGraphicViewer();
 	//testes();
 	carregarFicheiros();
 
-	Cidade cidade = pesquisaNome(cidadesNome,"Porto");
+	Cidade cidade = pesquisaId(cidadesId,100);
 	imprimirCidade(cidade);
 
 
@@ -214,6 +212,7 @@ int main() {
 	std::cout << "Hotel mais barato: " << cidade.HotelMaisBarato(31,12)->getNome()<< " com preco "<< cidade.HotelMaisBarato(31,12)->getPreco(31,12) << endl;
 //	std::cout << "N destinos: " << cidade.getDestinos().size() << endl;
 
+	getchar();
 
 	return 0;
 }
