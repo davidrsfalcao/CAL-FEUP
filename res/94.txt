@@ -1,5 +1,5 @@
-Panama
-470,270
+Cidade Panama
+6674,5407
 2
 Panama Hotel
 2

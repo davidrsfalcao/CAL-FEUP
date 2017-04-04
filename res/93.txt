@@ -1,5 +1,5 @@
 San Jose
-470,270
+6364,5347
 3
 San Jose Hotel
 2

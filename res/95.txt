@@ -1,5 +1,5 @@
 Bogota
-470,270
+7034,5807
 3
 Bogota Hotel
 2

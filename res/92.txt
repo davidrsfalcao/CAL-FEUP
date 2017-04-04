@@ -1,5 +1,5 @@
-El Salvador
-470,270
+Sao Salvador
+6074,5064
 2
 El Salvador Hotel
 1
