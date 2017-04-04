@@ -7,8 +7,9 @@
 #include <vector>
 #include <queue>
 #include <list>
-#include <limits>
+#include <climits>
 #include <cmath>
+#include <stddef.h>
 using namespace std;
 
 template <class T> class Edge;

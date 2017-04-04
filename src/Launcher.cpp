@@ -117,6 +117,7 @@ void carregarFicheiros() {
 			cidadesNome.push_back(cidade);
 			in.close();
 
+			graph.addVertex(cidade);
 			gv->addNode(contador, cords.getX(), cords.getY());
 			gv->setVertexLabel(contador, nomeCidade);
 			gv->setVertexColor(contador, VERTEX_COLOR);
@@ -203,14 +204,9 @@ int main() {
 	//testes();
 	carregarFicheiros();
 
-	Cidade cidade = pesquisaId(cidadesId,100);
+	Cidade cidade = pesquisaId(cidadesId,2);
 	imprimirCidade(cidade);
 
-
-//	std::cout << endl << endl << "O id de "<< cidade.getNome()<<" e " << cidade.getId();
-//	std::cout << endl << "CordX: " << cidade.getCoordenadas().getX() << " e " << cidade.getCoordenadas().getY() << endl;
-	std::cout << "Hotel mais barato: " << cidade.HotelMaisBarato(31,12)->getNome()<< " com preco "<< cidade.HotelMaisBarato(31,12)->getPreco(31,12) << endl;
-//	std::cout << "N destinos: " << cidade.getDestinos().size() << endl;
 
 	getchar();
 

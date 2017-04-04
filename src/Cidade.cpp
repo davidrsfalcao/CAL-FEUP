@@ -94,3 +94,13 @@ std::ostream & operator <<(std::ostream &of, const Cidade &ci){
 
 	return of;
 }
+
+bool Cidade::operator==(const Cidade &ci){
+
+	return ci.id == id;
+}
+
+bool Cidade::operator!=(const Cidade &ci){
+
+	return ci.id != id;
+}

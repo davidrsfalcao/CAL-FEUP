@@ -37,7 +37,8 @@ public:
 	int getIdDestino(int n);
 	int getCustoViagemDestino(int n);
 	friend std::ostream & operator <<(std::ostream &of, const Cidade &ci);
-
+	bool operator==(const Cidade &ci);
+	bool operator!=(const Cidade &ci);
 };
 
 
