@@ -12,10 +12,13 @@ O cliente especifica:
 
 **ou**
 
-- conjunto de locais que pretende visitar na viagem 
+- conjunto de locais que pretende visitar na viagem
 
 **ou**
 
 - o cliente pode ainda especificar um tempo limite para realizar a viagem.
 
-Avalie a conectividade do grafo, a fim de evitar que locais a visitar se encontrem em zonas inacessíveis.
+#Developers
+- David Falcão
+- Pedro Miranda
+- Verónica Fradique
