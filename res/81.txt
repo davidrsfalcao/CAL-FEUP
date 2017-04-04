@@ -1,0 +1,32 @@
+Calgary
+4218,2701
+2
+Calgary Hotel
+2
+Todo o Ano
+2-03/1-12
+140
+Inverno
+2-12/1-03
+200
+Canada Mayor Hotel
+2
+Todo o Ano
+2-03/1-12
+150
+Inverno
+2-12/1-03
+210
+4
+80
+150
+200
+79
+160
+190
+83
+170
+180
+84
+240
+260
