@@ -1,0 +1,47 @@
+Las Vegas
+4255,3441
+5
+Vegas Hotel
+1
+Todo o Ano
+1-01/31-12
+300
+Paris Royal Hotel
+1
+Todo o Ano
+1-01/31-12
+320
+Lotus Hotel
+1
+Todo o Ano
+1-01/31-12
+290
+Cesar Palace Hotel
+1
+Todo o Ano
+1-01/31-12
+315
+Sunrise Manor Hotel
+1
+Todo o Ano
+1-01/31-12
+330
+6
+89
+300
+550
+86
+160
+90
+80
+300
+590
+84
+400
+500
+85
+300
+390
+83
+450
+600
