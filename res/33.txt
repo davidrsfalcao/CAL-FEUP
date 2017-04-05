@@ -1,0 +1,50 @@
+Amesterdao
+470,270
+2
+Meininger Hotel Amsterdam City West
+4
+Primavera
+20-03/19-06
+90
+Natal
+18-12/28-12
+90
+Resto Do Ano
+29-12/19-03
+50
+Resto Do Ano
+20-06/27-12
+50
+Hotel Casa Amsterdam
+4
+Primavera
+20-03/19-06
+65
+Natal
+18-12/28-12
+65
+Resto Do Ano
+29-12/19-03
+35
+Resto Do Ano
+20-06/27-12
+35
+6
+10
+85
+75
+31
+25
+30
+36
+60
+55
+48
+150
+135
+83
+575
+495
+95
+725
+665
