@@ -63,6 +63,18 @@ void creditos(){
 	std::cin.ignore();
 }
 
+void carregarFichMsg(){
+
+	gotoxy(0,21);
+	textcolor(light_red);
+	std::cout << "\t    Os ficheiros ja foram carregados" << std::endl;
+	textcolor(white);
+	Sleep(1000);
+	gotoxy(0,21);
+	std::cout << "\t                                    " << std::endl;
+
+}
+
 int carregarFicheiros() {
 
 	int contador = 1;
@@ -164,13 +176,10 @@ int carregarFicheiros() {
 	std::cout << "\t    Carregamento completo";
 	textcolor(white);
 	Sleep(500);
+	gotoxy(0,21);
 	std::cout << "\t                         ";
 
 	return 1;
-}
-
-void imprimirCidade(Cidade cidade){
-	std::cout << cidade;
 }
 
 void inicializarGraphicViewer(){
@@ -188,6 +197,31 @@ void inicializarGraphicViewer(){
 
 	gv->rearrange();
 
+}
+
+void abrirMapa(int opcao){
+
+	if (opcao == 0){
+		gotoxy(0,21);
+		textcolor(light_red);
+		std::cout << "\t    Carregue os ficheiros primeiro" << std::endl;
+		textcolor(white);
+		Sleep(1000);
+		gotoxy(0,21);
+		std::cout << "\t                                  " << std::endl;
+	}
+	else {
+		gotoxy(0,21);
+		textcolor(yellow);
+		std::cout << "\t    A abir . . ." << std::endl;
+
+		inicializarGraphicViewer();
+
+		gotoxy(0,21);
+		textcolor(white);
+		std::cout << "\t                 " << std::endl;
+
+	}
 
 }
 
@@ -214,6 +248,7 @@ void menu_inicial_ops(int opcao, int opcao_b){
 void menu_inicial(){
 	int opcao = 1, opcao_b = 1, tecla;
 	bool imprimir = true;
+	int carFich = 0;
 
 	do
 	{
@@ -244,13 +279,20 @@ void menu_inicial(){
 		switch (opcao)
 		{
 		case 1:
-			carregarFicheiros();
-			imprimir = true;
+			if (carFich == 0){
+				carFich = carregarFicheiros();
+			}
+			else carregarFichMsg();
 			break;
 
 		case 2:
-			inicializarGraphicViewer();
-			imprimir = true;
+
+			if (carFich == 0){
+				abrirMapa(0);
+			}
+			else {
+				abrirMapa(1);
+			}
 			break;
 
 		case 3:
