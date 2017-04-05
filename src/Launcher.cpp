@@ -346,11 +346,14 @@ void menu_inicial(){
 }
 
 int main() {
-	configurar_terminal();
-	gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
-	menu_inicial();
+	 configurar_terminal();
+	 gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
+	 menu_inicial();
+//	carregarFicheiros();
+//	Cidade cid = pesquisaNome(cidadesNome, "Banguecoque");
+//	std::cout << cid;
 
-	limparEcra();
-	gv->closeWindow();
+	 limparEcra();
+	 gv->closeWindow();
 	return 0;
 }
