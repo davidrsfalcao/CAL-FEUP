@@ -1,6 +1,6 @@
 Maputo
 470,270
-3
+2
 Maputo Hotel
 2
 Verao
