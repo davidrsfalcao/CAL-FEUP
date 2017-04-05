@@ -1,7 +1,6 @@
 # CAL-proj1
 1st project of Cal-FEUP
 
-
 # Tema 2: Agência de Viagens
 Uma agência de viagens auxilia os seus clientes na pesquisa das melhores soluções para a marcação de viagens e respetivo alojamento.
 
@@ -17,6 +16,9 @@ O cliente especifica:
 **ou**
 
 - o cliente pode ainda especificar um tempo limite para realizar a viagem.
+
+# Screenshots
+![alt-taj](http://image.prntscr.com/image/09fc84384f634ef49fe234d86b11deb8.png)
 
 # Developers
 - David Falcão
