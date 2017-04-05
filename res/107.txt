@@ -1,5 +1,5 @@
 Maputo
-470,270
+14153,7511
 3
 Maputo Hotel
 2

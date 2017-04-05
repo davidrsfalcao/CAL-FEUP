@@ -1,5 +1,5 @@
 Cairo
-470,270
+13875,3996
 2
 Cairo Hotel
 1
