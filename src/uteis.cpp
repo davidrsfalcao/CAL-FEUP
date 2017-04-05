@@ -509,16 +509,33 @@ void titulo(){
 	int g = 219;
 	char i = g; // obter -> â–ˆ
 
-	textcolor(light_cyan);
+	textcolor(cyan);
 	cout << "\t      " << char2 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char4 << endl;
-	cout << "\t      "<<char1 << " "<<i<<i<<i<<i<<i<<i<<i<<"  "<<i<<i<<i<<"   "<<i<<i<<i<<i<<i<<i<<"   "<<i<<i<<i<<i<<i<<i<<"  "<<i<<i<<i<<"  "<<i<<i<<i<<"   "<<i<<i<<i<<"     "<<i<<i<<i<<"     " << char1 << endl;
-	cout << "\t      "<<char1 << " "<<i<<i<<i<<"  "<<i<<i<<i<<" "<<i<<i<<i<<"  "<<i<<i<<i<<"      "<<i<<i<<i<<"      "<<i<<i<<i<<"  "<<i<<i<<i<<i<<"  "<<i<<i<<i<<"    "<<i<<i<<i<<i<<i<<"    " << char1 << endl;
-	cout << "\t      "<<char1 << " "<<i<<i<<i<<"  "<<i<<i<<i<<" "<<i<<i<<i<<"  "<<i<<i<<i<<i<<i<<"   "<<i<<i<<i<<"       "<<i<<i<<i<<"  "<<i<<i<<i<<i<<i<<" "<<i<<i<<i<<"   "<<i<<i<<i<<" "<<i<<i<<i<<"   " << char1 << endl;
-	cout << "\t      "<<char1 << " "<<i<<i<<i<<i<<i<<i<<i<<"  "<<i<<i<<i<<"    "<<i<<i<<i<<i<<i<<" "<<i<<i<<i<<"       "<<i<<i<<i<<"  "<<i<<i<<" "<<i<<i<<i<<i<<i<<i<<"   "<<i<<i<<i<<" "<<i<<i<<i<<"   " << char1 << endl;
-	cout << "\t      "<<char1 << " "<<i<<i<<i<<"      "<<i<<i<<i<<"      "<<i<<i<<i<<"  "<<i<<i<<i<<"      "<<i<<i<<i<<"  "<<i<<i<<"   "<<i<<i<<i<<i<<"  "<<i<<i<<i<<i<<i<<i<<i<<i<<i<<"  " << char1 << endl;
-	cout << "\t      "<<char1 << " "<<i<<i<<i<<"      "<<i<<i<<i<<"  "<<i<<i<<i<<i<<i<<i<<"    "<<i<<i<<i<<i<<i<<i<<"  "<<i<<i<<i<<"  "<<i<<i<<"    "<<i<<i<<i<<"  "<<i<<i<<i<<"   "<<i<<i<<i<<"  " << char1 << endl;
+
+	cout << "\t      "<<char1 << "  "<<i<<i<<i<<i<<i<<i<<i<<"  "<<i<<i<<"  "<<i<<i<<i<<i<<i<<i<<i<<"                                      " << char1 << endl;
+	cout << "\t      "<<char1 << "  "<<i<<i<< "   " <<i<<i<<"  "<<i<<i<<"  "<<i<<i<< "   " <<i<<i<<"                                      " << char1 << endl;
+	cout << "\t      "<<char1 << "  "<<i<<i<< "   " <<i<<i<<"  "<<i<<i<<"  "<<i<<i<< "   " <<i<<i<<"                                      " << char1 << endl;
+	cout << "\t      "<<char1 << "  "<<i<<i<<i<<i<<i<<i<<i<<"  "<<i<<i<<"  "<<i<<i<<i<<i<<i<<i<<i<<i<<i<<"                                    " << char1 << endl;
+	cout << "\t      "<<char1 << "  "<<i<<i<< "   " <<i<<i<<"  "<<i<<i<<"  "<<i<<i<< "     " <<i<<i<<"                                    " << char1 << endl;
+	cout << "\t      "<<char1 << "  "<<i<<i<< "   " <<i<<i<<"  "<<i<<i<<"  "<<i<<i<< "     " <<i<<i<<"                                    " << char1 << endl;
+
 	cout << "\t      " << char5 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char6 << endl;
 	textcolor(white);
+
+	gotoxy(42,5);
+
+	textcolor(cyan);
+	for (size_t k = 0; k < 30; k++) {
+			cout << i ;
+	}
+
+	gotoxy(48,4);
+	cout << "AGENCIA DE VIAJENS";
+
+	textcolor(white);
+
+	gotoxy(0,21);
+
 }
 
 void configurar_terminal(){

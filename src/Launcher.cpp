@@ -152,14 +152,14 @@ int main() {
 	configurar_terminal();
 	limparEcra();
 	titulo();
-	inicializarGraphicViewer();
-	carregarFicheiros();
+	//inicializarGraphicViewer();
+	//carregarFicheiros();
 
-	Cidade cidade = pesquisaId(cidadesId,1);
+	//Cidade cidade = pesquisaId(cidadesId,1);
 	//imprimirCidade(cidade);
 
 
-	getchar();
+	//getchar();
 
 	return 0;
 }
