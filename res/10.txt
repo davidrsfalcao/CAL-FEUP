@@ -1,28 +1,28 @@
 Toulouse
-470,270
+11914,3053
 3
 Grand Hotel de L'Opera
 2
-Verão
+Verao
 21-06/22-09
 85
-RestoDoAno
+Resto Do Ano
 23-09/20-06
 40
 Hotel Le Pere Leon
 2
-Verão
+Verï¿½o
 21-06/22-09
 75
-RestoDoAno
+Resto Do Ano
 23-09/20-06
 35
 Hotel de Brienne
 2
-Verão
+Verï¿½o
 21-06/22-09
 70
-RestoDoAno
+Resto Do Ano
 23-09/20-06
 40
 3
@@ -32,6 +32,6 @@ RestoDoAno
 47
 95
 110
-109
+108
 325
 450

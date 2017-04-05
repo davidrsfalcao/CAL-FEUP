@@ -1,46 +1,46 @@
 Bordeus
-470,270
+11785,2960
 3
 Quality Hotel Bordeaux Centre
 4
-Verão
+Verao
 21-06/22-09
 75
 Natal
 18-12/28-12
 85
-RestoDoAno
+Resto Do Ano
 29-12/20-06
 45
-RestoDoAno
+Resto Do Ano
 23-09/17-12
 45
 Mercure Bordeaux Cite Mondiale Centre Ville
 4
-Verão
+Verao
 21-06/22-09
 95
 Natal
 18-12/28-12
 95
-RestoDoAno
+Resto Do Ano
 29-12/20-06
 55
-RestoDoAno
+Resto Do Ano
 23-09/17-12
 55
 Maison d'Hotes Chambre en Ville
 4
-Verão
+Verao
 21-06/22-09
 140
 Natal
 18-12/28-12
 140
-RestoDoAno
+Resto Do Ano
 29-12/20-06
 100
-RestoDoAno
+Resto Do Ano
 23-09/17-12
 100
 3
