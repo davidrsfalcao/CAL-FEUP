@@ -1,11 +1,6 @@
 Maputo
-<<<<<<< HEAD
 14153,7511
-3
-=======
-470,270
 2
->>>>>>> origin/master
 Maputo Hotel
 2
 Verao
