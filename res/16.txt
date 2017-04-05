@@ -1,5 +1,5 @@
 Frankfurt
-470,270
+12303,2664
 2
 Steigenberger Frankfurter Hof
 4
@@ -43,10 +43,10 @@ Resto Do Ano
 950
 660
 71
-800
+1600
 690
 78
-2500
+1400
 1200
 82
 1000

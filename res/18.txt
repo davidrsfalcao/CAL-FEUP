@@ -1,36 +1,36 @@
 Munique
-470,270
+12617,2720
 4
 NH Munchen Deutscher Kaiser
 2
-Verão
+Verao
 21-06/22-09
 212
-RestoDoAno
+Resto Do Ano
 23-09/20-06
 175
 Best Western Atrium Hotel
 2
-Verão
+Verao
 21-06/22-09
 135
-RestoDoAno
+Resto Do Ano
 23-09/20-06
 100
 Buddy Hotel
 2
-Verão
+Verao
 21-06/22-09
 110
-RestoDoAno
+Resto Do Ano
 23-09/20-06
 80
 Euro Youth Hotel Munich
 2
-Verão
+Verao
 21-06/22-09
 55
-RestoDoAno
+Resto Do Ano
 23-09/20-06
 35
 4
@@ -40,9 +40,9 @@ RestoDoAno
 52
 115
 100
-64
+63
 870
 670
-69
+68
 795
 645

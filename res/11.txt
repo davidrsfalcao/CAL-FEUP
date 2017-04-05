@@ -1,60 +1,60 @@
 Lyon
-470,270
+12044,2942
 4
 Okko Hotels Lyon Pont
 4
-Verão
+Verao
 21-06/22-09
 130
 Natal
 18-12/28-12
 130
-RestoDoAno
+Resto Do Ano
 29-12/20-06
 90
-RestoDoAno
+Resto Do Ano
 23-09/17-12
 90
 Mercure Lyon Centre Beaux-Arts
 4
-Verão
+Verao
 21-06/22-09
 100
 Natal
 18-12/28-12
 105
-RestoDoAno
+Resto Do Ano
 29-12/20-06
 70
-RestoDoAno
+Resto Do Ano
 23-09/17-12
 70
 Sofitel Lyon Bellecour
 4
-Verão
+Verao
 21-06/22-09
 170
 Natal
 18-12/28-12
 175
-RestoDoAno
+Resto Do Ano
 29-12/20-06
 120
-RestoDoAno
+Resto Do Ano
 23-09/17-12
 120
 Novotel Lyon Gerland Musee des Confluences
 4
-Verão
+Verao
 21-06/22-09
 175
 Natal
 18-12/28-12
 175
-RestoDoAno
+Resto Do Ano
 29-12/20-06
 125
-RestoDoAno
+Resto Do Ano
 23-09/17-12
 125
 3
@@ -67,6 +67,6 @@ RestoDoAno
 24
 95
 120
-99
-755
-670
+98
+1140
+900

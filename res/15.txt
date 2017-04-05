@@ -1,40 +1,40 @@
 Roma
-470,270
+12617,3164
 3
 Hotel Degli Aranci
 2
-Verão
+Verao
 21-06/22-09
 125
-RestoDoAno
+Resto Do Ano
 23-09/20-06
 95
 Augusta Lucilla Palace
 2
-Verão
+Verao
 21-06/22-09
 160
-RestoDoAno
+Resto Do Ano
 23-09/20-06
 120
 Gioberti Art Hotel
 2
-Verão
+Verao
 21-06/22-09
 95
-RestoDoAno
+Resto Do Ano
 23-09/20-06
 65
 4
 4
 55
 60
-83
-850
+82
+1250
 670
-91
-1100
+90
+1230
 770
-108
-740
+107
+640
 570

@@ -1,5 +1,5 @@
 Copenhaga
-470,270
+12654,2276
 2
 Copenhagen Star Hotel
 4
@@ -9,10 +9,10 @@ Festival Roskilde
 Passagem de Ano
 28-12/03-01
 140
-RestoDoAno
+Resto Do Ano
 04-01/24-06
 85
-RestoDoAno
+Resto Do Ano
 07-07/27-12
 85
 Radisson Blu Royal Hotel
@@ -23,19 +23,19 @@ Festival Roskilde
 Passagem de Ano
 28-12/03-01
 335
-RestoDoAno
+Resto Do Ano
 04-01/24-06
 250
-RestoDoAno
+Resto Do Ano
 07-07/27-12
 250
 4
-74
-985
+73
+1230
 750
-76
-2540
+75
+1270
 1200
-90
-685
+89
+1320
 490
