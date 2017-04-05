@@ -1,28 +1,28 @@
 Oslo
-470,270
+12526,1961
 3
 Anker Hotel
 2
-Verão
+Verao
 21-06/22-09
 100
-RestoDoAno
+Resto Do Ano
 23-09/20-06
 65
 Best Western Karl Johan Hotel
 2
-Verão
+Verao
 21-06/22-09
 125
-RestoDoAno
+Resto Do Ano
 23-09/20-06
 85
 Voksenasen
 2
-Verão
+Verao
 21-06/22-09
 120
-RestoDoAno
+Resto Do Ano
 23-09/20-06
 95
 6
@@ -32,14 +32,15 @@ RestoDoAno
 54
 225
 185
-870
-690
-75
+86
+1290
+950
+74
 1340
 1200
-81
+80
 585
 420
-93
+92
 850
 690

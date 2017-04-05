@@ -1,46 +1,46 @@
 Estocolmo
-470,270
+13006,2017
 3
 Central Hotel
 4
-Verão
+Verao
 21-06/22-09
 165
 Natal
 18-12/28-12
 165
-RestoDoAno
+Resto Do Ano
 29-12/20-06
 110
-RestoDoAno
+Resto Do Ano
 23-09/17-12
 110
 Hotel Birger Jarl
 4
-Verão
+Verao
 21-06/22-09
 110
 Natal
 18-12/28-12
 120
-RestoDoAno
+Resto Do Ano
 29-12/20-06
 90
-RestoDoAno
+Resto Do Ano
 23-09/17-12
 90
 Scandic Anglais
 4
-Verão
+Verao
 21-06/22-09
 190
 Natal
 18-12/28-12
 190
-RestoDoAno
+Resto Do Ano
 29-12/20-06
 130
-RestoDoAno
+Resto Do Ano
 23-09/17-12
 130
 7
@@ -56,14 +56,12 @@ RestoDoAno
 48
 165
 130
-67
-790
-585
-77
-2125
+66
+980
+785
+76
+1925
 1230
-110
+109
 300
 255
-
-

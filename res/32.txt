@@ -1,9 +1,9 @@
 Luxemburgo
-470,270
+12118,2609
 3
 Hotel Empire
 4
-Verão
+Verao
 21-06/22-09
 110
 Natal
@@ -17,7 +17,7 @@ Resto Do Ano
 80
 Hotel Grey
 4
-Verão
+Verao
 21-06/22-09
 135
 Natal
@@ -31,7 +31,7 @@ Resto Do Ano
 95
 Hotel Piemont
 4
-Verão
+Verao
 21-06/22-09
 125
 Natal
@@ -53,6 +53,6 @@ Resto Do Ano
 57
 280
 225
-73
+72
 1110
 850

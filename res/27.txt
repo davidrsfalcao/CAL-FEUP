@@ -1,5 +1,5 @@
 Rovaniemi
-470,270
+13579,1536
 2
 Cumulus Resort Pohjanhovi
 4
@@ -36,6 +36,6 @@ Resto Do Ano
 35
 175
 140
-61
-470
+56
+570
 365

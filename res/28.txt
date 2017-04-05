@@ -1,12 +1,12 @@
 Oulu
-470,270
+13450,1684
 3
 Hotel Lasaretti
 2
 Natal
 18-12/28-12
 100
-RestoDoAno
+Resto Do Ano
 29-12/17-12
 75
 Hotelli Pohjankievari
@@ -14,7 +14,7 @@ Hotelli Pohjankievari
 Natal
 18-12/28-12
 75
-RestoDoAno
+Resto Do Ano
 29-12/17-12
 50
 Lapland Hotels Oulu
@@ -22,7 +22,7 @@ Lapland Hotels Oulu
 Natal
 18-12/28-12
 80
-RestoDoAno
+Resto Do Ano
 29-12/17-12
 45
 3
@@ -35,4 +35,3 @@ RestoDoAno
 53
 75
 90
-

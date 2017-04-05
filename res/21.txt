@@ -1,12 +1,12 @@
 Alborg
-470,270
+12395,2202
 2
 Hotel Gestus
 2
 Primavera
 20-03/19-06
 70
-RestoDoAno
+Resto Do Ano
 20-06/19-03
 40
 Comwell Hvide Hus Aalborg
@@ -14,7 +14,7 @@ Comwell Hvide Hus Aalborg
 Primavera
 20-03/19-06
 70
-RestoDoAno
+Resto Do Ano
 20-06/19-03
 40
 2
