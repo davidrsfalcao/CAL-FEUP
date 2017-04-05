@@ -1,5 +1,5 @@
 Brun
-470,270
+470,27
 3
 Hotel Sky Brun
 4
