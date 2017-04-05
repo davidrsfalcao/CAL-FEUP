@@ -149,8 +149,10 @@ void inicializarGraphicViewer(){
 
 int main() {
 
+	configurar_terminal();
+	limparEcra();
+	titulo();
 	inicializarGraphicViewer();
-	//testes();
 	carregarFicheiros();
 
 	Cidade cidade = pesquisaId(cidadesId,1);
