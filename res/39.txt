@@ -1,12 +1,12 @@
 Graz
-470,270
+12802,2812
 3
 Graz Grand Hotel
 2
 Natal
 18-12/28-12
 65
-RestoDoAno
+Resto Do Ano
 29-12/17-12
 30
 Graz House And Friends
@@ -14,7 +14,7 @@ Graz House And Friends
 Natal
 18-12/28-12
 80
-RestoDoAno
+Resto Do Ano
 29-12/17-12
 45
 Hotel Mariahilf
@@ -22,7 +22,7 @@ Hotel Mariahilf
 Natal
 18-12/28-12
 80
-RestoDoAno
+Resto Do Ano
 29-12/17-12
 45
 2
