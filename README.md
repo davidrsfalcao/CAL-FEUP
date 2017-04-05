@@ -22,9 +22,7 @@ O cliente especifica:
 
 
 
-
-
-![alt-taj](http://image.prntscr.com/image/7b8667a2447c4ab4ae74b3ac2794544a.png)
+![alt-taj](http://image.prntscr.com/image/e78a858056ac4005bad3619b1dbad7f2.png)
 
 > Mais de 100 destinos de viagem
 
