@@ -542,7 +542,7 @@ void titulo(){
 
 void configurar_terminal(){
 	//Definir nome janela
-	system("TITLE PROJETO 2 - PISCINA");
+	system("TITLE AGENCIA DE VIAGENS");
 
 	//Ajustar tamanho janela
 

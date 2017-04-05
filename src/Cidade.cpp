@@ -11,7 +11,7 @@
 extern std::vector<Cidade> cidadesId;
 
 Cidade::Cidade() {
-	id = 999999;
+	id = 0;
 	nome = "";
 	coordenadas = Coordenadas();
 	hoteis = *(new std::vector<Alojamento*>());
@@ -75,6 +75,10 @@ Alojamento* Cidade::HotelMaisBarato(int dia, int mes) {
 
 std::vector<int> Cidade::getDestinos(){
 	return destinos;
+}
+
+int Cidade::getNumeroDestinos(){
+	return destinos.size()/3;
 }
 
 int Cidade::getIdDestino(int n){

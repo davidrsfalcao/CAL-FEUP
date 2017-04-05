@@ -175,11 +175,39 @@ int carregarFicheiros() {
 	textcolor(light_green);
 	std::cout << "\t    Carregamento completo";
 	textcolor(white);
-	Sleep(500);
+	Sleep(1000);
 	gotoxy(0,21);
 	std::cout << "\t                         ";
 
 	return 1;
+}
+
+void updateGViewer(){
+	for (size_t i = 0; i < cidadesId.size(); i++) {
+		gv->addNode(cidadesId[i].getId(), cidadesId[i].getCoordenadas().getX(), cidadesId[i].getCoordenadas().getY());
+		gv->setVertexLabel(cidadesId[i].getId(), cidadesId[i].getNome());
+		gv->setVertexColor(cidadesId[i].getId(), VERTEX_COLOR);
+	}
+
+	int id = 0;
+
+	for (size_t i = 0; i < cidadesId.size(); i++){
+		for(size_t k = 0; k < cidadesId[i].getNumeroDestinos(); k++)
+			{
+				Cidade cid = pesquisaId(cidadesId, cidadesId[i].getIdDestino(k));
+
+				if (cid.getId() == 0)
+				{
+					std::cout << cidadesId[i].getIdDestino(k) << std::endl;
+				}
+				else gv->addEdge(id, cidadesId[i].getId(), cidadesId[i].getIdDestino(k), EdgeType::DIRECTED);
+				id++;
+			}
+	}
+
+
+	gv->rearrange();
+
 }
 
 void inicializarGraphicViewer(){
@@ -188,14 +216,8 @@ void inicializarGraphicViewer(){
 	gv->createWindow(1680, 1050);
 	gv->defineVertexColor(VERTEX_COLOR);
 	gv->defineEdgeColor(EDGE_COLOR);
-
-	for (size_t i = 0; i < cidadesId.size(); i++) {
-		gv->addNode(cidadesId[i].getId(), cidadesId[i].getCoordenadas().getX(), cidadesId[i].getCoordenadas().getY());
-		gv->setVertexLabel(cidadesId[i].getId(), cidadesId[i].getNome());
-		gv->setVertexColor(cidadesId[i].getId(), VERTEX_COLOR);
-	}
-
-	gv->rearrange();
+	gv->defineEdgeCurved(false);
+	std::cout << "HERE";
 
 }
 
@@ -249,6 +271,7 @@ void menu_inicial(){
 	int opcao = 1, opcao_b = 1, tecla;
 	bool imprimir = true;
 	int carFich = 0;
+	bool updated = false;
 
 	do
 	{
@@ -291,7 +314,12 @@ void menu_inicial(){
 				abrirMapa(0);
 			}
 			else {
-				abrirMapa(1);
+				if (!updated){
+					abrirMapa(1);
+					updateGViewer();
+					updated = true;
+				}
+				else abrirMapa(1);
 			}
 			break;
 
@@ -315,11 +343,16 @@ void menu_inicial(){
 }
 
 int main() {
-	configurar_terminal();
-	gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
-	menu_inicial();
+	//configurar_terminal();
+	//gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
+	//menu_inicial();
+	carregarFicheiros();
+	Cidade cid = pesquisaId(cidadesId, 5);
 
-	limparEcra();
-	gv->closeWindow();
+	std::cout << cid;
+
+
+	// limparEcra();
+	// gv->closeWindow();
 	return 0;
 }
