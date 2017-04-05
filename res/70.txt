@@ -1,0 +1,20 @@
+Kyoto
+20831,3606
+2
+Kyoto Hotel
+1
+Todo o Ano
+1-01/31-12
+175
+Royal Memorial Hotel
+1
+Todo o Ano
+1-01/31-12
+170
+2
+71
+40
+35
+69
+25
+30
