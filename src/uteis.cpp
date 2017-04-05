@@ -514,10 +514,10 @@ void titulo(){
 	textcolor(cyan);
 	cout << "\t      " << char2 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char4 << endl;
 
-	cout << "\t      "<<char1 << "  "<<i<<i<<i<<i<<i<<i<<i<<"  "<<i<<i<<"  "<<i<<i<<i<<i<<i<<i<<i<<"                                      " << char1 << endl;
+	cout << "\t      "<<char1 << "   "  <<i<<i<<i<<i<<i<<  "   " <<i<<i<<"  "<<i<<i<<i<<i<<i<<i<<  "                                       " << char1 << endl;
 	cout << "\t      "<<char1 << "  "<<i<<i<< "   " <<i<<i<<"  "<<i<<i<<"  "<<i<<i<< "   " <<i<<i<<"                                      " << char1 << endl;
 	cout << "\t      "<<char1 << "  "<<i<<i<< "   " <<i<<i<<"  "<<i<<i<<"  "<<i<<i<< "   " <<i<<i<<"                                      " << char1 << endl;
-	cout << "\t      "<<char1 << "  "<<i<<i<<i<<i<<i<<i<<i<<"  "<<i<<i<<"  "<<i<<i<<i<<i<<i<<i<<i<<i<<i<<"                                    " << char1 << endl;
+	cout << "\t      "<<char1 << "  "<<i<<i<<i<<i<<i<<i<<i<<"  "<<i<<i<<"  "<<i<<i<<i<<i<<i<<i<<i<<i<<"                                     " << char1 << endl;
 	cout << "\t      "<<char1 << "  "<<i<<i<< "   " <<i<<i<<"  "<<i<<i<<"  "<<i<<i<< "     " <<i<<i<<"                                    " << char1 << endl;
 	cout << "\t      "<<char1 << "  "<<i<<i<< "   " <<i<<i<<"  "<<i<<i<<"  "<<i<<i<< "     " <<i<<i<<"                                    " << char1 << endl;
 
