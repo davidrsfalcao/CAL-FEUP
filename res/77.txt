@@ -1,0 +1,28 @@
+Wellington
+23403,8621
+3
+Wellington Hotel
+1
+Todo o Ano
+1-01/31-12
+150
+All Black Hotel
+1
+Todo o Ano
+1-01/31-12
+140
+Hotel Novel
+1
+Todo o Ano
+1-01/31-12
+145
+3
+76
+200
+180
+75
+230
+210
+74
+190
+195

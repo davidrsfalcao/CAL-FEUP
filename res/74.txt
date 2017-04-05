@@ -1,0 +1,65 @@
+Sidney
+21867,8011
+5
+Sidney Hotel
+2
+Passagem de Ano
+27-12/3-01
+350
+Todo o Ano
+4-01/26-12
+250
+Sidney Royal Palace Hotel
+2
+Passagem de Ano
+27-12/3-01
+370
+Todo o Ano
+4-01/26-12
+260
+Sidney Mayor Hotel
+2
+Passagem de Ano
+27-12/3-01
+340
+Todo o Ano
+4-01/26-12
+240
+Mercure Hotel
+2
+Passagem de Ano
+27-12/3-01
+345
+Todo o Ano
+4-01/26-12
+260
+Novotel Sidney Hotel
+2
+Passagem de Ano
+27-12/3-01
+330
+Todo o Ano
+4-01/26-12
+255
+7
+76
+50
+40
+77
+200
+210
+75
+90
+80
+66
+500
+450
+69
+540
+500
+73
+370
+350
+72
+340
+300

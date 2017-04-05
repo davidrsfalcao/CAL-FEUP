@@ -4,26 +4,26 @@ Caracas
 Caracas Hotel
 2
 Verao
-21-11/20-02
+20-06/20-09
 210
 Resto do Ano
-21-02/20-11
+21-09/19-06
 170
 Venezuela Hotel
 2
 Verao
-21-11/17-02
+20-06/20-09
 230
 Resto do Ano
-18-02/20-11
+21-09/19-06
 180
 Royal Caracas Hotel
 2
 Verao
-21-11/19-02
+20-06/20-09
 210
 Resto do Ano
-18-02/20-11
+21-09/19-06
 160
 4
 99
