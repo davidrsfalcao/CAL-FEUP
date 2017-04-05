@@ -1,6 +1,6 @@
 Cracovia
 470,270
-3
+4
 Krakow Royal Suite
 2
 Inverno
@@ -17,7 +17,7 @@ Inverno
 Resto Do Ano
 21-03/20-12
 40
-Grand Hotel Krakow 
+Grand Hotel Krakow
 2
 Inverno
 21-12/20-03
@@ -43,4 +43,3 @@ Resto Do Ano
 58
 180
 160
-

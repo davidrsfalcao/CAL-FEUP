@@ -347,7 +347,7 @@ int main() {
 	//gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
 	//menu_inicial();
 	carregarFicheiros();
-	Cidade cid = pesquisaId(cidadesId, 30);
+	Cidade cid = pesquisaId(cidadesId, 35);
 
 	std::cout << cid;
 
