@@ -488,6 +488,8 @@ void textcolor(DOS_COLORS iColor){
 }
 
 void titulo(){
+	limparEcra();
+
 	int a = 186;
 	char char1 = a;  // obter -> â•‘
 
@@ -534,7 +536,7 @@ void titulo(){
 
 	textcolor(white);
 
-	gotoxy(0,21);
+	gotoxy(0,8);
 
 }
 

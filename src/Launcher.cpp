@@ -30,6 +30,39 @@ GraphViewer *gv;
 std::vector<Cidade> cidadesId;  //cidades ordenadas por Id
 std::vector<Cidade> cidadesNome; //cidades ordenadas por Nome
 
+void creditos(){
+	system("cls");
+	titulo();
+	std::cout << std::endl;
+	std::cout << std::endl << "\t    Primeiro projeto da cadeira 'Concepcao e Analise de Algoritmos'" << endl << endl;
+	cout << "\t    Desenvolvido por:" << endl << endl;
+
+	std::cout << "\t\t\t David Falcao       -  up201506571";
+	textcolor(yellow);
+	std::cout << " @ ";
+	textcolor(white);
+	std::cout <<"fe.up.pt" << std::endl;
+
+	std::cout << "\t\t\t Pedro Miranda      -  up201506574";
+	textcolor(yellow);
+	std::cout << " @ ";
+	textcolor(white);
+	std::cout << "fe.up.pt" << std::endl;
+
+	std::cout << "\t\t\t Veronica Fradique  -  up201506440";
+	textcolor(yellow);
+	std::cout << " @ ";
+	textcolor(white);
+	std::cout << "fe.up.pt" << std::endl;
+
+
+	textcolor(yellow);
+	std::cout << std::endl << std::endl << "\t    Prima ENTER para voltar" << std::endl;
+	textcolor(white);
+
+	std::cin.ignore();
+}
+
 void carregarFicheiros() {
 
 	int contador = 1;
@@ -119,10 +152,6 @@ void carregarFicheiros() {
 			in.close();
 
 			graph.addVertex(cidade);
-			gv->addNode(contador, cords.getX(), cords.getY());
-			gv->setVertexLabel(contador, nomeCidade);
-			gv->setVertexColor(contador, VERTEX_COLOR);
-			gv->rearrange();
 		}
 
 		contador++;
@@ -145,15 +174,102 @@ void inicializarGraphicViewer(){
 	gv->createWindow(1680, 1050);
 	gv->defineVertexColor(VERTEX_COLOR);
 	gv->defineEdgeColor(EDGE_COLOR);
+
+	for (size_t i = 0; i < cidadesId.size(); i++) {
+		gv->addNode(cidadesId[i].getId(), cidadesId[i].getCoordenadas().getX(), cidadesId[i].getCoordenadas().getY());
+		gv->setVertexLabel(cidadesId[i].getId(), cidadesId[i].getNome());
+		gv->setVertexColor(cidadesId[i].getId(), VERTEX_COLOR);
+	}
+
+	gv->rearrange();
+
+
+}
+
+void menu_inicial_ops(int opcao, int opcao_b){
+	int a = 254;
+	char square = a;
+
+	int y = 9 + opcao_b;
+	int y1 = 9 + opcao;
+
+	gotoxy(34, y);
+	textcolor(yellow);
+	std::cout << " ";
+	textcolor(white);
+
+	gotoxy(34, y1);
+	textcolor(yellow);
+	std::cout << square;
+	textcolor(white);
+
+	gotoxy(0, 21);
+}
+
+void menu_inicial(){
+	int opcao = 1, opcao_b = 1, tecla;
+	bool imprimir = true;
+
+	do
+	{
+		if (imprimir)
+		{
+			titulo();
+			std::cout << std::endl << std::endl;
+			std::cout << "\t\t\t\t    Carregar Ficheiros" << std::endl;
+			std::cout << "\t\t\t\t    Abrir Mapa" << std::endl;
+			std::cout << "\t\t\t\t    Escolher viagem" << std::endl;
+			std::cout << "\t\t\t\t    Sobre" << std::endl;
+			std::cout << "\t\t\t\t    Sair" << std::endl;
+			std::cout << std::endl << std::endl << std::endl << std::endl;
+			std::cout << "\t\t\t\t\t\t\t\t" << mostrar_mes(mes_do_sistema()) << " " << ano_do_sistema();
+			std::cout << std::endl << std::endl;
+
+		}
+
+		imprimir = false;
+
+		menu_inicial_ops(opcao,opcao_b);
+		opcao_b = opcao;
+		tecla = opcao_valida(opcao, 1, 5);
+		Sleep(100);
+
+
+		if (tecla == ENTER)
+		switch (opcao)
+		{
+		case 1:
+			carregarFicheiros();
+			imprimir = true;
+			break;
+
+		case 2:
+			inicializarGraphicViewer();
+			imprimir = true;
+			break;
+
+		case 3:
+			imprimir = true;
+			break;
+
+		case 4:
+			creditos();
+			imprimir = true;
+			break;
+
+		case 5:
+			return;
+
+		}
+
+	} while ((opcao != 5) || (tecla != ENTER));
+
+	std::cout << std::endl << std::endl;
 }
 
 int main() {
-
 	configurar_terminal();
-	limparEcra();
-	titulo();
-	//inicializarGraphicViewer();
-	//carregarFicheiros();
+	menu_inicial();
 
 	//Cidade cidade = pesquisaId(cidadesId,1);
 	//imprimirCidade(cidade);
