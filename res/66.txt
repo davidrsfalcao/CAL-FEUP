@@ -1,0 +1,45 @@
+Xangai
+19869,3922
+4
+Xangai Hotel
+1
+Todo o Ano
+1-01/31-12
+190
+Min Hon Hotel
+1
+Todo o Ano
+1-01/31-12
+180
+Chin Hon Hotel
+1
+Todo o Ano
+1-01/31-12
+175
+Chi Min Ho Hotel
+1
+Todo o Ano
+1-01/31-12
+190
+7
+68
+90
+85
+69
+120
+110
+62
+70
+65
+74
+500
+450
+16
+950
+660
+82
+1200
+950
+63
+160
+150

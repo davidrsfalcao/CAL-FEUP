@@ -3,30 +3,30 @@ Frankfurt
 2
 Steigenberger Frankfurter Hof
 4
-Verão
+Verao
 21-06/22-09
 125
 Passagem de Ano
 28-12/03-01
 135
-RestoDoAno
+Resto Do Ano
 04-01/20-06
 100
-RestoDoAno
+Resto Do Ano
 23-09/27-12
 100
 Hotel Excelsior
 4
-Verão
+Verao
 21-06/22-09
 60
 Passagem de Ano
 28-12/03-12
 75
-RestoDoAno
+Resto Do Ano
 04-01/20-06
 40
-RestoDoAno
+Resto Do Ano
 23-09/27-12
 40
 7
@@ -39,7 +39,7 @@ RestoDoAno
 55
 190
 165
-67
+66
 950
 660
 71
@@ -48,6 +48,6 @@ RestoDoAno
 78
 2500
 1200
-83
-715
-620
+82
+1000
+800
