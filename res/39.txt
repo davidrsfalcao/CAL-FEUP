@@ -1,0 +1,34 @@
+Graz
+470,270
+3
+Graz Grand Hotel
+2
+Natal
+18-12/28-12
+65
+RestoDoAno
+29-12/17-12
+30
+Graz House And Friends
+2
+Natal
+18-12/28-12
+80
+RestoDoAno
+29-12/17-12
+45
+Hotel Mariahilf
+2
+Natal
+18-12/28-12
+80
+RestoDoAno
+29-12/17-12
+45
+2
+7
+85
+75
+54
+125
+95
