@@ -511,7 +511,7 @@ void titulo(){
 	int g = 219;
 	char i = g; // obter -> â–ˆ
 
-	textcolor(cyan);
+	textcolor(yellow);
 	cout << "\t      " << char2 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char4 << endl;
 
 	cout << "\t      "<<char1 << "   "  <<i<<i<<i<<i<<i<<  "   " <<i<<i<<"  "<<i<<i<<i<<i<<i<<i<<  "                                       " << char1 << endl;
@@ -526,7 +526,7 @@ void titulo(){
 
 	gotoxy(42,5);
 
-	textcolor(cyan);
+	textcolor(brown);
 	for (size_t k = 0; k < 30; k++) {
 			cout << i ;
 	}

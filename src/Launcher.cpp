@@ -34,8 +34,8 @@ void creditos(){
 	system("cls");
 	titulo();
 	std::cout << std::endl;
-	std::cout << std::endl << "\t    Primeiro projeto da cadeira 'Concepcao e Analise de Algoritmos'" << endl << endl;
-	cout << "\t    Desenvolvido por:" << endl << endl;
+	std::cout << std::endl << "\t     Primeiro projeto da cadeira 'Concepcao e Analise de Algoritmos'" << endl << endl;
+	cout << "\t     Desenvolvido por:" << endl << endl;
 
 	std::cout << "\t\t\t David Falcao       -  up201506571";
 	textcolor(yellow);
@@ -57,7 +57,7 @@ void creditos(){
 
 
 	textcolor(yellow);
-	std::cout << std::endl << std::endl << "\t    Prima ENTER para voltar" << std::endl;
+	std::cout << std::endl << std::endl << "\t     Prima ENTER para voltar" << std::endl;
 	textcolor(white);
 
 	std::cin.ignore();
@@ -140,6 +140,11 @@ int carregarFicheiros() {
 			getline(in, temp);
 			count = atoi(temp.c_str());
 
+			if (count == 0)
+			{
+				std::cout << nomeCidade << std::endl;
+			}
+
 			//Ciclo destinos
 			std::vector<int> destinos;
 
@@ -198,7 +203,7 @@ void updateGViewer(){
 
 				if (cid.getId() == 0)
 				{
-					std::cout << cidadesId[i].getIdDestino(k) << std::endl;
+					//std::cout << cidadesId[i].getIdDestino(k) << std::endl;
 				}
 				else gv->addEdge(id, cidadesId[i].getId(), cidadesId[i].getIdDestino(k), EdgeType::DIRECTED);
 				id++;
@@ -217,8 +222,6 @@ void inicializarGraphicViewer(){
 	gv->defineVertexColor(VERTEX_COLOR);
 	gv->defineEdgeColor(EDGE_COLOR);
 	gv->defineEdgeCurved(false);
-	std::cout << "HERE";
-
 }
 
 void abrirMapa(int opcao){
@@ -343,16 +346,11 @@ void menu_inicial(){
 }
 
 int main() {
-	//configurar_terminal();
-	//gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
-	//menu_inicial();
-	carregarFicheiros();
-	Cidade cid = pesquisaId(cidadesId, 35);
+	configurar_terminal();
+	gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
+	menu_inicial();
 
-	std::cout << cid;
-
-
-	// limparEcra();
-	// gv->closeWindow();
+	limparEcra();
+	gv->closeWindow();
 	return 0;
 }

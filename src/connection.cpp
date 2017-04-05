@@ -35,7 +35,7 @@ Connection::Connection(short port) {
 	// Create a socket.
     sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sock == INVALID_SOCKET) {
-        printf("Client: socket() - Error at socket(): %ld\n", WSAGetLastError());
+        printf("Client: socket() - Error at socket(): %d\n", WSAGetLastError());
         WSACleanup();
     }
 
@@ -56,7 +56,7 @@ Connection::Connection(short port) {
 bool Connection::sendMsg(string msg) {
   int res = send(sock, msg.c_str(), msg.size(), 0);
   if (res < 0) 
-    myerror("Unable to send");
+    myerror("");
   string answer = readLine();
   return answer == "ok";
 }
