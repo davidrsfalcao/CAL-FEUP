@@ -16,7 +16,7 @@ O cliente especifica:
 
 # Screenshots
 
-![alt-taj](http://image.prntscr.com/image/09fc84384f634ef49fe234d86b11deb8.png)
+![alt-taj](http://image.prntscr.com/image/77e213f4e833430d8c67fe136c0efcf0.png)
 
 > Command Line Interface
 
