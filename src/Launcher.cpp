@@ -17,6 +17,7 @@
 #include "Cidade.h"
 #include "Algoritmos.h"
 #include "Alojamento.h"
+#include "uteis.h"
 
 #define NOT_DYNAMIC false
 #define EDGE_COLOR "white"
