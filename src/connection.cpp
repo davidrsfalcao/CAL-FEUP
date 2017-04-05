@@ -56,7 +56,7 @@ Connection::Connection(short port) {
 bool Connection::sendMsg(string msg) {
   int res = send(sock, msg.c_str(), msg.size(), 0);
   if (res < 0)
-    myerror("Unable to send");
+    myerror("");
   string answer = readLine();
   return answer == "ok";
 }

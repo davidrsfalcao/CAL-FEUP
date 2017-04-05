@@ -63,7 +63,7 @@ void creditos(){
 	std::cin.ignore();
 }
 
-void carregarFicheiros() {
+int carregarFicheiros() {
 
 	int contador = 1;
 	std::string path = "./res/";
@@ -147,11 +147,11 @@ void carregarFicheiros() {
 			Cidade cidade = Cidade(contador, nomeCidade, cords, hoteis,
 					destinos);
 
+			graph.addVertex(cidade);
 			cidadesId.push_back(cidade);
 			cidadesNome.push_back(cidade);
 			in.close();
 
-			graph.addVertex(cidade);
 		}
 
 		contador++;
@@ -159,17 +159,22 @@ void carregarFicheiros() {
 	cidadesId = ordenarPorId(cidadesId, 0, cidadesId.size()-1);
 	cidadesNome = ordenarPorNome(cidadesNome, 0, cidadesNome.size()-1);
 
+	gotoxy(0,21);
+	textcolor(light_green);
+	std::cout << "\t    Carregamento completo";
+	textcolor(white);
+	Sleep(500);
+	std::cout << "\t                         ";
+
+	return 1;
 }
 
 void imprimirCidade(Cidade cidade){
-
 	std::cout << cidade;
-
 }
 
 void inicializarGraphicViewer(){
 	//Inicializar graphos
-	gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
 	gv->setBackground("background.jpg");
 	gv->createWindow(1680, 1050);
 	gv->defineVertexColor(VERTEX_COLOR);
@@ -269,13 +274,10 @@ void menu_inicial(){
 
 int main() {
 	configurar_terminal();
+	gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
 	menu_inicial();
 
-	//Cidade cidade = pesquisaId(cidadesId,1);
-	//imprimirCidade(cidade);
-
-
-	//getchar();
-
+	limparEcra();
+	gv->closeWindow();
 	return 0;
 }
