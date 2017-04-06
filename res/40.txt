@@ -1,5 +1,5 @@
 Berna
-470,270
+12340,2886
 4
 Bern Royal Suite
 2
@@ -55,4 +55,3 @@ Resto Do Ano
 94
 845
 695
-

@@ -1,5 +1,5 @@
 Riga
-470,270
+13431,2165
 3
 Welton Riga Hotel And Spa
 2
@@ -38,5 +38,3 @@ Resto Do Ano
 71
 710
 590
-
-

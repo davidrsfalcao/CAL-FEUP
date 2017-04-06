@@ -1,5 +1,5 @@
 Bilbao
-470,270
+11563,3090
 3
 Bilbao Grand Resort
 2
@@ -9,7 +9,7 @@ Verao
 Resto do Ano
 22-09/19-06
 100
-Bilbao Hotel 
+Bilbao Hotel
 2
 Verao
 20-06/21-09

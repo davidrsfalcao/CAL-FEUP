@@ -1,5 +1,5 @@
 Tirana
-470,270
+13154,3201
 4
 Tirana Royal Hotel
 2
@@ -9,7 +9,7 @@ Inverno
 Resto Do Ano
 21-03/20-12
 70
-Resort Tirana 
+Resort Tirana
 2
 Inverno
 21-12/20-03
@@ -46,4 +46,3 @@ Resto Do Ano
 108
 570
 425
-

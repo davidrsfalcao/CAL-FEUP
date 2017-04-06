@@ -1,9 +1,9 @@
 Sofia
-470,270
+13357,3127
 3
 Ramada Sofia
 4
-Verão
+Verï¿½o
 21-06/22-09
 60
 Natal
@@ -17,7 +17,7 @@ Resto Do Ano
 35
 Central Hotel Sofia
 4
-Verão
+Verï¿½o
 21-06/22-09
 115
 Natal
@@ -31,7 +31,7 @@ Resto Do Ano
 80
 Metropolitan Hotel Sofia
 4
-Verão
+Verï¿½o
 21-06/22-09
 80
 Natal

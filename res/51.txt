@@ -1,5 +1,5 @@
 Klaipeda
-470,270
+13228,2257
 2
 Amberton Klaipeda
 2
@@ -24,4 +24,3 @@ Resto Do Ano
 33
 90
 85
-

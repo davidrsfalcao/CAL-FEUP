@@ -1,9 +1,9 @@
 Budapeste
-470,270
+12987,2757
 3
 Prestige Hotel Budapest
 4
-Verão
+Verï¿½o
 21-06/22-09
 100
 Natal
@@ -17,7 +17,7 @@ Resto Do Ano
 65
 Arcadia Hotel Budapest
 4
-Verão
+Verï¿½o
 21-06/22-09
 115
 Natal
@@ -31,7 +31,7 @@ Resto Do Ano
 75
 Budapest Marriot Hotel
 4
-Verão
+Verï¿½o
 21-06/22-09
 80
 Natal

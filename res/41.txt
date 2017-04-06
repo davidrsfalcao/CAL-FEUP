@@ -1,5 +1,5 @@
 Kosice
-470,270
+13135,2775
 3
 Kosice Hotel And Spa
 2
@@ -35,4 +35,3 @@ Resto Do Ano
 35
 15
 25
-

@@ -1,9 +1,9 @@
 Vilnius
-470,270
+13487,2368
 3
 Ramada Hotel And Suites Vilnius
 4
-Verão
+Verï¿½o
 21-06/22-09
 120
 Natal
@@ -17,7 +17,7 @@ Resto Do Ano
 95
 Kempinski Hotel Cathedral Square
 4
-Verão
+Verï¿½o
 21-06/22-09
 100
 Natal
@@ -31,7 +31,7 @@ Resto Do Ano
 75
 Ecotel Vilnius
 4
-Verão
+Verï¿½o
 21-06/22-09
 80
 Natal
