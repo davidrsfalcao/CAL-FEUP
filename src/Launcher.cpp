@@ -196,18 +196,20 @@ void updateGViewer(){
 
 	int id = 0;
 
-	for (size_t i = 0; i < cidadesId.size(); i++){
-		for(size_t k = 0; k < cidadesId[i].getNumeroDestinos(); k++)
-			{
-				Cidade cid = pesquisaId(cidadesId, cidadesId[i].getIdDestino(k));
+	for (size_t i = 0; i < cidadesId.size(); i++) {
+		if (cidadesId[i].getId() != 0)
+		{
+			for (size_t k = 0; k < cidadesId[i].getNumeroDestinos(); k++) {
+				Cidade cid = pesquisaId(cidadesId,cidadesId[i].getIdDestino(k));
 
-				if (cid.getId() == 0)
-				{
-					std::cout << cidadesId[i].getIdDestino(k) << std::endl;
+				if (cid.getId() == 0) {
+				} else {
+					//std::cout << id << " - " << cidadesId[i].getId() << " - " << cidadesId[i].getIdDestino(k) << endl;
+					gv->addEdge(id, cidadesId[i].getId(), cidadesId[i].getIdDestino(k), EdgeType::DIRECTED);
+					id++;
 				}
-				else gv->addEdge(id, cidadesId[i].getId(), cidadesId[i].getIdDestino(k), EdgeType::DIRECTED);
-				id++;
 			}
+		}
 	}
 
 
@@ -346,20 +348,11 @@ void menu_inicial(){
 }
 
 int main() {
-	  configurar_terminal();
-	 gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
+	 //configurar_terminal();
+	gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
 	menu_inicial();
-//	carregarFicheiros();
-//	Cidade cid = pesquisaId(cidadesId, 13);
-//	std::cout << cid << std::endl;
-//
-//	cid = pesquisaId(cidadesId, 14);
-//	std::cout << cid << std::endl;
-//
-//	cid = pesquisaId(cidadesId, 15);
-//	std::cout << cid << std::endl;
 
-	  limparEcra();
-	  gv->closeWindow();
+	limparEcra();
+	gv->closeWindow();
 	return 0;
 }

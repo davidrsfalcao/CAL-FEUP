@@ -1,0 +1,70 @@
+Istambul
+470,270
+3
+Elite World Business Hotel
+4
+Primavera
+20-03/19-06
+80
+Natal
+18-12/28-12
+80
+Resto Do Ano
+29-12/19-03
+55
+Resto Do Ano
+20-06/27-12
+55
+Legacy Ottoman Hotel
+4
+Primavera
+20-03/19-06
+100
+Natal
+18-12/28-12
+100
+Resto Do Ano
+29-12/19-03
+60
+Resto Do Ano
+20-06/27-12
+60
+Design Hotel Istanbul
+4
+Primavera
+20-03/19-06
+75
+Natal
+18-12/28-12
+75
+Resto Do Ano
+29-12/19-03
+50
+Resto Do Ano
+20-06/27-12
+50
+8
+2
+360
+245
+7
+205
+170
+17
+145
+130
+58
+115
+100
+64
+635
+560
+67
+655
+585
+97
+895
+730
+106
+635
+560

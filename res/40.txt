@@ -1,0 +1,58 @@
+Berna
+470,270
+4
+Bern Royal Suite
+2
+Inverno
+21-12/20-03
+100
+Resto Do Ano
+21-03/20-12
+70
+Hotel Bern
+2
+Inverno
+21-12/20-03
+75
+Resto Do Ano
+21-03/20-12
+40
+Grand Hotel And Spa Bern
+2
+Inverno
+21-12/20-03
+110
+Resto Do Ano
+21-03/20-12
+70
+Sorell Hotel Arabelle
+2
+Inverno
+21-12/20-03
+115
+Resto Do Ano
+21-03/20-12
+85
+7
+1
+125
+110
+9
+65
+55
+17
+65
+55
+24
+125
+110
+67
+775
+650
+87
+835
+690
+94
+845
+695
+

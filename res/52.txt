@@ -1,0 +1,42 @@
+Riga
+470,270
+3
+Welton Riga Hotel And Spa
+2
+Primavera
+20-03/19-06
+110
+Resto Do Ano
+20-06/19-03
+65
+Bellevue Park Hotel Riga
+2
+Primavera
+20-03/19-06
+75
+Resto Do Ano
+20-06/19-03
+35
+Royal Hotel Riga
+2
+Primavera
+20-03/19-06
+100
+Resto Do Ano
+20-06/19-03
+75
+4
+12
+170
+145
+19
+60
+55
+55
+175
+150
+71
+710
+590
+
+

@@ -1,0 +1,43 @@
+Minsk
+470,270
+3
+President Hotel
+2
+Natal
+18-12/28-12
+65
+Resto Do Ano
+29-12/17-12
+35
+Victoria Hotel Monastyrski Minsk
+2
+Natal
+18-12/28-12
+80
+Resto Do Ano
+29-12/17-12
+50
+Hotel Yubileiny
+2
+Natal
+18-12/28-12
+100
+Resto Do Ano
+29-12/17-12
+55
+5
+1
+265
+230
+24
+75
+90
+36
+60
+75
+38
+60
+75
+75
+1685
+1130

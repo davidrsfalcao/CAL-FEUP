@@ -1,0 +1,55 @@
+Zagreb
+470,270
+3
+Panorama Zagreb Hotel 
+4
+Primavera
+20-03/19-06
+75
+Natal
+18-12/28-12
+75
+Resto Do Ano
+29-12/19-03
+40
+Resto Do Ano
+20-06/27-12
+40
+Esplanade Zagreb Hotel
+4
+Primavera
+20-03/19-06
+85
+Natal
+18-12/28-12
+85
+Resto Do Ano
+29-12/19-03
+50
+Resto Do Ano
+20-06/27-12
+50
+Palace Hotel Zagreb
+4
+Primavera
+20-03/19-06
+100
+Natal
+18-12/28-12
+100
+Resto Do Ano
+29-12/19-03
+75
+Resto Do Ano
+20-06/27-12
+75
+3
+36
+50
+40
+44
+25
+30
+60
+545
+490
