@@ -5,57 +5,57 @@ HF Ipanema Porto
 4
 Verao
 21-06/22-09
-400
+100
 Natal e Passagem de Ano
 21-12/2-02
-540
+140
 Resto do Ano
 23-09/20-12
-350
+80
 Resto do Ano
 3-02/20-06
-350
+80
 Pestana Vintage Porto
 4
 Verao
 21-06/22-09
-414
+110
 Natal e Passagem de Ano
 21-12/2-02
-515
+140
 Resto do Ano
 23-09/20-12
-370
+90
 Resto do Ano
 3-02/20-06
-370
+90
 The Yeatman Hotel
 4
 Verao
 30-06/5-09
-405
+130
 Natal e Passagem de Ano
 23-12/5-02
-600
+200
 Resto do Ano
 6-09/22-12
-416
+100
 Resto do Ano
 3-02/29-06
-416
+100
 5
 2
+55
 50
-30
 4
 95
-60
+70
 7
 190
 90
 16
-230
-140
+210
+125
 43
-350
+250
 210
