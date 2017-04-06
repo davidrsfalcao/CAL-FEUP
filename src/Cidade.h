@@ -34,7 +34,7 @@ public:
 	std::vector<Alojamento*> getTodosHoteis();
 	Alojamento* HotelMaisBarato(int dia, int mes);
 	std::vector<int> getDestinos();
-	int getNumeroDestinos();
+	unsigned int getNumeroDestinos();
 	int getIdDestino(int n);
 	int getCustoViagem(int n);
 	int getTempoViagem(int n);

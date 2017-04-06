@@ -77,7 +77,7 @@ std::vector<int> Cidade::getDestinos(){
 	return destinos;
 }
 
-int Cidade::getNumeroDestinos(){
+unsigned int Cidade::getNumeroDestinos(){
 	return destinos.size()/3;
 }
 

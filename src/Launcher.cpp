@@ -31,6 +31,24 @@ GraphViewer *gv;
 std::vector<Cidade> cidadesId;  //cidades ordenadas por Id
 std::vector<Cidade> cidadesNome; //cidades ordenadas por Nome
 
+//std::vector<Cidade> dest; //testar voos a chegar
+
+
+void testarLigacoes(){
+
+	for (size_t i = 1; i <= 110; i++) {
+		Cidade cid = pesquisaId(dest, i);
+		Cidade cid1 = pesquisaId(cidadesId, i);
+
+		if (cid.getId() == 0){
+			std::cout << "Sem voos para " << cid1.getId() << std::endl;
+		}
+
+
+	}
+
+}
+
 void creditos(){
 	system("cls");
 	titulo();
@@ -205,13 +223,17 @@ void updateGViewer(){
 				Cidade cid = pesquisaId(cidadesId,cidadesId[i].getIdDestino(k));
 
 				if (cid.getId() == 0) {
+					std::cout << "ERRO";
 				} else {
+					dest.push_back(pesquisaId(cidadesId, cidadesId[i].getIdDestino(k)));
 					gv->addEdge(id, cidadesId[i].getId(), cidadesId[i].getIdDestino(k), EdgeType::DIRECTED);
 					id++;
 				}
 			}
 		}
 	}
+
+	dest = ordenarPorId(dest, 0, dest.size()-1);
 
 
 	gv->rearrange();
@@ -324,6 +346,7 @@ void menu_inicial(){
 					abrirMapa(1);
 					updateGViewer();
 					updated = true;
+					//testarLigacoes(); //testar Ligacoes a entrar
 				}
 				else abrirMapa(1);
 			}
@@ -349,7 +372,7 @@ void menu_inicial(){
 }
 
 int main() {
-	 //configurar_terminal();
+	configurar_terminal();
 	gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
 	menu_inicial();
 
