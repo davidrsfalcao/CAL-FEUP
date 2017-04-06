@@ -1,5 +1,5 @@
 Graz
-470,27
+470,270
 3
 Graz Grand Hotel
 2

@@ -1,35 +1,35 @@
-Viena
+Bucareste
 470,270
 3
-Atlantis Hotel Vienna 
+Ramada Plaza Hotel Bucharest
 4
 Primavera
 20-03/19-06
-75
+115
 Natal
 18-12/28-12
-75
+115
 Resto Do Ano
 29-12/19-03
-45
+80
 Resto Do Ano
 20-06/27-12
-45
-Austria Trend Hotel Vienna
+80
+Hotel Sir Gara de Nord
 4
 Primavera
 20-03/19-06
-85
+40
 Natal
 18-12/28-12
-85
+40
 Resto Do Ano
 29-12/19-03
-50
+20
 Resto Do Ano
 20-06/27-12
-50
-Hotel Prinz Eugen
+20
+Intercontinental Hotel Bucharest
 4
 Primavera
 20-03/19-06
@@ -43,22 +43,13 @@ Resto Do Ano
 Resto Do Ano
 20-06/27-12
 75
-6
-4
+3
+5
+195
+170
+87
+900
+770
+109
+155
 125
-105
-16
-50
-45
-47
-75
-60
-52
-100
-85
-71
-795
-665
-84
-655
-510

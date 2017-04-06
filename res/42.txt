@@ -1,55 +1,61 @@
-Brun
+Budapeste
 470,270
 3
-Hotel Sky Brun
+Prestige Hotel Budapest
 4
 Verão
 21-06/22-09
-90
-Natal
-18-12/28-12
-95
-Resto Do Ano
-29-12/20-06
-70
-Resto Do Ano
-23-09/17-12
-70
-Palace Hotel Brun
-4
-Verão
-21-06/22-09
-110
-Natal
-18-12/28-12
-110
-Resto Do Ano
-29-12/20-06
-75
-Resto Do Ano
-23-09/17-12
-75
-Grand Residence Brun
-4
-Verão
-21-06/22-09
-75
-Natal
-18-12/28-12
-75
-Resto Do Ano
-29-12/20-06
-45
-Resto Do Ano
-23-09/17-12
-45
-3
-29
-115
 100
-49
-90
+Natal
+18-12/28-12
+100
+Resto Do Ano
+29-12/20-06
+65
+Resto Do Ano
+23-09/17-12
+65
+Arcadia Hotel Budapest
+4
+Verão
+21-06/22-09
+115
+Natal
+18-12/28-12
+115
+Resto Do Ano
+29-12/20-06
 75
-59
-245
-210
+Resto Do Ano
+23-09/17-12
+75
+Budapest Marriot Hotel
+4
+Verão
+21-06/22-09
+80
+Natal
+18-12/28-12
+80
+Resto Do Ano
+29-12/20-06
+40
+Resto Do Ano
+23-09/17-12
+40
+5
+4
+130
+115
+31
+100
+85
+57
+180
+155
+83
+700
+580
+107
+860
+625

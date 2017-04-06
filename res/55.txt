@@ -1,0 +1,60 @@
+Ancara
+470,270
+4
+Suit Hotel Ancara
+2
+Natal
+18-12/28-12
+75
+Resto Do Ano
+29-12/17-12
+35
+Ancara Design And Suites Palace
+2
+Natal
+18-12/28-12
+95
+Resto Do Ano
+29-12/17-12
+45
+Royal Hotel Ancara
+2
+Natal
+18-12/28-12
+80
+Resto Do Ano
+29-12/17-12
+50
+Ancara Business Hotel
+2
+Natal
+18-12/28-12
+115
+Resto Do Ano
+29-12/17-12
+75
+8
+16
+180
+165
+43
+135
+115
+56
+70
+55
+57
+65
+55
+78
+770
+665
+92
+990
+865
+102
+1135
+940
+104
+260
+235
