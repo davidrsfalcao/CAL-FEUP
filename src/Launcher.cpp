@@ -142,7 +142,7 @@ int carregarFicheiros() {
 
 			if (count == 0)
 			{
-				std::cout << nomeCidade << std::endl;
+				//std::cout << nomeCidade << std::endl;
 			}
 
 			//Ciclo destinos
@@ -203,7 +203,7 @@ void updateGViewer(){
 
 				if (cid.getId() == 0)
 				{
-					//std::cout << cidadesId[i].getIdDestino(k) << std::endl;
+					std::cout << cidadesId[i].getIdDestino(k) << std::endl;
 				}
 				else gv->addEdge(id, cidadesId[i].getId(), cidadesId[i].getIdDestino(k), EdgeType::DIRECTED);
 				id++;
@@ -346,14 +346,20 @@ void menu_inicial(){
 }
 
 int main() {
-	 configurar_terminal();
+	  configurar_terminal();
 	 gv = new GraphViewer(1680, 1050, NOT_DYNAMIC);
-	 menu_inicial();
+	menu_inicial();
 //	carregarFicheiros();
-//	Cidade cid = pesquisaNome(cidadesNome, "Banguecoque");
-//	std::cout << cid;
+//	Cidade cid = pesquisaId(cidadesId, 13);
+//	std::cout << cid << std::endl;
+//
+//	cid = pesquisaId(cidadesId, 14);
+//	std::cout << cid << std::endl;
+//
+//	cid = pesquisaId(cidadesId, 15);
+//	std::cout << cid << std::endl;
 
-	 limparEcra();
-	 gv->closeWindow();
+	  limparEcra();
+	  gv->closeWindow();
 	return 0;
 }
