@@ -23,6 +23,7 @@
 #define EDGE_COLOR "white"
 #define VERTEX_COLOR "red"
 #define ID_MAX 110 //mudar consoante o numero de ficheiros
+
 Graph<Cidade> graph;
 GraphViewer *gv;
 
@@ -354,5 +355,7 @@ int main() {
 
 	limparEcra();
 	gv->closeWindow();
+
+	gotoxy(0,0);
 	return 0;
 }
