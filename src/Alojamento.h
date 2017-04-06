@@ -21,19 +21,19 @@ private:
 
 public:
 	/**
-	* Constructor sem parametros da Classe Alojamento
+	* @brief Constructor sem parametros da Classe Alojamento
 	*
 	*/
 	Alojamento();
 	/**
-	* Construtor com parametros da Classe Alojamento
+	* @brief Construtor com parametros da Classe Alojamento
 	*
 	* @param nome Nome do Alojamento
 	* @param epocas Vector com as epocas em que existem diferentes precos
 	*/
 	Alojamento(std::string nome, std::vector<Epoca*>epocas);
 	/**
-	* Função que retorna a Epoca de uma data
+	* @brief Função que retorna a Epoca de uma data
 	*
 	* @param dia Dia da data que se quer saber a epoca
 	* @param mes Mes da data que se quer saber a epoca
@@ -42,13 +42,13 @@ public:
 	*/
 	Epoca* getEpoca(int dia, int mes);
 	/**
-	* Função que retorna o Nome do Alojamento
+	* @brief Função que retorna o Nome do Alojamento
 	*
 	* @return O Nome do Alojamento
 	*/
 	std::string getNome();
 	/**
-	* Função que retorna O preco de uma data
+	* @brief Função que retorna O preco de uma data
 	*
 	* @param dia Dia da data que se quer saber o preco
 	* @param mes Mes da data que se quer saber o preco
@@ -57,13 +57,13 @@ public:
 	*/
 	int getPreco(int dia, int mes);
 	/**
-	* Função que retorna um vetor com as Epocas
+	* @brief Função que retorna um vetor com as Epocas
 	*
 	* @return As epocas em que ha precos diferentes no Alojamento
 	*/
 	std::vector<Epoca*> getTodasEpocas();
 	/**
-	*	para mostrar um Alojamento
+	*	@brief para mostrar um Alojamento
 	*
 	* @param of ostream para mostrar o alojamento
 	*	@param ht alojamento que vai ser mostrado

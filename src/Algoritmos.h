@@ -12,7 +12,7 @@
 #include <string>
 #include "Cidade.h"
 /**
-* Função que ordena as cidades por ID
+* @brief Função que ordena as cidades por ID
 *
 * @param vect Vector de Cidades para ordenar
 * @param left Elemento mais a esquerda
@@ -22,7 +22,7 @@
 */
 std::vector<Cidade> ordenarPorId(std::vector<Cidade> vect, int left, int right);
 /**
-* Função que ordena as cidades por Nome
+* @brief Função que ordena as cidades por Nome
 *
 * @param vect Vector de Cidades para ordenar
 * @param left Elemento mais a esquerda
@@ -32,7 +32,7 @@ std::vector<Cidade> ordenarPorId(std::vector<Cidade> vect, int left, int right);
 */
 std::vector<Cidade> ordenarPorNome(std::vector<Cidade> vect, int left, int right);
 /**
-* Função que procura e retorna uma cidade pelo seu Nome
+* @brief Função que procura e retorna uma cidade pelo seu Nome
 *
 * @param vect Vector de Cidades para pesquisar
 * @param chave Nome da Cidade a procurar
@@ -41,7 +41,7 @@ std::vector<Cidade> ordenarPorNome(std::vector<Cidade> vect, int left, int right
 */
 Cidade pesquisaNome( std::vector<Cidade> vect , std::string chave);
 /**
-* Função que procura e retorna uma cidade pelo seu ID
+* @brief Função que procura e retorna uma cidade pelo seu ID
 *
 * @param vect Vector de Cidades para pesquisar
 * @param chave ID da Cidade a procurar
