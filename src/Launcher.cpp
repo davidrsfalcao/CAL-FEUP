@@ -192,6 +192,7 @@ void updateGViewer(){
 		gv->addNode(cidadesId[i].getId(), cidadesId[i].getCoordenadas().getX(), cidadesId[i].getCoordenadas().getY());
 		gv->setVertexLabel(cidadesId[i].getId(), cidadesId[i].getNome());
 		gv->setVertexColor(cidadesId[i].getId(), VERTEX_COLOR);
+		gv->setVertexSize(cidadesId[i].getId(), 25);
 	}
 
 	int id = 0;
@@ -204,7 +205,6 @@ void updateGViewer(){
 
 				if (cid.getId() == 0) {
 				} else {
-					//std::cout << id << " - " << cidadesId[i].getId() << " - " << cidadesId[i].getIdDestino(k) << endl;
 					gv->addEdge(id, cidadesId[i].getId(), cidadesId[i].getIdDestino(k), EdgeType::DIRECTED);
 					id++;
 				}
