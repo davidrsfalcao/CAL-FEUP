@@ -6,6 +6,7 @@
 #include <time.h>
 #include <sstream>
 #include <vector>
+#include <string>
 #include <conio.h>
 #include <cstdlib>
 #include <windows.h>
@@ -131,6 +132,13 @@ int opcao_valida(int &opcao, int min, int max);
 int opcao_valida_listas(int &opcao, int min, int max);
 
 /**
+*@brief Lê o input do utilizador e vê se a entrada do teclado
+*
+*
+*@return Retorna a tecla primida
+*/
+int tecla_pressionada();
+/**
 *@brief Definir cores
 *
 */
@@ -141,11 +149,20 @@ enum DOS_COLORS{
 };
 
 /**
+ * @brief Algoritmo de pesquisa de uma palavra num vetor
+ *
+ * @param palavra A palavra que se pretende encontrar
+ * @param v1 Vetor onde se vai procurar
+ *
+ * @return Retorn a posicao da palavra no vetor se encontrar ou -1 se nao encontrar
+ */
+int encontra_string_vetor(std::string palavra, std::vector<std::string> v1);
+
+/**
 * @brief Define a côr do texto a imprimir
 *
 * @param iColor cor escolhida
 */
-
 void textcolor(DOS_COLORS iColor);
 
 /**

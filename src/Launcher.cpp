@@ -31,24 +31,6 @@ GraphViewer *gv;
 std::vector<Cidade> cidadesId;  //cidades ordenadas por Id
 std::vector<Cidade> cidadesNome; //cidades ordenadas por Nome
 
-//std::vector<Cidade> dest; //testar voos a chegar
-
-
-void testarLigacoes(){
-
-	for (size_t i = 1; i <= 110; i++) {
-		Cidade cid = pesquisaId(dest, i);
-		Cidade cid1 = pesquisaId(cidadesId, i);
-
-		if (cid.getId() == 0){
-			std::cout << "Sem voos para " << cid1.getId() << std::endl;
-		}
-
-
-	}
-
-}
-
 void creditos(){
 	system("cls");
 	titulo();
@@ -225,16 +207,13 @@ void updateGViewer(){
 				if (cid.getId() == 0) {
 					std::cout << "ERRO";
 				} else {
-					dest.push_back(pesquisaId(cidadesId, cidadesId[i].getIdDestino(k)));
+					//dest.push_back(pesquisaId(cidadesId, cidadesId[i].getIdDestino(k)));
 					gv->addEdge(id, cidadesId[i].getId(), cidadesId[i].getIdDestino(k), EdgeType::DIRECTED);
 					id++;
 				}
 			}
 		}
 	}
-
-	dest = ordenarPorId(dest, 0, dest.size()-1);
-
 
 	gv->rearrange();
 
@@ -273,6 +252,297 @@ void abrirMapa(int opcao){
 
 	}
 
+}
+
+void displayCaixaDestinos(int opcao, int idI, int idF){
+	if (opcao == 1){
+		textcolor(yellow);
+	}
+	else {
+		textcolor(white);
+	}
+
+	int a = 186;
+	char char1 = a;  //
+
+	int b = 201;
+	char char2 = b; //
+
+	int c = 205;
+	char char3 = c; //
+
+	int d = 187;
+	char char4 = d; //
+
+	int e = 200;
+	char char5 = e; //
+
+	int f = 188;
+	char char6 = f; //
+
+
+
+	gotoxy(14,5);
+	std::cout << char2 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char4 << endl;
+
+	gotoxy(14,6);
+	std::cout <<char1;
+
+	gotoxy(75,6);
+	std::cout <<char1;
+
+	gotoxy(14,7);
+	std::cout << char5 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char6 << endl;
+
+	if ((opcao == 1) && (idI != 0)){
+		gotoxy(13,6);
+		std::cout <<"<";
+	}
+	else {
+		gotoxy(13,6);
+		std::cout <<" ";
+	}
+
+	if ((opcao == 1) && (idF != cidadesNome.size()-1)){
+		gotoxy(76,6);
+		std::cout <<">";
+	}
+	else {
+		gotoxy(76,6);
+		std::cout <<" ";
+	}
+
+	textcolor(white);
+
+	gotoxy(0,21);
+
+}
+
+void displayBarraDestinos(int idI, int idF, std::vector<std::string> vect){
+
+	std::string temp;
+	gotoxy(15,6);
+	for (size_t i = 15; i <= 74; i++) {
+		std::cout << " ";
+	}
+
+	gotoxy(17,6);
+
+	temp = cidadesNome[idI].getNome();
+	if (encontra_string_vetor(temp, vect) == -1){
+		textcolor(white);
+		std::cout << cidadesNome[idI].getNome();
+	}
+	else {
+		textcolor(brown);
+		std::cout << cidadesNome[idI].getNome();
+	}
+
+	for (size_t i = idI+1; i < idF; i++) {
+		temp = cidadesNome[i].getNome();
+
+		textcolor(white);
+		std::cout << " - ";
+
+		if (encontra_string_vetor(temp, vect) == -1){
+			std::cout << cidadesNome[i].getNome();
+		}
+		else {
+			textcolor(brown);
+			std::cout << cidadesNome[i].getNome();
+		}
+
+	}
+
+	textcolor(white);
+	gotoxy(0,21);
+
+}
+
+void barraDestinos_move(int &idI, int &idF, int key){
+
+	int tamanho = 35;
+	int contador = 0;
+
+	if (key == LEFT_KEY){
+		if (idI == 0)
+		{
+			return;
+		}
+		else {
+			idF = idI;
+
+			while (1){
+				if (idI == -1){
+					break;
+				}
+				else {
+					contador += cidadesNome[idI].getNome().size();
+					if (contador > tamanho)
+					{
+						idI++;
+						return;
+					}
+					else {
+						idI--;
+					}
+				}
+			}
+
+			contador = 0;
+			idF = 0;
+			idI = 0;
+			while (1){
+					contador += cidadesNome[idF].getNome().size();
+					if (contador > tamanho)
+					{
+						idF--;
+						return;
+					}
+					else {
+						idF++;
+					}
+			}
+
+		}
+
+	}
+	else if (key == RIGHT_KEY){
+
+		if (idF == cidadesNome.size()-1)
+		{
+			return;
+		}
+		else {
+			idI = idF;
+
+			while (1){
+				if (idF == cidadesNome.size()){
+					break;
+				}
+				else {
+					contador += cidadesNome[idF].getNome().size();
+					if (contador > tamanho)
+					{
+						idF--;
+						return;
+					}
+					else {
+						idF++;
+					}
+				}
+			}
+
+			contador = 0;
+			idF = cidadesNome.size()-1;
+			idI = cidadesNome.size()-1;
+			while (1){
+					contador += cidadesNome[idI].getNome().size();
+					if (contador > tamanho)
+					{
+						idI++;
+						return;
+					}
+					else {
+						idI--;
+					}
+			}
+
+		}
+
+	}
+
+}
+
+void menu_escolha_ops(int opcao, int opcao_b){
+	int a = 254;
+	char square = a;
+
+	int y = 8 + opcao_b;
+	int y1 = 8 + opcao;
+
+	if (opcao_b != 1){
+		gotoxy(34, y);
+		textcolor(yellow);
+		std::cout << " ";
+		textcolor(white);
+	}
+
+	if (opcao != 1){
+		gotoxy(34, y1);
+		textcolor(yellow);
+		std::cout << square;
+		textcolor(white);
+	}
+
+
+	gotoxy(0, 21);
+}
+
+void menu_escolha(){
+	int opcao = 1, opcao_b = 1, tecla, tecla1 = 0;
+	bool imprimir = true;
+	int carFich = 0;
+	bool updated = false;
+	int idI = 0, idF = 5;
+	std::vector<std::string> vect;
+
+	do
+	{
+		if (imprimir)
+		{
+			limparEcra();
+			cabecalho();
+			displayBarraDestinos(idI, idF, vect);
+
+		}
+
+		imprimir = false;
+		if (opcao == 1)
+		{
+			displayCaixaDestinos(1, idI, idF);
+		}
+		else if(opcao_b == 1){
+			displayCaixaDestinos(0, idI, idF);
+		}
+
+		menu_escolha_ops(opcao,opcao_b);
+		opcao_b = opcao;
+
+
+		tecla = opcao_valida(opcao, 1, 5);
+		Sleep(100);
+
+		if (tecla == ENTER)
+		switch (opcao)
+		{
+		case 1:
+			while (tecla1 != ENTER) {
+				tecla1 = tecla_pressionada();
+				barraDestinos_move(idI, idF, tecla1);
+				displayBarraDestinos(idI, idF,vect);
+				displayCaixaDestinos(1, idI, idF);
+			}
+			imprimir = true;
+			break;
+
+		case 2:
+			break;
+
+		case 3:
+			break;
+
+		case 4:
+			break;
+
+		case 5:
+			return;
+
+		}
+
+	} while ((opcao != 5) || (tecla != ENTER));
+
+	std::cout << std::endl << std::endl;
 }
 
 void menu_inicial_ops(int opcao, int opcao_b){
@@ -346,13 +616,13 @@ void menu_inicial(){
 					abrirMapa(1);
 					updateGViewer();
 					updated = true;
-					//testarLigacoes(); //testar Ligacoes a entrar
 				}
 				else abrirMapa(1);
 			}
 			break;
 
 		case 3:
+			menu_escolha();
 			imprimir = true;
 			break;
 

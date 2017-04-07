@@ -283,7 +283,7 @@ void cabecalho(){
 	int f = 188;
 	char char6 = f; // obter -> â•�
 
-	textcolor(cyan);
+	textcolor(yellow);
 	cout << "\t      " << char2 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char4 << endl;
 	cout << "\t      " << char1;
 	textcolor(white);
@@ -306,16 +306,16 @@ void cabecalho(){
 	cout << "\t\t" << calculo_dia_da_semana(dia, mes, ano) << ", " << dia
 		<< " de " << mostrar_mes(mes) << " de " << ano;
 
-	textcolor(cyan);
+	textcolor(yellow);
 	gotoxy(75, 1);
 	cout << char1 << endl;
 	cout << "\t      " << char5 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char6 << endl;
 	textcolor(white);
 }
 
-unsigned int encontra_string_vetor(string palavra, vector<string> v1){
+int encontra_string_vetor(string palavra, vector<string> v1){
 	bool encontrou = false;
-	unsigned int indice;
+	int indice;
 
 	for (size_t i = 0; i < v1.size(); i++)
 	{
@@ -474,6 +474,21 @@ int opcao_valida_listas(int &opcao, int min, int max){
 
 	if (opcao < min)
 		opcao = max;
+
+	return tecla;
+
+}
+
+int tecla_pressionada(){
+	int tecla;
+	int make = 0, breakc = 0;
+	make = _getch();
+
+	if (make == 224)
+		breakc = _getch();
+	else return make;
+
+	tecla = make * 100 + breakc;
 
 	return tecla;
 
