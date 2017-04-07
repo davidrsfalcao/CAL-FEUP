@@ -303,7 +303,7 @@ void displayCaixaDestinos(int opcao, int idI, int idF){
 		std::cout <<" ";
 	}
 
-	if ((opcao == 1) && (idF != cidadesNome.size()-1)){
+	if ((opcao == 1) && (idF != (int)cidadesNome.size()-1)){
 		gotoxy(76,6);
 		std::cout <<">";
 	}
@@ -318,7 +318,7 @@ void displayCaixaDestinos(int opcao, int idI, int idF){
 
 }
 
-void displayBarraDestinos(int idI, int idF, std::vector<std::string> vect){
+void displayBarraDestinos(int idI, int idF){
 
 	std::string temp;
 	gotoxy(15,6);
@@ -328,29 +328,18 @@ void displayBarraDestinos(int idI, int idF, std::vector<std::string> vect){
 
 	gotoxy(17,6);
 
-	temp = cidadesNome[idI].getNome();
-	if (encontra_string_vetor(temp, vect) == -1){
-		textcolor(white);
-		std::cout << cidadesNome[idI].getNome();
-	}
-	else {
-		textcolor(brown);
-		std::cout << cidadesNome[idI].getNome();
-	}
 
-	for (size_t i = idI+1; i < idF; i++) {
+	std::cout << cidadesNome[idI].getNome();
+
+
+	for (int i = idI+1; i < idF; i++) {
 		temp = cidadesNome[i].getNome();
 
 		textcolor(white);
 		std::cout << " - ";
 
-		if (encontra_string_vetor(temp, vect) == -1){
-			std::cout << cidadesNome[i].getNome();
-		}
-		else {
-			textcolor(brown);
-			std::cout << cidadesNome[i].getNome();
-		}
+
+		std::cout << cidadesNome[i].getNome();
 
 	}
 
@@ -361,7 +350,7 @@ void displayBarraDestinos(int idI, int idF, std::vector<std::string> vect){
 
 void barraDestinos_move(int &idI, int &idF, int key){
 
-	int tamanho = 35;
+	int tamanho = 38;
 	int contador = 0;
 
 	if (key == LEFT_KEY){
@@ -454,22 +443,41 @@ void barraDestinos_move(int &idI, int &idF, int key){
 
 }
 
+void menu_resultado(std::vector<std::string> vect){
+	limparEcra();
+
+
+}
+
 void menu_escolha_ops(int opcao, int opcao_b){
 	int a = 254;
 	char square = a;
+	int y = 0;
+	int y1 = 0;
 
-	int y = 8 + opcao_b;
-	int y1 = 8 + opcao;
+	if (opcao_b > 4){
+		y = 9 + opcao_b;
+	}
+	else {
+		y = 8 + opcao_b;
+	}
+
+	if (opcao > 4){
+		y1 = 9 + opcao;
+	}
+	else {
+		y1 = 8 + opcao;
+	}
 
 	if (opcao_b != 1){
-		gotoxy(34, y);
+		gotoxy(14, y);
 		textcolor(yellow);
 		std::cout << " ";
 		textcolor(white);
 	}
 
 	if (opcao != 1){
-		gotoxy(34, y1);
+		gotoxy(14, y1);
 		textcolor(yellow);
 		std::cout << square;
 		textcolor(white);
@@ -486,6 +494,9 @@ void menu_escolha(){
 	bool updated = false;
 	int idI = 0, idF = 5;
 	std::vector<std::string> vect;
+	std::string partida;
+	std::string chegada;
+	std::vector<std::string> paragens;
 
 	do
 	{
@@ -493,11 +504,57 @@ void menu_escolha(){
 		{
 			limparEcra();
 			cabecalho();
-			displayBarraDestinos(idI, idF, vect);
+			displayBarraDestinos(idI, idF);
+			gotoxy(0,10);
+			textcolor(red);
+			std::cout << "\t        Partida: " << std::endl;
+			textcolor(green);
+			std::cout << "\t        Destino: " << std::endl;
+			textcolor(light_gray);
+			std::cout << "\t        Paragens: " << std::endl << std::endl;
+
+			textcolor(white);
+			std::cout << "\t        Avancar" << std::endl;
+			std::cout << "\t        Cancelar" << std::endl;
+
+			imprimir = false;
+
+			if (partida == "")
+			{
+				gotoxy(25,10);
+				textcolor(dark_gray);
+				std::cout << " (obrigatorio)";
+				textcolor(white);
+			}
+			else {
+				gotoxy(25,10);
+				std::cout << partida;
+			}
+
+			if (chegada == "")
+			{
+				gotoxy(25,11);
+				textcolor(dark_gray);
+				std::cout << " (obrigatorio)";
+				textcolor(white);
+			}
+			else {
+				gotoxy(25,11);
+				std::cout << chegada;
+			}
+
+			if (paragens.size() == 0)
+			{
+				gotoxy(27,12);
+				textcolor(dark_gray);
+				std::cout << "(opcional)";
+				textcolor(white);
+			}
+
+			gotoxy(0,21);
 
 		}
 
-		imprimir = false;
 		if (opcao == 1)
 		{
 			displayCaixaDestinos(1, idI, idF);
@@ -510,9 +567,10 @@ void menu_escolha(){
 		opcao_b = opcao;
 
 
-		tecla = opcao_valida(opcao, 1, 5);
+		tecla = opcao_valida(opcao, 1, 6);
 		Sleep(100);
 
+		tecla1 = 0;
 		if (tecla == ENTER)
 		switch (opcao)
 		{
@@ -520,27 +578,76 @@ void menu_escolha(){
 			while (tecla1 != ENTER) {
 				tecla1 = tecla_pressionada();
 				barraDestinos_move(idI, idF, tecla1);
-				displayBarraDestinos(idI, idF,vect);
+				displayBarraDestinos(idI, idF);
 				displayCaixaDestinos(1, idI, idF);
 			}
 			imprimir = true;
 			break;
 
-		case 2:
+		case 2:{
+			Cidade cid = Cidade();
+			while(cid.getId() == 0){
+				gotoxy(25,10);
+				std::cout << "                                                                ";
+				gotoxy(25,10);
+				getline(cin, partida);
+				cid = pesquisaNome(cidadesNome, partida);
+				if (cid.getId() == 0)
+				{
+					gotoxy(25,10);
+					std::cout << "                                                                ";
+					gotoxy(25,10);
+					textcolor(red);
+					std::cout << " Cidade nao existente";
+					textcolor(white);
+				}
+				}
+				gotoxy(0,21);
+			}
 			break;
 
-		case 3:
+		case 3:{
+			Cidade cid = Cidade();
+
+			while(cid.getId() == 0){
+					gotoxy(25,11);
+					std::cout << "                                                                ";
+					gotoxy(25,11);
+					getline(cin, chegada);
+					cid = pesquisaNome(cidadesNome, chegada);
+					if (cid.getId() == 0)
+					{
+						gotoxy(25,11);
+						std::cout << "                                                                ";
+						gotoxy(25,11);
+						textcolor(red);
+						std::cout << " Cidade nao existente";
+						textcolor(white);
+					}
+				}
+			gotoxy(0,21);
+			}
 			break;
 
 		case 4:
 			break;
 
-		case 5:
+		case 5:{
+				vect.push_back(partida);
+				vect.push_back(chegada);
+
+				for (size_t i = 0; i < paragens.size(); i++{
+					vect.push_back(paragens[i]);
+				}
+			}
+			break;
+
+		case 6:
 			return;
 
 		}
 
-	} while ((opcao != 5) || (tecla != ENTER));
+	} while ((opcao != 6) || (tecla != ENTER));
 
 	std::cout << std::endl << std::endl;
 }
