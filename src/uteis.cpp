@@ -14,7 +14,7 @@ int horas_do_sistema(){
 	ptm = gmtime ( &rawtime );
 
 
-	return ptm->tm_hour+0;
+	return ptm->tm_hour+1;
 
 
 }

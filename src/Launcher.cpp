@@ -24,7 +24,8 @@
 #define VERTEX_COLOR "red"
 #define ID_MAX 110 //mudar consoante o numero de ficheiros
 
-Graph<Cidade> graph;
+Graph<Cidade> graph;  // o peso das arestas é o custo
+Graph<Cidade> graph1; // o peso das arestas é o tempo
 GraphViewer *gv;
 
 //Variaveis globais
@@ -166,6 +167,7 @@ int carregarFicheiros() {
 					destinos);
 
 			graph.addVertex(cidade);
+			graph1.addVertex(cidade);
 			cidadesId.push_back(cidade);
 			cidadesNome.push_back(cidade);
 			in.close();
@@ -447,6 +449,7 @@ void menu_resultado(std::vector<std::string> vect){
 	limparEcra();
 
 
+
 }
 
 void menu_escolha_ops(int opcao, int opcao_b){
@@ -636,7 +639,7 @@ void menu_escolha(){
 				vect.push_back(partida);
 				vect.push_back(chegada);
 
-				for (size_t i = 0; i < paragens.size(); i++{
+				for (size_t i = 0; i < paragens.size(); i++){
 					vect.push_back(paragens[i]);
 				}
 			}
