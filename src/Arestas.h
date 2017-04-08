@@ -14,9 +14,11 @@ private:
 	unsigned int id_destino;
 
 public:
+	Aresta();
 	Aresta(unsigned int id_origem, unsigned int id_destino);
 	unsigned int getIdOrigem();
 	unsigned int getIdDestino();
+	bool operator <(const Aresta a);
 };
 
 

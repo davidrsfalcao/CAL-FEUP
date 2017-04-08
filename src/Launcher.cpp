@@ -12,6 +12,8 @@
 #include <sstream>
 #include <conio.h>
 #include <vector>
+#include <map>
+#include "Arestas.h"
 #include "Graph.h"
 #include "graphviewer.h"
 #include "Cidade.h"
@@ -29,6 +31,7 @@
 //Variaveis globais
 Graph<Cidade> graph;
 GraphViewer *gv;
+std::map<int, Aresta> arestas;
 std::vector<Cidade> cidadesId;  //cidades ordenadas por Id
 std::vector<Cidade> cidadesNome; //cidades ordenadas por Nome
 
@@ -68,11 +71,14 @@ void creditos(){
 // Arestas com custo
 void carregarArestasOp1(){
 
-		for (size_t i=0; i<cidadesId.size(); i++){
-			for(size_t k=0; k < cidadesId[i].getNumeroDestinos(); k++){
+	int counter = 0;
 
-			}
-		}
+	while(arestas.find(counter) != arestas.end()){
+
+		counter++;
+	}
+
+
 
 }
 
@@ -202,6 +208,20 @@ int carregarFicheiros() {
 	}
 	cidadesId = ordenarPorId(cidadesId, 0, cidadesId.size()-1);
 	cidadesNome = ordenarPorNome(cidadesNome, 0, cidadesNome.size()-1);
+
+	int id = 0;
+
+	for(size_t i=0; i<cidadesId.size(); i++)
+	{
+		for (size_t k = 0; k < cidadesId[i].getNumeroDestinos(); k++) {
+			int id = cidadesId[i].getId();
+			int id_destino = cidadesId[i].getIdDestino(k);
+			Aresta a = Aresta(id,id_destino);
+			arestas[id] = a;
+			id++;
+
+		}
+	}
 
 	gotoxy(0,21);
 	textcolor(yellow);
@@ -476,6 +496,116 @@ void menu_resultado(std::vector<std::string> vect){
 
 }
 
+void menu_custo_tempo_interface(int opcao, bool imprimir){
+
+
+	int a = 186;
+	char char1 = a;  //
+
+	int b = 201;
+	char char2 = b; //
+
+	int c = 205;
+	char char3 = c; //
+
+	int d = 187;
+	char char4 = d; //
+
+	int e = 200;
+	char char5 = e; //
+
+	int f = 188;
+	char char6 = f; //
+
+	int g = 204;
+	char char7 = g; // obter -> ╠
+
+	int h = 185;
+	char char8 = h; // obter -> ╣
+
+	if (imprimir){
+		limparEcra();
+		textcolor(yellow);
+		gotoxy(14,5);
+		std::cout << char2 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char4 << endl;
+
+
+		for (size_t i = 0; i < 7; i++) {
+			gotoxy(14,6+i);
+			std::cout <<char1;
+
+			gotoxy(75,6+i);
+			std::cout <<char1;
+		}
+
+		gotoxy(14,7);
+		std::cout << char7 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char8 << endl;
+
+		gotoxy(14,13);
+		std::cout << char5 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char6 << endl;
+
+		textcolor(white);
+		gotoxy(24,6);
+		std::cout << "Deseja otimizar os resultados quanto ao: ";
+	}
+
+
+	if (opcao == 1){
+		textcolor(light_red);
+	}
+	else {
+		textcolor(white);
+	}
+	gotoxy(25,9);
+	std::cout << char2 << char3 << char3 << char3 << char3 << char3 << char3 << char3  << char3 << char3<< char4;
+	gotoxy(25,10);
+	std::cout << char1 << "  Custo";
+	gotoxy(35,10);
+	std::cout << char1;
+	gotoxy(25,11);
+	std::cout << char5 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char6;
+
+	if (opcao == 2){
+		textcolor(light_red);
+	}
+	else {
+		textcolor(white);
+	}
+	gotoxy(53,9);
+	std::cout << char2 << char3 << char3 << char3 << char3 << char3 << char3 << char3  << char3 << char3<< char4;
+	gotoxy(53,10);
+	std::cout << char1 << "  Tempo";
+	gotoxy(63,10);
+	std::cout << char1;
+	gotoxy(53,11);
+	std::cout << char5 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char6;
+
+
+
+	textcolor(white);
+	gotoxy(0,21);
+
+}
+
+void menu_custo_tempo(){
+
+	int tecla = 0;
+	int opcao = 1;
+	bool imprimir = true;
+
+	do{
+		menu_custo_tempo_interface(opcao, imprimir);
+		imprimir = false;
+		tecla = opcao_valida_listas(opcao,1,2);
+
+		if (tecla != RIGHT_KEY && tecla != LEFT_KEY)
+			imprimir = true;
+
+	} while(tecla != ENTER);
+
+
+}
+
 void menu_escolha_ops(int opcao, int opcao_b){
 	int a = 254;
 	char square = a;
@@ -717,7 +847,6 @@ void menu_escolha(){
 
 			break;
 
-		case 5:
 			break;
 
 		case 6:{
@@ -727,6 +856,10 @@ void menu_escolha(){
 				for (size_t i = 0; i < paragens.size(); i++){
 					vect.push_back(paragens[i]);
 				}
+
+				menu_custo_tempo();
+				imprimir = true;
+
 			}
 			break;
 
