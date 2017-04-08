@@ -360,7 +360,7 @@ bool dia_existe(int dia, int mes, int ano){
 	case 3: //marco
 		if(dia > 31)
 			return false;
-		else return false;
+		else return true;
 		break;
 
 	case 4:  //abril

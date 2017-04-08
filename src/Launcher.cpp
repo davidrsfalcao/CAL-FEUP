@@ -24,11 +24,11 @@
 #define VERTEX_COLOR "red"
 #define ID_MAX 110 //mudar consoante o numero de ficheiros
 
-Graph<Cidade> graph;  // o peso das arestas é o custo
-Graph<Cidade> graph1; // o peso das arestas é o tempo
-GraphViewer *gv;
+
 
 //Variaveis globais
+Graph<Cidade> graph;
+GraphViewer *gv;
 std::vector<Cidade> cidadesId;  //cidades ordenadas por Id
 std::vector<Cidade> cidadesNome; //cidades ordenadas por Nome
 
@@ -63,6 +63,31 @@ void creditos(){
 	textcolor(white);
 
 	std::cin.ignore();
+}
+
+// Arestas com custo
+void carregarArestasOp1(){
+
+		for (size_t i=0; i<cidadesId.size(); i++){
+			for(size_t k=0; k < cidadesId[i].getNumeroDestinos(); k++){
+
+			}
+		}
+
+}
+
+void carregarArestas(int opcao){
+	switch(opcao){
+		case 1:
+			break;
+
+		case 2:
+			break;
+
+		case 3:
+			break;
+	}
+
 }
 
 void carregarFichMsg(){
@@ -167,7 +192,6 @@ int carregarFicheiros() {
 					destinos);
 
 			graph.addVertex(cidade);
-			graph1.addVertex(cidade);
 			cidadesId.push_back(cidade);
 			cidadesNome.push_back(cidade);
 			in.close();
@@ -180,7 +204,7 @@ int carregarFicheiros() {
 	cidadesNome = ordenarPorNome(cidadesNome, 0, cidadesNome.size()-1);
 
 	gotoxy(0,21);
-	textcolor(light_green);
+	textcolor(yellow);
 	std::cout << "\t    Carregamento completo";
 	textcolor(white);
 	Sleep(1000);
@@ -400,7 +424,7 @@ void barraDestinos_move(int &idI, int &idF, int key){
 	}
 	else if (key == RIGHT_KEY){
 
-		if (idF == cidadesNome.size()-1)
+		if (idF == (int)cidadesNome.size()-1)
 		{
 			return;
 		}
@@ -408,7 +432,7 @@ void barraDestinos_move(int &idI, int &idF, int key){
 			idI = idF;
 
 			while (1){
-				if (idF == cidadesNome.size()){
+				if (idF == (int)cidadesNome.size()){
 					break;
 				}
 				else {
@@ -458,14 +482,14 @@ void menu_escolha_ops(int opcao, int opcao_b){
 	int y = 0;
 	int y1 = 0;
 
-	if (opcao_b > 4){
+	if (opcao_b > 5){
 		y = 9 + opcao_b;
 	}
 	else {
 		y = 8 + opcao_b;
 	}
 
-	if (opcao > 4){
+	if (opcao > 5){
 		y1 = 9 + opcao;
 	}
 	else {
@@ -500,6 +524,8 @@ void menu_escolha(){
 	std::string partida;
 	std::string chegada;
 	std::vector<std::string> paragens;
+	std::string data;
+	unsigned int dia, mes, ano;
 
 	do
 	{
@@ -513,6 +539,8 @@ void menu_escolha(){
 			std::cout << "\t        Partida: " << std::endl;
 			textcolor(green);
 			std::cout << "\t        Destino: " << std::endl;
+			textcolor(light_gray);
+			std::cout << "\t        Data: " << std::endl;
 			textcolor(light_gray);
 			std::cout << "\t        Paragens: " << std::endl << std::endl;
 
@@ -546,9 +574,21 @@ void menu_escolha(){
 				std::cout << chegada;
 			}
 
+			if (data == "")
+			{
+				gotoxy(23,12);
+				textcolor(dark_gray);
+				std::cout << "( DD/MM/AAAA )";
+				textcolor(white);
+			}
+			else {
+				gotoxy(23,12);
+				std::cout << data;
+			}
+
 			if (paragens.size() == 0)
 			{
-				gotoxy(27,12);
+				gotoxy(27,13);
 				textcolor(dark_gray);
 				std::cout << "(opcional)";
 				textcolor(white);
@@ -570,7 +610,7 @@ void menu_escolha(){
 		opcao_b = opcao;
 
 
-		tecla = opcao_valida(opcao, 1, 6);
+		tecla = opcao_valida(opcao, 1, 7);
 		Sleep(100);
 
 		tecla1 = 0;
@@ -603,6 +643,7 @@ void menu_escolha(){
 					textcolor(red);
 					std::cout << " Cidade nao existente";
 					textcolor(white);
+					Sleep(1000);
 				}
 				}
 				gotoxy(0,21);
@@ -626,16 +667,60 @@ void menu_escolha(){
 						textcolor(red);
 						std::cout << " Cidade nao existente";
 						textcolor(white);
+						Sleep(1000);
 					}
 				}
 			gotoxy(0,21);
 			}
 			break;
 
-		case 4:
+		case 4:{
+			bool avancar = false;
+			char sep = '/';
+			char ch1, ch2;
+
+			while(!avancar)
+			{
+				gotoxy(23,12);
+				std::cout << "                                                                ";
+				gotoxy(25,12);
+				getline(cin, data);
+				stringstream ss1(data);
+				ss1 >> dia >> ch1 >> mes >> ch2 >> ano;
+
+				if ((ch1 != sep) || (ch2 != sep)){
+					gotoxy(23,12);
+					std::cout << "                                                                ";
+					gotoxy(25,12);
+					textcolor(red);
+					std::cout << " Formato invalido";
+					textcolor(white);
+					Sleep(1000);
+				} else {
+					if (!dia_existe(dia,mes,ano)){
+						gotoxy(23,12);
+						std::cout << "                                                                ";
+						gotoxy(25,12);
+						textcolor(red);
+						std::cout << " Data inexistente";
+						textcolor(white);
+						Sleep(1000);
+					} else {
+						avancar = true;
+					}
+
+				}
+
+			}
+			gotoxy(0,21);
+		}
+
 			break;
 
-		case 5:{
+		case 5:
+			break;
+
+		case 6:{
 				vect.push_back(partida);
 				vect.push_back(chegada);
 
@@ -645,12 +730,12 @@ void menu_escolha(){
 			}
 			break;
 
-		case 6:
+		case 7:
 			return;
 
 		}
 
-	} while ((opcao != 6) || (tecla != ENTER));
+	} while ((opcao != 7) || (tecla != ENTER));
 
 	std::cout << std::endl << std::endl;
 }
