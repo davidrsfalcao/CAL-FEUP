@@ -24,6 +24,10 @@ O cliente especifica:
 
 > Mais de 100 destinos de viagem
 
+![alt-taj](http://image.prntscr.com/image/97577172c81444d1a44db4250cdeef06.png)
+
+> Otimização quanto ao custo e quanto ao tempo
+
 # Developers
 - David Falcão
 - Pedro Miranda
