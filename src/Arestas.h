@@ -12,10 +12,12 @@ class Aresta{
 private:
 	unsigned int id_origem;
 	unsigned int id_destino;
+	int custo;
+	int tempo;
 
 public:
 	Aresta();
-	Aresta(unsigned int id_origem, unsigned int id_destino);
+	Aresta(unsigned int id_origem, unsigned int id_destino, int custo, int tempo);
 	unsigned int getIdOrigem();
 	unsigned int getIdDestino();
 	bool operator <(const Aresta a);

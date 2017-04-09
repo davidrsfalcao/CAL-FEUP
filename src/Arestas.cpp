@@ -12,9 +12,11 @@ Aresta::Aresta(){
 	id_destino = 99999;
 }
 
-Aresta::Aresta(unsigned int id_origem, unsigned int id_destino){
+Aresta::Aresta(unsigned int id_origem, unsigned int id_destino, int custo, int tempo){
 	this->id_origem = id_origem;
 	this->id_destino = id_destino;
+	this->custo = custo;
+	this->tempo = tempo;
 
 }
 

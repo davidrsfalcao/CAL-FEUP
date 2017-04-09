@@ -140,7 +140,7 @@ void carregarArestasTempo(std::vector<std::string> vect){
 
 			int tempo = cidadesId[i].getTempoViagem(k);
 			if (origem){
-				// o tempo é só o da Viagem
+				// o tempo ï¿½ sï¿½ o da Viagem
 			}
 			else if(visitar){
 				tempo += VISITING_TIME; //tempo viagem + tempo visita
@@ -283,7 +283,10 @@ int carregarFicheiros() {
 		for (size_t k = 0; k < cidadesId[i].getNumeroDestinos(); k++) {
 			int id = cidadesId[i].getId();
 			int id_destino = cidadesId[i].getIdDestino(k);
-			Aresta a = Aresta(id,id_destino);
+			int custo =  cidadesId[i].getCustoViagem(k);
+			int tempo =  cidadesId[i].getTempoViagem(k);
+
+			Aresta a = Aresta(id,id_destino, custo, tempo);
 			arestas[id] = a;
 			id++;
 
@@ -556,6 +559,31 @@ void barraDestinos_move(int &idI, int &idF, int key){
 
 }
 
+void imprimir_tempo(std::vector<Cidade> caminho){
+	limparEcra();
+	cabecalho();
+	int acumulado = 0;
+	int espera = 0;
+
+	for(size_t i=1; i< caminho.size(); i++)
+	{
+		int id = caminho[i].getId() - 1;
+
+		gotoxy(14,4+i);
+		std::cout << caminho[i].getNome();
+
+		gotoxy(40, 4+i);
+		std::cout << graph.getVertexSet()[id]->getDist() - acumulado;
+
+		gotoxy(60, 4+i);
+		std::cout << graph.getVertexSet()[id]->getDist() - acumulado;
+
+	}
+
+
+
+}
+
 void menu_resultado(int opcao, std::vector<std::string> vect){
 	limparEcra();
 	std::string origem = vect[0];
@@ -582,11 +610,9 @@ void menu_resultado(int opcao, std::vector<std::string> vect){
 
 	graph.dijkstraShortestPath(pesquisaNome(cidadesNome, origem));
 	vector<Cidade> caminho = graph.getPath(pesquisaNome(cidadesNome, origem), pesquisaNome(cidadesNome, destino));
-	//
-	// std::cout << caminho.size() << std::endl;
 	unsigned int id = pesquisaNome(cidadesNome, destino).getId()-1;
-	//std::cout << graph.getVertexSet()[id]->getDist();
-	//std::cout << caminho.size();
+	imprimir_tempo(caminho);
+
 	std::cout << "\n\nO total e de: " << graph.getVertexSet()[id]->getDist() << std::endl;
 
 	for (size_t i = 0; i < caminho.size(); i++) {
