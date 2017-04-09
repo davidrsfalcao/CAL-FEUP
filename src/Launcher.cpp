@@ -25,6 +25,7 @@
 #define EDGE_COLOR "white"
 #define VERTEX_COLOR "red"
 #define ID_MAX 110 //mudar consoante o numero de ficheiros
+#define AVERAGE_WAITING 120 //tempo de espera pelo próximo transporte
 
 
 
@@ -68,32 +69,40 @@ void creditos(){
 	std::cin.ignore();
 }
 
-// Arestas com custo
-void carregarArestasOp1(){
-
-	int counter = 0;
-
-	while(arestas.find(counter) != arestas.end()){
-
-		counter++;
+void carregarArestasCusto(){
+	for (size_t i = 0; i < cidadesId.size(); i++) {
+		for(size_t k = 0; k < cidadesId[i].getNumeroDestinos(); k++)
+		{
+			int id_destino = cidadesId[i].getIdDestino(k);
+			Cidade destino = pesquisaId(cidadesId, id_destino);
+			int custo = cidadesId[i].getCustoViagem(k);
+			graph.addEdge(cidadesId[i], destino, custo, 0);
+		}
 	}
-
-
 
 }
 
-void carregarArestas(int opcao){
-	switch(opcao){
-		case 1:
-			break;
-
-		case 2:
-			break;
-
-		case 3:
-			break;
+void carregarArestasTempo(){
+	for (size_t i = 0; i < cidadesId.size(); i++) {
+		for(size_t k = 0; k < cidadesId[i].getNumeroDestinos(); k++)
+		{
+			int id_destino = cidadesId[i].getIdDestino(k);
+			Cidade destino = pesquisaId(cidadesId, id_destino);
+			int tempo = cidadesId[i].getTempoViagem(k);
+			graph.addEdge(cidadesId[i], destino, tempo, 0);
+		}
 	}
+}
 
+void limparArestas(){
+	for (size_t i = 0; i < cidadesId.size(); i++) {
+		for(size_t k = 0; k < cidadesId[i].getNumeroDestinos(); k++)
+		{
+			int id_destino = cidadesId[i].getIdDestino(k);
+			Cidade destino = pesquisaId(cidadesId, id_destino);
+			graph.removeEdge(cidadesId[i], destino);
+		}
+	}
 }
 
 void carregarFichMsg(){
@@ -211,8 +220,7 @@ int carregarFicheiros() {
 
 	int id = 0;
 
-	for(size_t i=0; i<cidadesId.size(); i++)
-	{
+	for(size_t i=0; i<cidadesId.size(); i++){
 		for (size_t k = 0; k < cidadesId[i].getNumeroDestinos(); k++) {
 			int id = cidadesId[i].getId();
 			int id_destino = cidadesId[i].getIdDestino(k);
@@ -489,11 +497,44 @@ void barraDestinos_move(int &idI, int &idF, int key){
 
 }
 
-void menu_resultado(std::vector<std::string> vect){
+void menu_resultado(int opcao, std::vector<std::string> vect){
 	limparEcra();
+	std::string origem = vect[0];
+	std::string destino = vect[1];
+	std::string data = vect[2];
+	std::vector<std::string> paragens;
+	int dia, mes;
+	char temp;
+
+	stringstream ss1(data);
+	ss1 >> dia >> temp >>mes;
+
+	cout << graph.getNumVertex();
+	system("pause");
+
+	for (size_t i = 3; i < vect.size(); i++) {
+		paragens.push_back(vect[i]);
+	}
+
+	std::cout << origem << std::endl;
+	std::cout << destino << std::endl;
+	std::cout << data << std::endl;
 
 
+	graph.dijkstraShortestPath(pesquisaNome(cidadesNome, origem));
+	vector<Cidade> caminho = graph.getPath(pesquisaNome(cidadesNome, origem), pesquisaNome(cidadesNome, destino));
+	//
+	// std::cout << caminho.size() << std::endl;
+	unsigned int id = pesquisaNome(cidadesNome, destino).getId()-1;
+	//std::cout << graph.getVertexSet()[id]->getDist();
+	//std::cout << caminho.size();
+	std::cout << "\n\nO total e de: " << graph.getVertexSet()[id]->getDist() << std::endl;
 
+	for (size_t i = 0; i < caminho.size(); i++) {
+		std::cout << caminho[i].getNome() << std::endl;
+	}
+
+	system("pause");
 }
 
 void menu_custo_tempo_interface(int opcao, bool imprimir){
@@ -587,7 +628,7 @@ void menu_custo_tempo_interface(int opcao, bool imprimir){
 
 }
 
-void menu_custo_tempo(){
+void menu_custo_tempo(std::vector<std::string> vect){
 
 	int tecla = 0;
 	int opcao = 1;
@@ -602,6 +643,42 @@ void menu_custo_tempo(){
 			imprimir = true;
 
 	} while(tecla != ENTER);
+
+	if(opcao == 1){
+		if(vect.size() != 3){
+			opcao = 3;
+		}
+	}
+	else if(opcao == 2){
+		if(vect.size() != 3)
+		{
+			opcao = 4;
+		}
+	}
+
+	switch (opcao) {
+		case 1:
+			carregarArestasCusto();
+			menu_resultado(1, vect);
+			limparArestas();
+			break;
+
+		case 2:
+			menu_resultado(2, vect);
+			limparArestas();
+			break;
+
+		case 3:
+			carregarArestasCusto();
+			menu_resultado(3, vect);
+			limparArestas();
+			break;
+
+		case 4:
+			menu_resultado(4, vect);
+			limparArestas();
+			break;
+	}
 
 
 }
@@ -664,6 +741,11 @@ void menu_escolha(){
 			limparEcra();
 			cabecalho();
 			displayBarraDestinos(idI, idF);
+			gotoxy(39,4);
+			textcolor(light_red);
+			std::cout << "DESTINOS";
+
+
 			gotoxy(0,10);
 			textcolor(red);
 			std::cout << "\t        Partida: " << std::endl;
@@ -850,18 +932,33 @@ void menu_escolha(){
 			break;
 
 		case 6:{
-				vect.push_back(partida);
-				vect.push_back(chegada);
 
-				for (size_t i = 0; i < paragens.size(); i++){
-					vect.push_back(paragens[i]);
-				}
+				if (partida != "")
+					if (chegada != "")
+						if(data != ""){
+							vect.push_back(partida);
+							vect.push_back(chegada);
+							vect.push_back(data);
 
-				menu_custo_tempo();
-				imprimir = true;
+							for (size_t i = 0; i < paragens.size(); i++){
+								vect.push_back(paragens[i]);
+							}
 
+							menu_custo_tempo(vect);
+							imprimir = true;
+							return;
+						}
+
+				gotoxy(14,21);
+				textcolor(red);
+				std::cout << "Preencha as informacoes obrigatorias primeiro" ;
+				Sleep(1000);
+				textcolor(white);
+				std::cout << "                                              " ;
+				gotoxy(0,21);
+
+				break;
 			}
-			break;
 
 		case 7:
 			return;
@@ -935,7 +1032,6 @@ void menu_inicial(){
 			break;
 
 		case 2:
-
 			if (carFich == 0){
 				abrirMapa(0);
 			}
@@ -950,8 +1046,11 @@ void menu_inicial(){
 			break;
 
 		case 3:
-			menu_escolha();
-			imprimir = true;
+			if (carFich == 1){
+				menu_escolha();
+				imprimir = true;
+			}
+			else abrirMapa(0);
 			break;
 
 		case 4:
