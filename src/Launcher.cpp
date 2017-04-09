@@ -25,7 +25,7 @@
 #define EDGE_COLOR "white"
 #define VERTEX_COLOR "red"
 #define ID_MAX 110 //mudar consoante o numero de ficheiros
-#define AVERAGE_WAITING 120 //tempo de espera pelo próximo transporte
+#define AVERAGE_WAITING 120 //tempo de espera pelo prÃ³ximo transporte
 #define VISITING_TIME 720 // tempo de visita
 
 
@@ -73,7 +73,6 @@ void carregarArestasCusto(std::vector<std::string> vect){
 
 	Cidade saida = pesquisaNome(cidadesNome, vect[0]);
 	Cidade chegada = pesquisaNome(cidadesNome, vect[1]);
-	std::cout << chegada.getNome() << std::endl;
 
 	stringstream ss1(vect[2]);
 	int dia, mes;
@@ -140,7 +139,7 @@ void carregarArestasTempo(std::vector<std::string> vect){
 
 			int tempo = cidadesId[i].getTempoViagem(k);
 			if (origem){
-				// o tempo � s� o da Viagem
+				// o tempo ï¿½ sï¿½ o da Viagem
 			}
 			else if(visitar){
 				tempo += VISITING_TIME; //tempo viagem + tempo visita
@@ -559,65 +558,407 @@ void barraDestinos_move(int &idI, int &idF, int key){
 
 }
 
-void imprimir_tempo(std::vector<Cidade> caminho){
+void imprimir_custo(std::vector<std::string> vect, int opcao){
 	limparEcra();
 	cabecalho();
 	int acumulado = 0;
-	int espera = 0;
+	int acumulado1 = 0;
 
-	for(size_t i=1; i< caminho.size(); i++)
-	{
-		int id = caminho[i].getId() - 1;
+	int a = 186;
+	char char1 = a;  // obter -> Ã¢â€¢â€˜
 
-		gotoxy(14,4+i);
-		std::cout << caminho[i].getNome();
+	int b = 201;
+	char char2 = b; // obter -> Ã¢â€¢â€�
 
-		gotoxy(40, 4+i);
-		std::cout << graph.getVertexSet()[id]->getDist() - acumulado;
+	int c = 205;
+	char char3 = c; // obter -> Ã¢â€¢ï¿½
 
-		gotoxy(60, 4+i);
-		std::cout << graph.getVertexSet()[id]->getDist() - acumulado;
+	int d = 187;
+	char char4 = d; // obter -> Ã¢â€¢â€”
 
-	}
+	int e = 200;
+	char char5 = e; // obter -> Ã¢â€¢Å¡
 
+	int f = 188;
+	char char6 = f; // obter -> Ã¢â€¢ï¿½
 
+	int g = 203;
+	char char7 = g; // obter -> â•¦
 
-}
+	int h = 185;
+	char char8 = h; // obter -> â•£
 
-void menu_resultado(int opcao, std::vector<std::string> vect){
-	limparEcra();
 	std::string origem = vect[0];
 	std::string destino = vect[1];
 	std::string data = vect[2];
-	std::vector<std::string> paragens;
 	int dia, mes;
 	char temp;
+	unsigned int i = 0;
+	unsigned int counter = 0;
+
+	vector<Cidade> caminho;
 
 	stringstream ss1(data);
 	ss1 >> dia >> temp >>mes;
 
-	cout << graph.getNumVertex();
-	system("pause");
+	carregarArestasCusto(vect);
 
-	for (size_t i = 3; i < vect.size(); i++) {
-		paragens.push_back(vect[i]);
+	if (opcao == 1){
+		graph.dijkstraShortestPath(pesquisaNome(cidadesNome, origem));
+		caminho = graph.getPath(pesquisaNome(cidadesNome, origem), pesquisaNome(cidadesNome, destino));
+		for(; i< caminho.size(); i++)
+		{
+			int id = caminho[i].getId() - 1;
+			textcolor(yellow);
+			gotoxy(14,5+i);
+			std::cout << char1;
+
+			gotoxy(16,5+i);
+			textcolor(white);
+			std::cout << caminho[i].getNome();
+
+			gotoxy(50, 5+i);
+			std::cout << graph.getVertexSet()[id]->getDist() - acumulado;
+			acumulado = graph.getVertexSet()[id]->getDist();
+
+			gotoxy(65, 5+i);
+			std::cout << graph.getVertexSet()[id]->getDist();
+
+			textcolor(yellow);
+			gotoxy(75,5+i);
+			std::cout << char1;
+		}
+	}
+	else {
+		graph.dijkstraShortestPath(pesquisaNome(cidadesNome, origem));
+		caminho = graph.getPath(pesquisaNome(cidadesNome, origem), pesquisaNome(cidadesNome, vect[3]));
+
+		for(; i< caminho.size(); i++)
+		{
+			int id = caminho[i].getId() - 1;
+			textcolor(yellow);
+			gotoxy(14,5+i);
+			std::cout << char1;
+
+			gotoxy(16,5+i);
+			textcolor(white);
+			std::cout << caminho[i].getNome();
+
+			gotoxy(50, 5+i);
+			std::cout << graph.getVertexSet()[id]->getDist() - acumulado;
+			acumulado = graph.getVertexSet()[id]->getDist();
+
+			gotoxy(65, 5+i);
+			std::cout << graph.getVertexSet()[id]->getDist();
+
+			textcolor(yellow);
+			gotoxy(75,5+i);
+			std::cout << char1;
+		}
+		counter = caminho.size();
+		i = counter;
+
+		vect.erase(vect.begin());
+		vect.erase(vect.begin());
+		vect.erase(vect.begin());
+
+		for(; i < vect.size()+counter; i++)
+		{
+			acumulado1 = 0;;
+
+			graph.dijkstraShortestPath(pesquisaNome(cidadesNome, vect[i-counter]));
+			if (i != (vect.size()+counter)-1){
+				caminho = graph.getPath(pesquisaNome(cidadesNome, vect[i-counter]), pesquisaNome(cidadesNome, vect[i+1-counter]));
+			}
+			else {
+				caminho = graph.getPath(pesquisaNome(cidadesNome, vect[i-counter]), pesquisaNome(cidadesNome, destino));
+			}
+			caminho.erase(caminho.begin());
+			for(; i< caminho.size()+counter; i++)
+			{
+				int id = caminho[i-counter].getId() - 1;
+				textcolor(yellow);
+				gotoxy(14,5+i);
+				std::cout << char1;
+
+				gotoxy(16,5+i);
+				textcolor(white);
+				std::cout << caminho[i-counter].getNome();
+
+				gotoxy(50, 5+i);
+				std::cout << graph.getVertexSet()[id]->getDist() - acumulado1;
+				acumulado1 = graph.getVertexSet()[id]->getDist();
+
+				gotoxy(65, 5+i);
+				std::cout << graph.getVertexSet()[id]->getDist()+acumulado;
+
+				textcolor(yellow);
+				gotoxy(75,5+i);
+				std::cout << char1;
+
+			}
+			acumulado += acumulado1;
+			counter += caminho.size();
+			i = counter;
+
+
+		}
+		i--;
 	}
 
-	std::cout << origem << std::endl;
-	std::cout << destino << std::endl;
-	std::cout << data << std::endl;
+	textcolor(light_red);
+	gotoxy(16,3);
+	std::cout << "Cidades";
+
+	gotoxy(45,3);
+	std::cout << "C. cidade";
+
+	gotoxy(60,3);
+	std::cout << "C. acumulado";
 
 
-	graph.dijkstraShortestPath(pesquisaNome(cidadesNome, origem));
-	vector<Cidade> caminho = graph.getPath(pesquisaNome(cidadesNome, origem), pesquisaNome(cidadesNome, destino));
-	unsigned int id = pesquisaNome(cidadesNome, destino).getId()-1;
-	imprimir_tempo(caminho);
+	gotoxy(0,4);
+	textcolor(yellow);
+	cout << "\t      " << char2 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char4 << endl;
 
-	std::cout << "\n\nO total e de: " << graph.getVertexSet()[id]->getDist() << std::endl;
+	textcolor(yellow);
+	gotoxy(14, 5+i);
+	std::cout << char5 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char8 << endl;
 
-	for (size_t i = 0; i < caminho.size(); i++) {
-		std::cout << caminho[i].getNome() << std::endl;
+	gotoxy(45,5+i);
+	std::cout << char7;
+
+	gotoxy(45,6+i);
+	std::cout << char1;
+
+	gotoxy(75,6+i);
+	std::cout << char1;
+
+	gotoxy(45,7+i);
+	std::cout << char5;
+
+	for(size_t k = 46; k< 75; k++)
+	{
+		std::cout << char3;
 	}
+	std::cout << char6;
+
+	gotoxy(48,6+i);
+	textcolor(light_red);
+	std::cout << "TOTAL";
+
+	gotoxy(65, 6+i);
+	std::cout << acumulado;
+
+
+	textcolor(white);
+	gotoxy(0,21);
+
+}
+
+void imprimir_tempo(std::vector<std::string> vect, int opcao){
+	limparEcra();
+	cabecalho();
+	int acumulado = 0;
+	int acumulado1 = 0;
+
+	int a = 186;
+	char char1 = a;  // obter -> Ã¢â€¢â€˜
+
+	int b = 201;
+	char char2 = b; // obter -> Ã¢â€¢â€�
+
+	int c = 205;
+	char char3 = c; // obter -> Ã¢â€¢ï¿½
+
+	int d = 187;
+	char char4 = d; // obter -> Ã¢â€¢â€”
+
+	int e = 200;
+	char char5 = e; // obter -> Ã¢â€¢Å¡
+
+	int f = 188;
+	char char6 = f; // obter -> Ã¢â€¢ï¿½
+
+	int g = 203;
+	char char7 = g; // obter -> â•¦
+
+	int h = 185;
+	char char8 = h; // obter -> â•£
+
+	std::string origem = vect[0];
+	std::string destino = vect[1];
+	std::string data = vect[2];
+	int dia, mes;
+	char temp;
+	unsigned int i = 0;
+	unsigned int counter = 0;
+
+	vector<Cidade> caminho;
+
+	stringstream ss1(data);
+	ss1 >> dia >> temp >>mes;
+
+	carregarArestasTempo(vect);
+
+	if (opcao == 2){
+		graph.dijkstraShortestPath(pesquisaNome(cidadesNome, origem));
+		caminho = graph.getPath(pesquisaNome(cidadesNome, origem), pesquisaNome(cidadesNome, destino));
+		for(; i< caminho.size(); i++)
+		{
+			int id = caminho[i].getId() - 1;
+			textcolor(yellow);
+			gotoxy(14,5+i);
+			std::cout << char1;
+
+			gotoxy(16,5+i);
+			textcolor(white);
+			std::cout << caminho[i].getNome();
+
+			gotoxy(50, 5+i);
+			std::cout << graph.getVertexSet()[id]->getDist() - acumulado;
+			acumulado = graph.getVertexSet()[id]->getDist();
+
+			gotoxy(65, 5+i);
+			std::cout << graph.getVertexSet()[id]->getDist();
+
+			textcolor(yellow);
+			gotoxy(75,5+i);
+			std::cout << char1;
+		}
+	}
+	else {
+		graph.dijkstraShortestPath(pesquisaNome(cidadesNome, origem));
+		caminho = graph.getPath(pesquisaNome(cidadesNome, origem), pesquisaNome(cidadesNome, vect[3]));
+
+		for(; i< caminho.size(); i++)
+		{
+			int id = caminho[i].getId() - 1;
+			textcolor(yellow);
+			gotoxy(14,5+i);
+			std::cout << char1;
+
+			gotoxy(16,5+i);
+			textcolor(white);
+			std::cout << caminho[i].getNome();
+
+			gotoxy(50, 5+i);
+			std::cout << graph.getVertexSet()[id]->getDist() - acumulado;
+			acumulado = graph.getVertexSet()[id]->getDist();
+
+			gotoxy(65, 5+i);
+			std::cout << graph.getVertexSet()[id]->getDist();
+
+			textcolor(yellow);
+			gotoxy(75,5+i);
+			std::cout << char1;
+		}
+		counter = caminho.size();
+		i = counter;
+
+		vect.erase(vect.begin());
+		vect.erase(vect.begin());
+		vect.erase(vect.begin());
+
+		for(; i < vect.size()+counter; i++)
+		{
+			acumulado1 = 0;;
+
+			graph.dijkstraShortestPath(pesquisaNome(cidadesNome, vect[i-counter]));
+			if (i != (vect.size()+counter-1)){
+				caminho = graph.getPath(pesquisaNome(cidadesNome, vect[i-counter]), pesquisaNome(cidadesNome, vect[i+1-counter]));
+			}
+			else {
+				caminho = graph.getPath(pesquisaNome(cidadesNome, vect[i-counter]), pesquisaNome(cidadesNome, destino));
+			}
+			caminho.erase(caminho.begin());
+			for(; i< caminho.size()+counter; i++)
+			{
+				int id = caminho[i-counter].getId() - 1;
+				textcolor(yellow);
+				gotoxy(14,5+i);
+				std::cout << char1;
+
+				gotoxy(16,5+i);
+				textcolor(white);
+				std::cout << caminho[i-counter].getNome();
+
+				gotoxy(50, 5+i);
+				std::cout << graph.getVertexSet()[id]->getDist() - acumulado1;
+				acumulado1 = graph.getVertexSet()[id]->getDist();
+
+				gotoxy(65, 5+i);
+				std::cout << graph.getVertexSet()[id]->getDist()+acumulado;
+
+				textcolor(yellow);
+				gotoxy(75,5+i);
+				std::cout << char1;
+
+			}
+			acumulado += acumulado1;
+			counter += caminho.size();
+			i = counter;
+		}
+		i--;
+	}
+
+
+	textcolor(light_red);
+	gotoxy(16,3);
+	std::cout << "Cidades";
+
+	gotoxy(45,3);
+	std::cout << "T. cidade";
+
+	gotoxy(60,3);
+	std::cout << "T. acumulado";
+
+
+	gotoxy(0,4);
+	textcolor(yellow);
+	cout << "\t      " << char2 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char4 << endl;
+
+	textcolor(yellow);
+	gotoxy(14, 5+i);
+	std::cout << char5 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char8 << endl;
+
+	gotoxy(45,5+i);
+	std::cout << char7;
+
+	gotoxy(45,6+i);
+	std::cout << char1;
+
+	gotoxy(75,6+i);
+	std::cout << char1;
+
+	gotoxy(45,7+i);
+	std::cout << char5;
+
+	for(size_t k = 46; k< 75; k++)
+	{
+		std::cout << char3;
+	}
+	std::cout << char6;
+
+	gotoxy(48,6+i);
+	textcolor(light_red);
+	std::cout << "TOTAL";
+
+	gotoxy(65, 6+i);
+	std::cout << acumulado;
+
+
+	textcolor(white);
+	gotoxy(0,21);
+
+}
+
+void menu_resultado(int opcao, std::vector<std::string> vect){
+
+	if (opcao == 1 || opcao == 3){
+		imprimir_custo(vect,opcao);
+	}
+	else imprimir_tempo(vect,opcao);
 
 	system("pause");
 }
@@ -644,10 +985,10 @@ void menu_custo_tempo_interface(int opcao, bool imprimir){
 	char char6 = f; //
 
 	int g = 204;
-	char char7 = g; // obter -> ╠
+	char char7 = g; // obter -> â• 
 
 	int h = 185;
-	char char8 = h; // obter -> ╣
+	char char8 = h; // obter -> â•£
 
 	if (imprimir){
 		limparEcra();
@@ -885,17 +1226,37 @@ void menu_escolha(){
 				std::cout << data;
 			}
 
-			if (paragens.size() == 0)
-			{
-				gotoxy(27,13);
-				textcolor(dark_gray);
-				std::cout << "(opcional)";
-				textcolor(white);
-			}
-
 			gotoxy(0,21);
 
 		}
+
+		if (paragens.size() == 0)
+		{
+			gotoxy(27,13);
+			textcolor(dark_gray);
+			std::cout << "(opcional)";
+			textcolor(white);
+		}
+		else {
+			int nLetras = 0;
+			gotoxy(27,13);
+			textcolor(white);
+
+			for(size_t i = 0; i < paragens.size(); i++)
+			{
+				if (nLetras + paragens[i].size() < 45)
+				{
+						std::cout << "  " << paragens[i];
+						nLetras += paragens[i].size()+2;
+				}
+				else {
+					std::cout << "...";
+					break;
+				}
+
+			}
+		}
+
 
 		if (opcao == 1)
 		{
@@ -943,6 +1304,7 @@ void menu_escolha(){
 					std::cout << " Cidade nao existente";
 					textcolor(white);
 					Sleep(1000);
+					cin.ignore(256,'\n');
 				}
 				}
 				gotoxy(0,21);
@@ -967,6 +1329,7 @@ void menu_escolha(){
 						std::cout << " Cidade nao existente";
 						textcolor(white);
 						Sleep(1000);
+						cin.ignore(256,'\n');
 					}
 				}
 			gotoxy(0,21);
@@ -1013,9 +1376,33 @@ void menu_escolha(){
 			}
 			gotoxy(0,21);
 		}
-
 			break;
 
+		case 5:{
+			Cidade cid = Cidade();
+			std::string temp;
+
+			while(cid.getId() == 0){
+				gotoxy(27,13);
+				std::cout << "                                                                          ";
+				gotoxy(27,13);
+				getline(cin, temp);
+				cid = pesquisaNome(cidadesNome, chegada);
+				if (cid.getId() == 0)
+				{
+					gotoxy(27,13);
+					std::cout << "                                                                        ";
+					gotoxy(27,13);
+					textcolor(red);
+					std::cout << " Cidade nao existente";
+					textcolor(white);
+					Sleep(1000);
+					cin.ignore(256,'\n');
+				}
+			}
+			paragens.push_back(temp);
+			gotoxy(0,21);
+			}
 			break;
 
 		case 6:{
@@ -1041,6 +1428,7 @@ void menu_escolha(){
 				std::cout << "Preencha as informacoes obrigatorias primeiro" ;
 				Sleep(1000);
 				textcolor(white);
+				gotoxy(14,21);
 				std::cout << "                                              " ;
 				gotoxy(0,21);
 
