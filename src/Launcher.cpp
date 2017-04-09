@@ -26,7 +26,7 @@
 #define VERTEX_COLOR "red"
 #define ID_MAX 110 //mudar consoante o numero de ficheiros
 #define AVERAGE_WAITING 120 //tempo de espera pelo pr√≥ximo transporte
-
+#define VISITING_TIME 720 // tempo de visita
 
 
 //Variaveis globais
@@ -69,27 +69,86 @@ void creditos(){
 	std::cin.ignore();
 }
 
-void carregarArestasCusto(){
+void carregarArestasCusto(std::vector<std::string> vect){
+
+	Cidade saida = pesquisaNome(cidadesNome, vect[0]);
+	Cidade chegada = pesquisaNome(cidadesNome, vect[1]);
+	std::cout << chegada.getNome() << std::endl;
+
+	stringstream ss1(vect[2]);
+	int dia, mes;
+	char nn;
+	ss1 >> dia >> nn >> mes;
+
+
+
 	for (size_t i = 0; i < cidadesId.size(); i++) {
 		for(size_t k = 0; k < cidadesId[i].getNumeroDestinos(); k++)
 		{
 			int id_destino = cidadesId[i].getIdDestino(k);
 			Cidade destino = pesquisaId(cidadesId, id_destino);
+
+			bool visitar = false;
+
+			if (chegada == destino)
+			{
+				visitar = true;
+			}
+			else for(size_t j=3; j< vect.size(); j++)
+			{
+				Cidade temp = pesquisaNome(cidadesNome, vect[j]);
+				if (temp == destino)
+					visitar = true;
+			}
+
 			int custo = cidadesId[i].getCustoViagem(k);
-			graph.addEdge(cidadesId[i], destino, custo, 0);
+
+			 if(visitar){
+				custo += destino.HotelMaisBarato(dia,mes)->getPreco(dia,mes); //custo viagem + custo visita
+			}
+
+			graph.addEdge(cidadesId[i], destino, custo);
 		}
 	}
 
 }
 
-void carregarArestasTempo(){
+void carregarArestasTempo(std::vector<std::string> vect){
+
+	Cidade saida = pesquisaNome(cidadesNome, vect[0]);
+
 	for (size_t i = 0; i < cidadesId.size(); i++) {
 		for(size_t k = 0; k < cidadesId[i].getNumeroDestinos(); k++)
 		{
 			int id_destino = cidadesId[i].getIdDestino(k);
 			Cidade destino = pesquisaId(cidadesId, id_destino);
+
+			bool origem = false;
+			bool visitar = false;
+
+			if (saida == cidadesId[i])
+			{
+				origem = true;
+			}
+
+			for(size_t j=3; j< vect.size(); j++)
+			{
+				Cidade temp = pesquisaNome(cidadesNome, vect[j]);
+				if (temp == destino)
+					visitar = true;
+			}
+
 			int tempo = cidadesId[i].getTempoViagem(k);
-			graph.addEdge(cidadesId[i], destino, tempo, 0);
+			if (origem){
+				// o tempo È sÛ o da Viagem
+			}
+			else if(visitar){
+				tempo += VISITING_TIME; //tempo viagem + tempo visita
+			}
+			else tempo += AVERAGE_WAITING; // tempo viagem + espera aeroporto
+
+
+			graph.addEdge(cidadesId[i], destino, tempo);
 		}
 	}
 }
@@ -658,23 +717,25 @@ void menu_custo_tempo(std::vector<std::string> vect){
 
 	switch (opcao) {
 		case 1:
-			carregarArestasCusto();
+			carregarArestasCusto(vect);
 			menu_resultado(1, vect);
 			limparArestas();
 			break;
 
 		case 2:
+			carregarArestasTempo(vect);
 			menu_resultado(2, vect);
 			limparArestas();
 			break;
 
 		case 3:
-			carregarArestasCusto();
+			carregarArestasCusto(vect);
 			menu_resultado(3, vect);
 			limparArestas();
 			break;
 
 		case 4:
+			carregarArestasTempo(vect);
 			menu_resultado(4, vect);
 			limparArestas();
 			break;
