@@ -28,6 +28,17 @@ O cliente especifica:
 
 > Otimização quanto ao custo e quanto ao tempo
 
+# Como correr? (apenas para Windows)
+**1.** Download do Zip do projeto
+
+**2.** Extrair a pasta CAL-proj1-master
+
+**3.** Abrir janela de comando dentro da pasta CAL-proj1-master (em windows faz-se primindo SHIFT + RIGTH CLICK ON MOUSE -> Abrir janela de comando aqui)
+
+**4.** Abrir a pasta CAL-proj1-master\Debug e arrastar o ficheiro CAL-proj1.exe para a janela de comando aberta
+
+**5.** Press Enter and enjoy it ;)
+
 # Developers
 - David Falcão
 - Pedro Miranda
