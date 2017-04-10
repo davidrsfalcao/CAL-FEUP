@@ -1239,7 +1239,7 @@ void menu_escolha(){
 		}
 		else {
 			int nLetras = 0;
-			gotoxy(27,13);
+			gotoxy(25,13);
 			textcolor(white);
 
 			for(size_t i = 0; i < paragens.size(); i++)
