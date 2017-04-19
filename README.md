@@ -40,6 +40,7 @@ O cliente especifica:
 **5.** Press Enter and enjoy it ;)
 
 # Developers
-- David Falcão
-- Pedro Miranda
-- Verónica Fradique
+- David Falcão [@davidrsfalcao](https://github.com/davidrsfalcao)
+- Pedro Miranda [@pmiranda07](https://github.com/pmiranda07)
+- Verónica Fradique [@veronicafradique](https://github.com/veronicafradique)
+
