@@ -16,7 +16,7 @@ O cliente especifica:
 
 # Screenshots
 
-![alt-taj](http://image.prntscr.com/image/77e213f4e833430d8c67fe136c0efcf0.png)
+![alt tag](https://raw.githubusercontent.com/davidrsfalcao/CAL-proj1/master/Screenshots/Screenshot1.png)
 
 > Command Line Interface
 
