@@ -558,6 +558,146 @@ void barraDestinos_move(int &idI, int &idF, int key){
 
 }
 
+void imprimir_hoteis(std::vector<std::string> vect){
+
+	limparEcra();
+	cabecalho();
+	int acumulado = 0;
+	int atual;
+
+	int a = 186;
+	char char1 = a;
+
+	int b = 201;
+	char char2 = b;
+
+	int c = 205;
+	char char3 = c;
+
+	int d = 187;
+	char char4 = d;
+
+	int e = 200;
+	char char5 = e;
+
+	int f = 188;
+	char char6 = f;
+
+	int g = 203;
+	char char7 = g;
+
+	int h = 185;
+	char char8 = h;
+
+	std::string origem = vect[0];
+	std::string destino = vect[1];
+	std::string data = vect[2];
+	int dia, mes;
+	char temp;
+	unsigned int i = 3;
+	stringstream ss1(data);
+	ss1 >> dia >> temp >>mes;
+
+	for(; i < vect.size(); i++){
+		gotoxy(14,2+i);
+		textcolor(yellow);
+		std::cout << char1;
+
+		Cidade cid = pesquisaNome(cidadesNome, vect[i]);
+		Alojamento* hh =  cid.HotelMaisBarato(dia,mes);
+
+		textcolor(white);
+		gotoxy(16,2+i);
+		std::cout << hh->getNome();
+
+		gotoxy(45,2+i);
+		std::cout << cid.getNome();
+
+		atual = hh->getPreco(dia,mes);
+		acumulado += atual;
+		gotoxy(65,2+i);
+		std::cout << atual;
+
+		gotoxy(75,2+i);
+		textcolor(yellow);
+		std::cout << char1;
+	}
+
+	gotoxy(14,2+i);
+	textcolor(yellow);
+	std::cout << char1;
+
+	Cidade cid = pesquisaNome(cidadesNome, destino);
+	Alojamento* hh =  cid.HotelMaisBarato(dia,mes);
+
+	textcolor(white);
+	gotoxy(16,2+i);
+	std::cout << hh->getNome();
+
+	gotoxy(45,2+i);
+	std::cout << cid.getNome();
+
+	atual = hh->getPreco(dia,mes);
+	acumulado += atual;
+	gotoxy(65,2+i);
+	std::cout << atual;
+
+	gotoxy(75,2+i);
+	textcolor(yellow);
+	std::cout << char1;
+
+
+	i-= 2;
+
+
+	textcolor(light_red);
+	gotoxy(16,3);
+	std::cout << "Hotel";
+
+	gotoxy(45,3);
+	std::cout << "Cidade";
+
+	gotoxy(64,3);
+	std::cout << "Custo";
+
+	gotoxy(0,4);
+	textcolor(yellow);
+	cout << "\t      " << char2 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char4 << endl;
+
+	textcolor(yellow);
+	gotoxy(14, 5+i);
+	std::cout << char5 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char3 << char8 << endl;
+
+	gotoxy(45,5+i);
+	std::cout << char7;
+
+	gotoxy(45,6+i);
+	std::cout << char1;
+
+	gotoxy(75,6+i);
+	std::cout << char1;
+
+	gotoxy(45,7+i);
+	std::cout << char5;
+
+	for(size_t k = 46; k< 75; k++)
+	{
+		std::cout << char3;
+	}
+	std::cout << char6;
+
+	gotoxy(48,6+i);
+	textcolor(light_red);
+	std::cout << "TOTAL";
+
+	gotoxy(65, 6+i);
+	std::cout << acumulado;
+
+
+	textcolor(white);
+	gotoxy(0,21);
+}
+
 void imprimir_custo(std::vector<std::string> vect, int opcao){
 	limparEcra();
 	cabecalho();
@@ -591,6 +731,9 @@ void imprimir_custo(std::vector<std::string> vect, int opcao){
 	std::string origem = vect[0];
 	std::string destino = vect[1];
 	std::string data = vect[2];
+
+	std::vector<std::string> v1 = vect;
+
 	int dia, mes;
 	char temp;
 	unsigned int i = 0;
@@ -753,7 +896,8 @@ void imprimir_custo(std::vector<std::string> vect, int opcao){
 
 	textcolor(white);
 	gotoxy(0,21);
-
+	system("pause");
+	imprimir_hoteis(v1);
 }
 
 void imprimir_tempo(std::vector<std::string> vect, int opcao){
