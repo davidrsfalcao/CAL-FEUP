@@ -547,7 +547,7 @@ void titulo(){
 	}
 
 	gotoxy(48,4);
-	cout << "AGENCIA DE VIAJENS";
+	cout << "AGENCIA DE VIAGENS";
 
 	textcolor(white);
 

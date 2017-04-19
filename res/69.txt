@@ -1,5 +1,5 @@
 Tokyo
-20998,3589
+21250,3610
 4
 Tokyo Mayor Hotel
 1

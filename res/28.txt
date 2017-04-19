@@ -1,5 +1,5 @@
 Oulu
-13450,1684
+13500,1784
 3
 Hotel Lasaretti
 2
