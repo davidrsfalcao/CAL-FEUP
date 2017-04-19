@@ -357,7 +357,7 @@ void abrirMapa(int opcao){
 	else {
 		gotoxy(0,21);
 		textcolor(yellow);
-		std::cout << "\t    A abir . . ." << std::endl;
+		std::cout << "\t    A abrir . . ." << std::endl;
 
 		inicializarGraphicViewer();
 
