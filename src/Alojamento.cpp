@@ -7,6 +7,7 @@
 #include "Alojamento.h"
 #include <vector>
 
+
 using namespace std;
 
 Alojamento::Alojamento() {
