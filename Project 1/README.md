@@ -16,15 +16,15 @@ O cliente especifica:
 
 # Screenshots
 
-![alt-taj](https://github.com/davidrsfalcao/CAL-proj1/blob/master/Screenshots/Screenshot1.png)
+![alt-taj](https://github.com/davidrsfalcao/CAL-proj1/blob/master/Project%201/Screenshots/Screenshot1.png)
 
 > Command Line Interface
 
-![alt-taj](https://github.com/davidrsfalcao/CAL-proj1/blob/master/Screenshots/Screenshot2.png)
+![alt-taj](https://github.com/davidrsfalcao/CAL-proj1/blob/master/Project%201/Screenshots/Screenshot2.png)
 
 > Mais de 100 destinos de viagem
 
-![alt-taj](https://github.com/davidrsfalcao/CAL-proj1/blob/master/Screenshots/Screenshot3.png)
+![alt-taj](https://github.com/davidrsfalcao/CAL-proj1/blob/masterProject%201//Screenshots/Screenshot3.png)
 
 > Otimização quanto ao custo e quanto ao tempo
 
