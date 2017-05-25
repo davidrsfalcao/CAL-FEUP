@@ -1,0 +1,26 @@
+Sao Salvador
+6074,5064
+2
+El Salvador Hotel
+1
+Todo o Ano
+1-01/31-12
+180
+Salvador Mayor Hotel
+1
+Todo o Ano
+1-01/31-12
+180
+3
+96
+80
+75
+100
+80
+85
+103
+95
+90
+2
+Estadio Cuscatlan
+Divino Salvador del Mundo

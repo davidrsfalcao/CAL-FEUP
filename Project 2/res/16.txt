@@ -1,0 +1,57 @@
+Frankfurt
+12303,2664
+2
+Steigenberger Frankfurter Hof
+4
+Verao
+21-06/22-09
+125
+Passagem de Ano
+28-12/03-01
+135
+Resto Do Ano
+04-01/20-06
+100
+Resto Do Ano
+23-09/27-12
+100
+Hotel Excelsior
+4
+Verao
+21-06/22-09
+60
+Passagem de Ano
+28-12/03-12
+75
+Resto Do Ano
+04-01/20-06
+40
+Resto Do Ano
+23-09/27-12
+40
+7
+3
+100
+110
+28
+135
+125
+55
+190
+165
+66
+950
+790
+71
+1200
+830
+78
+1200
+930
+82
+1000
+820
+3
+Romer
+Stadel
+Goethe House

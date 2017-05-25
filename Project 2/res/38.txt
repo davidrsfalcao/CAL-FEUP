@@ -1,0 +1,69 @@
+Viena
+12950,2720
+3
+Atlantis Hotel Vienna
+4
+Primavera
+20-03/19-06
+75
+Natal
+18-12/28-12
+75
+Resto Do Ano
+29-12/19-03
+45
+Resto Do Ano
+20-06/27-12
+45
+Austria Trend Hotel Vienna
+4
+Primavera
+20-03/19-06
+85
+Natal
+18-12/28-12
+85
+Resto Do Ano
+29-12/19-03
+50
+Resto Do Ano
+20-06/27-12
+50
+Hotel Prinz Eugen
+4
+Primavera
+20-03/19-06
+100
+Natal
+18-12/28-12
+100
+Resto Do Ano
+29-12/19-03
+75
+Resto Do Ano
+20-06/27-12
+75
+6
+4
+125
+105
+16
+50
+45
+47
+75
+60
+52
+100
+85
+71
+795
+865
+84
+1055
+910
+4
+Prater
+Catedral de Santo Estevao
+Palacio Belvedere
+Palacio Imperial de Hofburg

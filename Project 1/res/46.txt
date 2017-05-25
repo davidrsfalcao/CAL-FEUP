@@ -1,0 +1,52 @@
+Atenas
+13413,3441
+3
+Royal Olympic Hotel
+2
+Primavera
+20-03/19-06
+110
+Resto Do Ano
+20-06/19-03
+65
+Arethusa Hotel
+2
+Primavera
+20-03/19-06
+90
+Resto Do Ano
+20-06/19-03
+45
+Omiros Hotel
+2
+Primavera
+20-03/19-06
+100
+Resto Do Ano
+20-06/19-03
+70
+8
+7
+175
+160
+16
+140
+135
+24
+210
+195
+66
+765
+640
+76
+1455
+1040
+89
+725
+620
+91
+1065
+950
+107
+700
+540

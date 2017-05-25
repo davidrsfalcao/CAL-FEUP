@@ -1,0 +1,35 @@
+Ottawa
+6901,2997
+2
+Ottawa Hotel
+2
+Todo o Ano
+2-03/1-12
+160
+Inverno
+2-12/1-03
+210
+Ottawa Independent Hotel
+2
+Todo o Ano
+2-03/1-12
+180
+Inverno
+2-12/1-03
+230
+5
+81
+150
+190
+79
+40
+30
+83
+65
+60
+84
+90
+80
+85
+200
+180

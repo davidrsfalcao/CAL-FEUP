@@ -1,0 +1,65 @@
+Lisboa
+11378,3416
+2
+Hotel Avenida Palace
+6
+Pascoa
+15-03/20-04
+190
+Verao
+21-06/22-09
+170
+Passagem De Ano
+28-12/3-01
+210
+Resto Do Ano
+04-01/14-03
+90
+Resto Do Ano
+21-04/20-06
+90
+Resto Do Ano
+23-09/27-12
+90
+Bairro Alto Hotel
+6
+Pascoa
+15-03/20-04
+200
+Verao
+21-06/22-09
+210
+Passagem De Ano
+28-12/3-01
+240
+Resto Do Ano
+04-01/14-03
+100
+Resto Do Ano
+21-04/20-06
+100
+Resto Do Ano
+23-09/27-12
+100
+7
+1
+55
+40
+3
+120
+60
+4
+140
+90
+7
+250
+120
+15
+290
+170
+17
+330
+190
+23
+350
+240

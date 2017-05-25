@@ -1,0 +1,30 @@
+Klaipeda
+13428,2257
+2
+Amberton Klaipeda
+2
+Inverno
+21-12/20-03
+65
+Resto Do Ano
+21-03/20-12
+40
+Michaelson Boutique Hotel
+2
+Inverno
+21-12/20-03
+90
+Resto Do Ano
+21-03/20-12
+75
+2
+15
+140
+125
+33
+90
+85
+3
+Castelo de Klaipeda
+Lithuanian Sea Museum
+Escultura Wind

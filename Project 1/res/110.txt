@@ -1,0 +1,40 @@
+Dubai
+15736,4274
+3
+Dubai Hotel
+2
+Passagem de Ano
+28-12/2-01
+800
+Resto do Ano
+3-01/27-12
+650
+Nassima Royal
+2
+Passagem de Ano
+28-12/2-01
+810
+Resto do Ano
+3-01/27-12
+700
+Raffles Dubai
+2
+Passagem de Ano
+28-12/2-01
+780
+Resto do Ano
+3-01/27-12
+600
+4
+109
+170
+100
+7
+300
+210
+16
+270
+200
+4
+300
+270

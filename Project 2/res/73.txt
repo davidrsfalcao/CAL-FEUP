@@ -1,0 +1,43 @@
+Singapura
+18704,5865
+4
+Singapura Hotel
+1
+Todo o Ano
+1-01/31-12
+230
+Park Regis Hotel
+1
+Todo o Ano
+1-01/31-12
+190
+Carlton Hotel
+1
+Todo o Ano
+1-01/31-12
+215
+Mandarin Orchard Hotel
+1
+Todo o Ano
+1-01/31-12
+200
+5
+74
+370
+350
+66
+200
+190
+63
+100
+90
+72
+40
+35
+65
+70
+60
+3
+Sentosa
+Universal Studios Singapore
+Night Safari

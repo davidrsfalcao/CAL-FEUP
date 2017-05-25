@@ -1,0 +1,35 @@
+Canberra
+21460,8196
+3
+Canberra Hotel
+1
+Todo o Ano
+1-01/31-12
+170
+Martinez Hotel
+1
+Todo o Ano
+1-01/31-12
+160
+Canberra Royal Palace Hotel
+1
+Todo o Ano
+1-01/31-12
+165
+4
+77
+200
+180
+75
+90
+70
+74
+50
+40
+64
+400
+300
+3
+Museu Nacional da Australia
+Lago Burley Griffin
+Black Mountain Tower

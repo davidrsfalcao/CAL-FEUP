@@ -1,0 +1,54 @@
+Santiago
+7150,8684
+4
+Santiago Hotel
+2
+Verao
+21-06/20-09
+190
+Todo o Ano
+21-09/20-06
+170
+Spanish Hotel
+2
+Verao
+21-06/20-09
+200
+Todo o Ano
+21-09/20-06
+180
+Mariaca Hotel
+2
+Verao
+21-06/20-09
+180
+Todo o Ano
+21-09/20-06
+160
+Chile Royal Hotel
+2
+Verao
+21-06/20-09
+230
+Todo o Ano
+21-09/20-06
+200
+6
+101
+80
+110
+100
+60
+120
+98
+80
+300
+96
+60
+105
+90
+100
+60
+93
+60
+100

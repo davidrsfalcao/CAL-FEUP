@@ -1,0 +1,43 @@
+Bilbao
+11563,3090
+3
+Bilbao Grand Resort
+2
+Verao
+20-06/21-09
+130
+Resto do Ano
+22-09/19-06
+100
+Bilbao Hotel
+2
+Verao
+20-06/21-09
+110
+Resto do Ano
+22-09/19-06
+95
+Hotel Conde Duque Bilbao
+2
+Verao
+20-06/21-09
+80
+Resto do Ano
+22-09/19-06
+65
+5
+32
+85
+75
+34
+175
+140
+49
+170
+190
+57
+250
+210
+7
+55
+60

@@ -1,0 +1,40 @@
+Kiev
+13857,2553
+3
+Suit Hotel Kyiv
+2
+Natal
+18-12/28-12
+100
+Resto Do Ano
+29-12/17-12
+75
+Kozatskiy Hotel
+2
+Natal
+18-12/28-12
+95
+Resto Do Ano
+29-12/17-12
+45
+Hotel Kyiv
+2
+Natal
+18-12/28-12
+80
+Resto Do Ano
+29-12/17-12
+50
+4
+32
+145
+130
+44
+75
+90
+61
+355
+265
+80
+635
+545

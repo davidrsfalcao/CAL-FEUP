@@ -1,0 +1,42 @@
+Chicago
+6105,3182
+4
+Chicago Hotel
+1
+Todo o Ano
+1-01/31-12
+180
+Congress Plaza Hotel
+1
+Todo o Ano
+1-01/31-12
+170
+Essex Inn Hotel
+1
+Todo o Ano
+1-01/31-12
+190
+Hilton Hotel
+1
+Todo o Ano
+1-01/31-12
+185
+6
+84
+120
+90
+81
+170
+180
+85
+200
+250
+89
+210
+180
+79
+50
+40
+80
+80
+75

@@ -1,0 +1,39 @@
+Varsovia
+13024,2442
+3
+Warsaw Palace Hotel
+2
+Natal
+18-12/28-12
+95
+Resto Do Ano
+29-12/17-12
+75
+Grand Hotel Warsaw
+2
+Natal
+18-12/28-12
+100
+Resto Do Ano
+29-12/17-12
+65
+Royal Residence Warsaw
+2
+Natal
+18-12/28-12
+80
+Resto Do Ano
+29-12/17-12
+45
+2
+22
+75
+60
+41
+35
+30
+3
+Parque Lazienki
+Museu do Levante de Varsovia
+Castelo Real de Varsovia
+Chopin Statue

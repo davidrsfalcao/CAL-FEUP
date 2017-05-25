@@ -1,0 +1,61 @@
+Veneza
+12636,2997
+3
+Hotel Diana
+4
+Verao
+21-06/22-09
+100
+Natal
+18-12/28-12
+110
+Resto Do Ano
+29-12/20-06
+80
+Resto Do Ano
+23-09/17-12
+80
+Hotel Casanova
+4
+Verao
+21-06/22-09
+220
+Natal
+18-12/28-12
+220
+Resto Do Ano
+29-12/20-06
+175
+Resto Do Ano
+23-09/17-12
+175
+Palazzetto Pisani
+4
+Verao
+21-06/22-09
+250
+Natal
+18-12/28-12
+250
+Resto Do Ano
+29-12/20-06
+195
+Resto Do Ano
+23-09/17-12
+195
+5
+7
+55
+75
+40
+25
+30
+45
+65
+70
+79
+1300
+1050
+89
+1150
+950

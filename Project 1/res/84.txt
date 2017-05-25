@@ -1,0 +1,54 @@
+New York
+7123,3182
+4
+New York Hotel
+2
+Passagem de Ano
+27-12/03-01
+400
+Resto do Ano
+04-01/26-12
+310
+Central Park Hotel
+2
+Passagem de Ano
+27-12/03-01
+410
+Resto do Ano
+04-01/26-12
+330
+Plaza Tower Hotel
+2
+Passagem de Ano
+27-12/03-01
+380
+Resto do Ano
+04-01/26-12
+300
+Pennsylvania Hotel
+2
+Passagem de Ano
+27-12/03-01
+390
+Resto do Ano
+04-01/26-12
+310
+6
+85
+190
+140
+83
+120
+70
+82
+250
+280
+89
+110
+70
+80
+90
+70
+81
+240
+190

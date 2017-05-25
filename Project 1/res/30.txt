@@ -1,0 +1,63 @@
+Moscovo
+14338,2350
+4
+Arbat House
+2
+Inverno
+21-12/20-03
+75
+Resto Do Ano
+21-03/20-12
+60
+Cosmos Hotel
+2
+Inverno
+21-12/20-03
+65
+Resto Do Ano
+21-03/20-12
+40
+Golden Ring Hotel
+2
+Inverno
+21-12/20-03
+120
+Resto Do Ano
+21-03/20-12
+95
+Russo Balt Hotel
+2
+Inverno
+21-12/20-03
+220
+Resto Do Ano
+21-03/20-12
+175
+9
+17
+145
+120
+80
+760
+840
+86
+865
+835
+97
+875
+845
+101
+900
+820
+110
+325
+280
+61
+230
+240
+59
+100
+120
+58
+70
+80

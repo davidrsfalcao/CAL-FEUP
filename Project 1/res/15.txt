@@ -1,0 +1,40 @@
+Roma
+12747,3164
+3
+Hotel Degli Aranci
+2
+Verao
+21-06/22-09
+125
+Resto Do Ano
+23-09/20-06
+95
+Augusta Lucilla Palace
+2
+Verao
+21-06/22-09
+160
+Resto Do Ano
+23-09/20-06
+120
+Gioberti Art Hotel
+2
+Verao
+21-06/22-09
+95
+Resto Do Ano
+23-09/20-06
+65
+4
+4
+55
+60
+82
+1250
+970
+90
+1230
+1050
+107
+240
+220

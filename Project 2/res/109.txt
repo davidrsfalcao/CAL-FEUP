@@ -1,0 +1,27 @@
+Cairo
+13875,3996
+2
+Cairo Hotel
+1
+Todo o Ano
+21-06/20-06
+500
+Pyramisa Suites
+1
+Todo o Ano
+22-06/21-06
+510
+3
+110
+350
+100
+10
+300
+250
+19
+310
+250
+3
+Piramides de Gize
+Museu Egipcio
+Hanging Church

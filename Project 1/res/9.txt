@@ -1,0 +1,58 @@
+Bordeus
+11914,3053
+3
+Quality Hotel Bordeaux Centre
+4
+Verao
+21-06/22-09
+75
+Natal
+18-12/28-12
+85
+Resto Do Ano
+29-12/20-06
+45
+Resto Do Ano
+23-09/17-12
+45
+Mercure Bordeaux Cite Mondiale Centre Ville
+4
+Verao
+21-06/22-09
+95
+Natal
+18-12/28-12
+95
+Resto Do Ano
+29-12/20-06
+55
+Resto Do Ano
+23-09/17-12
+55
+Maison d'Hotes Chambre en Ville
+4
+Verao
+21-06/22-09
+140
+Natal
+18-12/28-12
+140
+Resto Do Ano
+29-12/20-06
+100
+Resto Do Ano
+23-09/17-12
+100
+3
+8
+40
+60
+14
+65
+60
+18
+100
+75
+23
+150
+125

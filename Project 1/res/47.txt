@@ -1,0 +1,64 @@
+Sofia
+13357,3127
+3
+Ramada Sofia
+4
+Verao
+21-06/22-09
+60
+Natal
+18-12/28-12
+60
+Resto Do Ano
+29-12/20-06
+35
+Resto Do Ano
+23-09/17-12
+35
+Central Hotel Sofia
+4
+Verao
+21-06/22-09
+115
+Natal
+18-12/28-12
+115
+Resto Do Ano
+29-12/20-06
+80
+Resto Do Ano
+23-09/17-12
+80
+Metropolitan Hotel Sofia
+4
+Ver�o
+21-06/22-09
+80
+Natal
+18-12/28-12
+80
+Resto Do Ano
+29-12/20-06
+40
+Resto Do Ano
+23-09/17-12
+40
+6
+40
+75
+95
+59
+200
+170
+68
+665
+620
+74
+1355
+1160
+79
+675
+580
+100
+1010
+955

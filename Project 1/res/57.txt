@@ -1,0 +1,20 @@
+Beirute
+14408,3663
+2
+Beirute Mayor Hotel
+1
+Todo o Ano
+1-01/31-12
+180
+Libano Royal Hotel
+1
+Todo o Ano
+1-01/31-12
+185
+2
+56
+30
+40
+55
+90
+85

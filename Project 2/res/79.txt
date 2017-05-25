@@ -1,0 +1,37 @@
+Toronto
+6586,3053
+2
+Toronto Hotel
+2
+Todo o Ano
+2-03/1-12
+150
+Inverno
+2-12/1-03
+190
+Plaza Hotel
+2
+Todo o Ano
+2-03/1-12
+160
+Inverno
+2-12/1-03
+200
+4
+80
+40
+30
+81
+160
+180
+83
+65
+60
+84
+90
+80
+4
+CN Tower
+Casa Loma
+Hockey Hall of Fame
+High Park

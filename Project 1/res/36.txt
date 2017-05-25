@@ -1,0 +1,40 @@
+Praga
+12987,2627
+3
+Three Crowns Hotel
+2
+Primavera
+20-03/19-06
+75
+Resto Do Ano
+20-06/19-03
+40
+Panorama Hotel Pague
+2
+Primavera
+20-03/19-06
+100
+Resto Do Ano
+20-06/19-03
+45
+Grand Majestic Plaza
+2
+Primavera
+20-03/19-06
+185
+Resto Do Ano
+20-06/19-03
+125
+4
+32
+55
+45
+65
+845
+690
+78
+1240
+945
+96
+925
+870

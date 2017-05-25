@@ -1,0 +1,35 @@
+Cantao
+19203,4496
+3
+Cantao Hotel
+1
+Todo o Ano
+1-01/31-12
+180
+Royal Cantao Hotel
+1
+Todo o Ano
+1-01/31-12
+175
+Hon Chi Hotel
+1
+Todo o Ano
+1-01/31-12
+170
+4
+65
+90
+80
+64
+70
+65
+66
+160
+150
+73
+100
+90
+3
+Ilha Shamian
+Chimelong Paradise
+Montanha Bayun

@@ -1,0 +1,41 @@
+Kosice
+13135,2775
+3
+Kosice Hotel And Spa
+2
+Primavera
+20-03/19-06
+80
+Resto Do Ano
+20-06/19-03
+40
+Grand Hotel Kosice
+2
+Primavera
+20-03/19-06
+75
+Resto Do Ano
+20-06/19-03
+45
+Kosice Royal Hotel
+2
+Primavera
+20-03/19-06
+95
+Resto Do Ano
+20-06/19-03
+65
+3
+15
+95
+80
+19
+80
+65
+35
+15
+25
+3
+Catedral de Santa Isabel
+Museu East Slovak
+St Urban Tower

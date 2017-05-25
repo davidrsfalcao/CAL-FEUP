@@ -1,0 +1,41 @@
+Copenhaga
+12654,2276
+2
+Copenhagen Star Hotel
+4
+Festival Roskilde
+25-06/06-07
+140
+Passagem de Ano
+28-12/03-01
+140
+Resto Do Ano
+04-01/24-06
+85
+Resto Do Ano
+07-07/27-12
+85
+Radisson Blu Royal Hotel
+4
+Festival Roskilde
+25-06/06-07
+330
+Passagem de Ano
+28-12/03-01
+335
+Resto Do Ano
+04-01/24-06
+250
+Resto Do Ano
+07-07/27-12
+250
+3
+73
+1230
+750
+75
+1270
+1020
+89
+1320
+890

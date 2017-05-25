@@ -1,0 +1,47 @@
+Havana
+6594,4472
+3
+Havana Hotel
+2
+Verao
+19-06/20-09
+300
+Resto do Ano
+21-09/18-06
+250
+Cuba Mayor
+2
+Verao
+19-06/20-09
+310
+Resto do Ano
+21-09/18-06
+260
+Mar Azul Hotel
+2
+Verao
+19-06/20-09
+320
+Resto do Ano
+21-09/18-06
+270
+5
+95
+60
+110
+90
+40
+120
+98
+85
+500
+85
+80
+150
+87
+200
+300
+3
+Malecon
+Castillo del Morro
+Capitolio

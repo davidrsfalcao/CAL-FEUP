@@ -1,0 +1,60 @@
+Paris
+11933,2720
+3
+Grand Hotel du Louvre
+3
+Primavera
+21-03/19-06
+115
+Verao
+20-06/21-09
+125
+Resto do Ano
+22-09/20-03
+100
+Eiffel Resort et Amis
+3
+Primavera
+21-03/19-06
+135
+Verao
+20-06/21-09
+125
+Resto do Ano
+22-09/20-03
+75
+Maison du Roix - Paris
+3
+Primavera
+21-03/19-06
+175
+Verao
+20-06/21-09
+150
+Resto do Ano
+22-09/20-03
+110
+6
+2
+90
+100
+3
+65
+80
+13
+85
+65
+38
+80
+100
+46
+120
+180
+64
+1230
+910
+4
+Torre Eiffel
+Museu de Louvre
+Montmartre
+Museu de Orsay

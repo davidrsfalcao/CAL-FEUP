@@ -1,0 +1,51 @@
+Oslo
+12526,1961
+3
+Anker Hotel
+2
+Verao
+21-06/22-09
+100
+Resto Do Ano
+23-09/20-06
+65
+Best Western Karl Johan Hotel
+2
+Verao
+21-06/22-09
+125
+Resto Do Ano
+23-09/20-06
+85
+Voksenasen
+2
+Verao
+21-06/22-09
+120
+Resto Do Ano
+23-09/20-06
+95
+6
+16
+75
+85
+54
+225
+185
+86
+1290
+950
+74
+1340
+1020
+80
+1190
+820
+92
+850
+890
+4
+Fiorde de Oslo
+Fortaleza de Akershus
+Vigeland Museum
+Frammuseet

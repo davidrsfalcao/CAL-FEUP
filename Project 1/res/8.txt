@@ -1,0 +1,41 @@
+Nice
+12303,3071
+2
+La Meridien Nice
+4
+Verao
+21-06/22-09
+140
+Natal
+18-12/28-12
+145
+Resto Do Ano
+29-12/20-06
+125
+Resto Do Ano
+23-09/17-12
+125
+Hotel Le Royal Promenade des Anglais
+4
+Verao
+21-06/22-09
+165
+Natal
+18-12/28-12
+175
+Resto Do Ano
+29-12/20-06
+110
+Resto Do Ano
+23-09/17-12
+110
+3
+7
+30
+55
+30
+190
+160
+36
+125
+100

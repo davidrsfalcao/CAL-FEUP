@@ -1,0 +1,51 @@
+Barcelona
+12127,3236
+2
+Hotel Ibis Barcelona Centro
+4
+Verao
+21-06/22-09
+210
+Passagem de Ano
+28-12/03-01
+235
+Resto Do Ano
+04-01/20-06
+150
+Resto Do Ano
+23-09/27-12
+150
+Hotel Sansi Diputaciu
+4
+Verao
+21-06/22-09
+1175
+Passagem de Ano
+28-12/03-12
+185
+Resto Do Ano
+04-01/20-06
+130
+Resto Do Ano
+23-09/27-12
+130
+5
+3
+50
+40
+7
+130
+70
+30
+320
+250
+31
+240
+115
+15
+225
+110
+3
+Sagrada Familia
+Camp Nou
+Museu Picasso

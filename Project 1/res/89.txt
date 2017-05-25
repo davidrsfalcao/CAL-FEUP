@@ -1,0 +1,54 @@
+Washington
+6771,3404
+4
+Washington Hotel
+1
+Todo o Ano
+1-01/31-12
+200
+Metropolitan Hotel
+1
+Todo o Ano
+1-01/31-12
+210
+Lincoln Hotel
+1
+Todo o Ano
+1-01/31-12
+190
+Kennedy Hotel
+1
+Todo o Ano
+1-01/31-12
+220
+10
+88
+200
+250
+87
+260
+300
+84
+190
+210
+82
+210
+180
+85
+200
+120
+83
+180
+170
+79
+300
+260
+74
+900
+1030
+16
+1050
+970
+8
+950
+920

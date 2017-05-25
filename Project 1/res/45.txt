@@ -1,0 +1,48 @@
+Tirana
+13454,3201
+4
+Tirana Royal Hotel
+2
+Inverno
+21-12/20-03
+95
+Resto Do Ano
+21-03/20-12
+70
+Resort Tirana
+2
+Inverno
+21-12/20-03
+80
+Resto Do Ano
+21-03/20-12
+45
+Grand Hotel Tirana
+2
+Inverno
+21-12/20-03
+115
+Resto Do Ano
+21-03/20-12
+70
+Tirana Palace Building Hotel
+2
+Inverno
+21-12/20-03
+110
+Resto Do Ano
+21-03/20-12
+85
+4
+37
+80
+70
+56
+100
+105
+104
+180
+165
+108
+570
+425

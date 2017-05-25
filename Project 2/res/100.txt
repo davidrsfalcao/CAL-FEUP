@@ -1,0 +1,28 @@
+La Paz
+7455,7059
+2
+La Paz Hotel
+1
+Todo do Ano
+01-01/31-12
+90
+Bolivia Mayor Hotel
+1
+Todo do Ano
+01-01/31-12
+100
+3
+92
+60
+110
+95
+40
+120
+97
+50
+100
+4
+Tiauanaco
+Illimani
+La Muela del diablo
+Praça Murillo

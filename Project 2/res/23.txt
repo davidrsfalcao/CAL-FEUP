@@ -1,0 +1,38 @@
+Gotemburgo
+12599,2128
+3
+Goteborg Resort and Ski
+2
+Inverno
+21-11/20-03
+100
+Resto do Ano
+21-03/20-11
+75
+Grand Hotel Goteborg
+2
+Inverno
+21-11/20-03
+120
+Resto do Ano
+21-03/20-11
+75
+Hotel Gamla Stan
+2
+Inverno
+21-11/20-03
+80
+Resto do Ano
+21-03/20-11
+35
+2
+4
+175
+145
+18
+110
+105
+3
+Liseberg
+Universeum
+Museu de Arte de Gotemburgo

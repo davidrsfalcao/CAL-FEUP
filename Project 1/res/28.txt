@@ -1,0 +1,37 @@
+Oulu
+13500,1784
+3
+Hotel Lasaretti
+2
+Natal
+18-12/28-12
+100
+Resto Do Ano
+29-12/17-12
+75
+Hotelli Pohjankievari
+2
+Natal
+18-12/28-12
+75
+Resto Do Ano
+29-12/17-12
+50
+Lapland Hotels Oulu
+2
+Natal
+18-12/28-12
+80
+Resto Do Ano
+29-12/17-12
+45
+3
+9
+315
+210
+29
+45
+40
+53
+75
+90

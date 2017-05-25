@@ -1,0 +1,28 @@
+Argel
+12062,3715
+3
+Argel Hotel
+1
+Todo o Ano
+21-06/20-06
+250
+Argel Royal Palace
+1
+Todo o Ano
+22-06/21-06
+270
+Honher Hotel
+1
+Todo o Ano
+22-06/21-06
+240
+3
+105
+90
+40
+3
+100
+70
+108
+200
+100

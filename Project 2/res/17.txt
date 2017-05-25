@@ -1,0 +1,66 @@
+Berlim
+12854,2404
+3
+Hotel Adlon Kempinski
+4
+Verao
+21-06/22-09
+125
+Natal
+18-12/28-12
+135
+Resto Do Ano
+29-12/20-06
+75
+Resto Do Ano
+23-09/17-12
+75
+Titanic Gendarmenmarkt Berlin
+4
+Verao
+21-06/22-09
+105
+Natal
+18-12/28-12
+110
+Resto Do Ano
+29-12/20-06
+95
+Resto Do Ano
+23-09/17-12
+95
+Grand Hyatt Berlin
+4
+Verao
+21-06/22-09
+120
+Natal
+18-12/28-12
+120
+Resto Do Ano
+29-12/20-06
+95
+Resto Do Ano
+23-09/17-12
+95
+5
+1
+180
+175
+7
+55
+65
+69
+1000
+870
+84
+650
+480
+99
+1350
+1020
+4
+Ilha dos Museus
+Muro de Berlim
+Palacio Reichtag
+Potao de Brandemburgo

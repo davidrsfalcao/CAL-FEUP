@@ -1,0 +1,51 @@
+Las Vegas
+4255,3441
+5
+Vegas Hotel
+1
+Todo o Ano
+1-01/31-12
+300
+Paris Royal Hotel
+1
+Todo o Ano
+1-01/31-12
+320
+Lotus Hotel
+1
+Todo o Ano
+1-01/31-12
+290
+Cesar Palace Hotel
+1
+Todo o Ano
+1-01/31-12
+315
+Sunrise Manor Hotel
+1
+Todo o Ano
+1-01/31-12
+330
+6
+89
+300
+260
+86
+160
+60
+80
+280
+310
+84
+300
+280
+85
+200
+190
+83
+350
+270
+3
+Bellagio
+Mob Museum
+Stratosphere

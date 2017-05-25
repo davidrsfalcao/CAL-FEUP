@@ -1,0 +1,12 @@
+
+Ir ao site https://pixlr.com/editor/
+
+Abrir a imagem background1.jpg do github
+
+Encontrar as coordenadas de uma Cidade
+NOTAS:
+1) ZOOM ao maximo para maior precisão
+2) AO multiplicar por 18,5 arrendondar às unidades
+
+
+Multiplicar por 18,5

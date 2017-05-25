@@ -1,0 +1,40 @@
+Caracas
+7604,5307
+3
+Caracas Hotel
+2
+Verao
+20-06/20-09
+210
+Resto do Ano
+21-09/19-06
+170
+Venezuela Hotel
+2
+Verao
+20-06/20-09
+230
+Resto do Ano
+21-09/19-06
+180
+Royal Caracas Hotel
+2
+Verao
+20-06/20-09
+210
+Resto do Ano
+21-09/19-06
+160
+4
+99
+275
+350
+93
+65
+60
+102
+70
+60
+103
+70
+60

@@ -1,0 +1,32 @@
+Melbourne
+21349,8436
+3
+Melbourne Hotel
+1
+Todo o Ano
+1-01/31-12
+180
+Country Palace Hotel
+1
+Todo o Ano
+1-01/31-12
+190
+Hotel Merlon
+1
+Todo o Ano
+1-01/31-12
+185
+3
+76
+60
+50
+77
+230
+210
+74
+90
+80
+3
+Federation Square
+Jardim Botanico de Melbourne
+Rio Yarra

@@ -1,0 +1,34 @@
+Guatemala
+5874,4977
+3
+Guatemala Hotel
+1
+Todo o Ano
+1-01/31-12
+140
+Aeros Hotel
+1
+Todo o Ano
+1-01/31-12
+135
+Omega Guatemala Hotel
+1
+Todo o Ano
+1-01/31-12
+145
+4
+92
+55
+50
+93
+85
+90
+94
+75
+80
+101
+75
+70
+2
+La Aurora Zoo
+National Palace

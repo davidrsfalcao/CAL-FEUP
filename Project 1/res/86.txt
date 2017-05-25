@@ -1,0 +1,48 @@
+Los Angeles
+4033,3682
+4
+Angeles Hotel
+1
+Todo o Ano
+1-01/31-12
+300
+HollyWood Hotel
+1
+Todo o Ano
+1-01/31-12
+320
+Beverly Hills Hotel
+1
+Todo o Ano
+1-01/31-12
+350
+Long Beach Hotel
+2
+Verao
+21-06/20-09
+340
+Resto do Ano
+21-09/20-06
+315
+7
+87
+110
+60
+88
+180
+130
+83
+400
+310
+89
+320
+270
+76
+900
+940
+90
+200
+300
+85
+300
+250
