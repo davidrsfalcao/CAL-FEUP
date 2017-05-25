@@ -79,8 +79,8 @@ std::vector<std::string> pesquisaAproximada(std::vector<Cidade> cidades, std::st
 
 	for (size_t i = 0; i < candidatos.size(); i++) {
 		result.push_back(candidatos[i].tipo);
-		result.push_back(candidatos[i].nome);
 		result.push_back(candidatos[i].cidade);
+		result.push_back(candidatos[i].nome);
 	}
 
 	return result;
@@ -112,7 +112,7 @@ int dividir_palavra(std::string palavra1, std::string cmp){
 		best_score = score;
 	}
 
-	return best_score; 
+	return best_score;
 }
 
 int verificarSimilaridade(std::string palavra1, std::string palavra2){
