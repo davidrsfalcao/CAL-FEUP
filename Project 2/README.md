@@ -1,4 +1,4 @@
-# 1º PROJETO CAL: Agência de Viagens
+# 2º PROJETO CAL: Agência de Viagens
 Para a segunda parte deste trabalho, considere que o cliente oferece uma lista de nomes de lugares e pontos de interesse a serem incluídos no seu itinerário. Os pontos de interesses podem ser monumentos, ou lugares numa cidade. A agência de viagem deverá pesquisar, na lista dos seus destinos, aqueles que estão incluídos na lista do cliente, e/ou possuem os pontos de interesses que o cliente deseja visitar durante a sua viagem. Por exemplo, o cliente pode desejar visitar a “Torre dos Clérigos” e a agência deve ser capaz de lhe incluir a cidade do Porto, como destino no seu itinerário. Implemente esta funcionalidade, considerando tanto pesquisa exata, assim como pesquisa aproximada, das strings identificativas dos nomes de cidades e pontos de interesse. O resultado da pesquisa exata deverá indicar se existe ou não o lugar desejado. Para a pesquisa aproximada, deverá retornar uma lista com os resultados mais próximos daquilo que se procura.
 
 # Screenshots
