@@ -15,10 +15,6 @@
 
 > Otimização quanto ao custo e quanto ao tempo
 
-![alt-taj](https://github.com/davidrsfalcao/CAL-proj1/blob/master/Project%202/Screenshots/Screenshot1.png)
-
-> Pesquisa exata e aproximada de cidades e pontos de interesse
-
 ![alt-taj](https://github.com/davidrsfalcao/CAL-proj1/blob/master/Project%202/Screenshots/Screenshot2.png)
 
 > 10 melhores resultados dados pela pesquisa aproxiamada de "Torr"
