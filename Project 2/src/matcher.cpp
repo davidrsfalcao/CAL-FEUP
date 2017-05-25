@@ -27,8 +27,8 @@ std::vector<std::string> pesquisaExata(std::vector<Cidade> cidades, std::string 
 		for (size_t k = 0; k < cidades[i].getPontosInteresse().size(); k++) {
 			if(cidades[i].getPontosInteresse()[k] == cmp){
 				result.push_back("PI");
-				result.push_back(cidades[i].getNome());
 				result.push_back(cidades[i].getPontosInteresse()[k]);
+				result.push_back(cidades[i].getNome());
 			}
 		}
 
@@ -69,9 +69,8 @@ std::vector<std::string> pesquisaAproximada(std::vector<Cidade> cidades, std::st
 				Candidato PI;
 				PI.pontos = score;
 				PI.tipo = "PI";
-				PI.nome = cidades[i].getPontosInteresse()[k];
 				PI.cidade = cidades[i].getNome();
-
+				PI.nome = cidades[i].getPontosInteresse()[k];
 				candidatos[findMaxVector(candidatos)] = PI;
 			}
 		}
@@ -79,8 +78,8 @@ std::vector<std::string> pesquisaAproximada(std::vector<Cidade> cidades, std::st
 
 	for (size_t i = 0; i < candidatos.size(); i++) {
 		result.push_back(candidatos[i].tipo);
-		result.push_back(candidatos[i].cidade);
 		result.push_back(candidatos[i].nome);
+		result.push_back(candidatos[i].cidade);
 	}
 
 	return result;
