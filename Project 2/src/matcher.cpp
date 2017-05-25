@@ -11,6 +11,7 @@
 #include <math.h>
 #include <algorithm>
 #include <iostream>
+#include "Algoritmos.h"
 
 class Candidato;
 
@@ -76,6 +77,7 @@ std::vector<std::string> pesquisaAproximada(std::vector<Cidade> cidades, std::st
 		}
 	}
 
+	candidatos = ordenaPorScore(candidatos, 0, candidatos.size()-1);
 	for (size_t i = 0; i < candidatos.size(); i++) {
 		result.push_back(candidatos[i].tipo);
 		result.push_back(candidatos[i].nome);

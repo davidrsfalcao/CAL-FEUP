@@ -105,3 +105,34 @@ Cidade pesquisaId(std::vector<Cidade> vect, unsigned int chave){
 
 	return Cidade();
 }
+
+
+std::vector<Candidato> ordenaPorScore(std::vector<Candidato> vect, int left, int right) {
+
+	int i = left, j = right;
+	Candidato tmp;
+	Candidato pivot = vect[(floor)((left + right) / 2)];
+
+	/* partition */
+	while (i <= j) {
+		while (vect[i].pontos < pivot.pontos)
+		i++;
+		while (vect[j].pontos > pivot.pontos)
+		j--;
+		if (i <= j) {
+			tmp = vect[i];
+			vect[i] = vect[j];
+			vect[j] = tmp;
+			i++;
+			j--;
+		}
+	};
+
+	/* recursion */
+	if (left < j)
+		vect =  ordenaPorScore(vect, left, j);
+	if (i < right)
+		vect =  ordenaPorScore(vect, i, right);
+
+	return vect;
+}

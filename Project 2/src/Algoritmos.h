@@ -11,6 +11,8 @@
 #include <vector>
 #include <string>
 #include "Cidade.h"
+#include "Candidato.h"
+
 /**
 * @brief Função que ordena as cidades por ID
 *
@@ -49,5 +51,7 @@ Cidade pesquisaNome( std::vector<Cidade> vect , std::string chave);
 * @return A Cidade pesquisada
 */
 Cidade pesquisaId(std::vector<Cidade> vect, unsigned int chave);
+
+std::vector<Candidato> ordenaPorScore(std::vector<Candidato> vect, int left, int right);
 
 #endif /* SRC_ALGORITMOS_H_ */
