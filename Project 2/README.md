@@ -14,11 +14,11 @@ Para a segunda parte deste trabalho, considere que o cliente oferece uma lista d
 # Como correr? (apenas para Windows)
 **1.** Download do Zip do projeto
 
-**2.** Extrair a pasta CAL-proj1-master
+**2.** Extrair a pasta CAL-FEUP-master
 
 **3.** Abrir janela de comando dentro da pasta CAL-FEUP-master (em windows faz-se primindo SHIFT + RIGTH CLICK ON MOUSE -> Abrir janela de comando aqui)
 
-**4.** Abrir a pasta CAL-proj1-master\Debug e arrastar o ficheiro CAL-proj1.exe para a janela de comando aberta
+**4.** Abrir a pasta CAL-FEUP-master\Debug e arrastar o ficheiro CAL-proj1.exe para a janela de comando aberta
 
 **5.** Press Enter and enjoy it ;)
 
